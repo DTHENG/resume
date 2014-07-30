@@ -40,3 +40,7 @@ angel.co/daniel-thengvall
 lnkd.in/bD6S_7J
 
 References available upon request
+
+
+
+v1.2
