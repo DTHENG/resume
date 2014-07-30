@@ -43,9 +43,4 @@ References available upon request
 
 
 
-<<<<<<< HEAD
-v1.3
-=======
 v1.4
-
->>>>>>> release/1.4
