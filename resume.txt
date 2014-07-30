@@ -20,6 +20,10 @@ Started coding
 Bought a book on actionscript 3.0
 
 
+Skills
+Java, PHP, Objective-C, Android SDK, HTML5/CSS3, Javascript, Illustrator, Photoshop, Intellij IDEA, Eclipse IDE, Unix, EC2, S3, MySQL, DynamoDB, Continuous Integration, Git
+
+
 1140 Sutter St, #406
 San Francisco, CA 94109
 
