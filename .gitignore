@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 *.iml
 .idea/**
+=======
+.iml
+.idea/**
+>>>>>>> release/1.2
