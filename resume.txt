@@ -22,7 +22,7 @@ Bought a book on actionscript 3.0
 
 Skills
 Java,  PHP,  Objective-C,  Go,  Android SDK,  HTML,  DHTML,  XHTML,  
-Ajax,  CSS,  Javascript,  Illustrator,  Photoshop, InDesign,  Intellij,  
+Ajax,  CSS,  Javascript,  Illustrator,  Photoshop,  InDesign,  Intellij,  
 Eclipse,  Android Studio,  Unix Shell Programming,  EC2,  S3,  J2EE,  
 JSP,  Servlets,  JavaBeans,  XML,  Ajax,  Maven,  Ant,  MySQL,  DynamoDB, 
 Continuous Integration,  Git,  Paypal APIs,  Google Maps API, 
