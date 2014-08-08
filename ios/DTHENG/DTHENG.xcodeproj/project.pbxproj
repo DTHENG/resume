@@ -15,13 +15,13 @@
 		7A9278CD1995561D0027D0B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9278CC1995561D0027D0B5 /* AppDelegate.m */; };
 		7A9278D01995561D0027D0B5 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9278CE1995561D0027D0B5 /* Main_iPhone.storyboard */; };
 		7A9278D31995561D0027D0B5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A9278D11995561D0027D0B5 /* Main_iPad.storyboard */; };
-		7A9278D61995561D0027D0B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9278D51995561D0027D0B5 /* ViewController.m */; };
 		7A9278D81995561D0027D0B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A9278D71995561D0027D0B5 /* Images.xcassets */; };
 		7A9278DF1995561D0027D0B5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9278DE1995561D0027D0B5 /* XCTest.framework */; };
 		7A9278E01995561E0027D0B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9278BC1995561D0027D0B5 /* Foundation.framework */; };
 		7A9278E11995561E0027D0B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9278C01995561D0027D0B5 /* UIKit.framework */; };
 		7A9278E91995561E0027D0B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A9278E71995561E0027D0B5 /* InfoPlist.strings */; };
 		7A9278EB1995561E0027D0B5 /* DTHENGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9278EA1995561E0027D0B5 /* DTHENGTests.m */; };
+		7AA85F50199582F700611CB7 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA85F4F199582F700611CB7 /* BaseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +47,14 @@
 		7A9278CC1995561D0027D0B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7A9278CF1995561D0027D0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		7A9278D21995561D0027D0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		7A9278D41995561D0027D0B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A9278D51995561D0027D0B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7A9278D71995561D0027D0B5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A9278DD1995561D0027D0B5 /* DTHENGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTHENGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9278DE1995561D0027D0B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7A9278E61995561E0027D0B5 /* DTHENGTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DTHENGTests-Info.plist"; sourceTree = "<group>"; };
 		7A9278E81995561E0027D0B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A9278EA1995561E0027D0B5 /* DTHENGTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTHENGTests.m; sourceTree = "<group>"; };
+		7AA85F4E199582F700611CB7 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		7AA85F4F199582F700611CB7 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +118,10 @@
 				7A9278CC1995561D0027D0B5 /* AppDelegate.m */,
 				7A9278CE1995561D0027D0B5 /* Main_iPhone.storyboard */,
 				7A9278D11995561D0027D0B5 /* Main_iPad.storyboard */,
-				7A9278D41995561D0027D0B5 /* ViewController.h */,
-				7A9278D51995561D0027D0B5 /* ViewController.m */,
 				7A9278D71995561D0027D0B5 /* Images.xcassets */,
 				7A9278C31995561D0027D0B5 /* Supporting Files */,
+				7AA85F4E199582F700611CB7 /* BaseTableViewController.h */,
+				7AA85F4F199582F700611CB7 /* BaseTableViewController.m */,
 			);
 			path = DTHENG;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A9278D61995561D0027D0B5 /* ViewController.m in Sources */,
 				7A9278CD1995561D0027D0B5 /* AppDelegate.m in Sources */,
+				7AA85F50199582F700611CB7 /* BaseTableViewController.m in Sources */,
 				7A9278C91995561D0027D0B5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +470,7 @@
 				7A9278F01995561E0027D0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A9278F11995561E0027D0B5 /* Build configuration list for PBXNativeTarget "DTHENGTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +479,7 @@
 				7A9278F31995561E0027D0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
