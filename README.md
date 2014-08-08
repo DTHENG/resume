@@ -4,7 +4,7 @@ I am a self-taught multidisciplinary programer who has been coding for 10 years,
 
 * * *
 
-- Download Resume [(PDF, 631 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf) or [(PDF compressed, 78 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume_compressed.pdf)
+- Download Resume [(PDF, 78 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf)
 - [View Resume](https://github.com/DTHENG/resume/blob/master/resume.txt)
 - [AngelList Profile](https://angel.co/daniel-thengvall)
 - [LinkedIn Profile](http://lnkd.in/bD6S_7J)
