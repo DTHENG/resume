@@ -9,4 +9,4 @@ I am a self-taught multidisciplinary programer who has been coding for 10 years,
 - [AngelList Profile](https://angel.co/daniel-thengvall)
 - [LinkedIn Profile](http://lnkd.in/bD6S_7J)
 
-`version 1.10`
+`version 1.11`
