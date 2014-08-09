@@ -19,10 +19,10 @@
             <div class="large-1 medium-1 small-1 hide-for-medium hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
-            <div class="large-1 medium-1 small-1 columns">
+            <div class="large-1 medium-1 small-1 hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
-            <div class="large-6 medium-8 small-10 columns">
+            <div class="large-6 medium-8 small-12 columns">
 
                 <!-- PROFILE PIC -->
                 <div class="row">
@@ -50,11 +50,11 @@
                         <h4>&#160;</h4>
                         <h4 style="text-align:center"><strong>Daniel Thengvall</strong></h4>
                         <h4>&#160;</h4>
-                        <p>I am a self-taught multidisciplinary programer who has been coding for 10 years,
-                            for the past 3 I have been Lead Developer at Rixty, Inc., an online payments platform.
-                            I have experience writing in many languages such as java, objective-c, go and the android sdk.</p>
+                        <p>For the past 3 years, I have been Lead Developer at Rixty, Inc., an online payments platform,
+                            building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web,
+                            I have experience creating iOS and Android mobile apps.</p>
                         <h4>&#160;</h4>
-                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 78KB)</a></p>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 76KB)</a></p>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
@@ -95,7 +95,7 @@
                 <h1>&#160;</h1>
 
             </div>
-            <div class="large-1 medium-1 small-1 columns">
+            <div class="large-1 medium-1 small-1 hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
             <div class="large-1 medium-1 small-1 hide-for-medium hide-for-small columns">
