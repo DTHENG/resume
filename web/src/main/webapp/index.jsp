@@ -19,10 +19,10 @@
             <div class="large-1 medium-1 small-1 hide-for-medium hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
-            <div class="large-1 medium-1 small-1 columns">
+            <div class="large-1 medium-1 small-1 hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
-            <div class="large-6 medium-8 small-10 columns">
+            <div class="large-6 medium-8 small-12 columns">
 
                 <!-- PROFILE PIC -->
                 <div class="row">
@@ -95,7 +95,7 @@
                 <h1>&#160;</h1>
 
             </div>
-            <div class="large-1 medium-1 small-1 columns">
+            <div class="large-1 medium-1 small-1 hide-for-small columns">
                 <h4>&#160;</h4>
             </div>
             <div class="large-1 medium-1 small-1 hide-for-medium hide-for-small columns">
