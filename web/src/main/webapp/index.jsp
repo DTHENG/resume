@@ -54,7 +54,7 @@
                             building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web,
                             I have experience creating iOS and Android mobile apps.</p>
                         <h4>&#160;</h4>
-                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 78KB)</a></p>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 76KB)</a></p>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
