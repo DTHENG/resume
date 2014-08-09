@@ -5,4 +5,4 @@ I am a self-taught multidisciplinary programer who has been coding for 10 years,
 - [Download Resume (PDF, 78 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf)
 - [dtheng.com](http://dtheng.com/)
 
-`version 1.11`
+`version 1.12`
