@@ -8,36 +8,38 @@
 
 @implementation HomeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+            
+        case 0: {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+            UIImageView *profile = (UIImageView *)[cell viewWithTag:1];
+            profile.image = [UIImage imageNamed:@"profile"];
+            return cell;
+        }
+            
+        case 1:
+            return [tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
+        default:
+        case 2:
+            return [tableView dequeueReusableCellWithIdentifier:@"bioCell" forIndexPath:indexPath];
+            
     }
-    return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:
+            return 158;
+        case 1:
+            return 73;
+        default:
+        case 2:
+            return 173;
+    }
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

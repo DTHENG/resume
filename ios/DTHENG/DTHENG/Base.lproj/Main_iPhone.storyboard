@@ -23,23 +23,69 @@
         <scene sceneID="z0F-Zh-mCA">
             <objects>
                 <tableViewController id="L42-Zl-t4x" customClass="HomeViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" id="t1c-Zr-wlx">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="126" sectionHeaderHeight="22" sectionFooterHeight="22" id="t1c-Zr-wlx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="126" id="roc-JV-uP6">
-                                <rect key="frame" x="0.0" y="86" width="320" height="126"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="158" id="roc-JV-uP6">
+                                <rect key="frame" x="0.0" y="86" width="320" height="158"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="roc-JV-uP6" id="QyT-30-V6N">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMM-x6-R8w" customClass="ProfileImageView">
-                                            <rect key="frame" x="97.5" y="0.0" width="125" height="125"/>
+                                            <rect key="frame" x="113" y="43" width="95" height="95"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" rowHeight="73" id="5tx-OQ-K5B">
+                                <rect key="frame" x="0.0" y="244" width="320" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5tx-OQ-K5B" id="azA-fh-abf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Thengvall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSV-8Q-j6h">
+                                            <rect key="frame" x="20" y="26" width="280" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JSV-8Q-j6h" firstAttribute="top" secondItem="azA-fh-abf" secondAttribute="top" constant="26" id="1mj-l0-Gpp"/>
+                                        <constraint firstAttribute="trailing" secondItem="JSV-8Q-j6h" secondAttribute="trailing" constant="20" id="6de-Fs-sE9"/>
+                                        <constraint firstAttribute="bottom" secondItem="JSV-8Q-j6h" secondAttribute="bottom" constant="26" id="eyy-KX-fZj"/>
+                                        <constraint firstItem="JSV-8Q-j6h" firstAttribute="leading" secondItem="azA-fh-abf" secondAttribute="leading" constant="20" id="gGT-ar-cd9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bioCell" rowHeight="173" id="9YJ-QA-Agm">
+                                <rect key="frame" x="0.0" y="317" width="320" height="173"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9YJ-QA-Agm" id="mqs-YC-gPu">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHJ-9z-Ppx">
+                                            <rect key="frame" x="20" y="0.0" width="280" height="153"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <string key="text">For the past 3 years, I have been Lead Developer at Rixty, Inc., an online payments platform, building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web, I have experience creating iOS and Android mobile apps.
+</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BHJ-9z-Ppx" firstAttribute="leading" secondItem="mqs-YC-gPu" secondAttribute="leading" constant="20" id="NVv-DJ-0g8"/>
+                                        <constraint firstAttribute="trailing" secondItem="BHJ-9z-Ppx" secondAttribute="trailing" constant="20" id="mm1-SZ-EzP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
