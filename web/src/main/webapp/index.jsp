@@ -88,7 +88,7 @@
                         <a href="https://twitter.com/DTHENG" title="Twitter Profile" target="_blank">Twitter</a>
                     </div>
                     <div class="large-2 medium-2 small-4 hide-for-small columns">
-                        <a href="https://www.facebook.com/daniel.thengvall" title="Facebook Profile" target="_blank">Facebook</a>
+                        <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank">Instagram</a>
                     </div>
                 </div>
 
