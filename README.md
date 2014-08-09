@@ -4,4 +4,4 @@ I am a self-taught multidisciplinary programer who has been coding for 10 years,
 
 <a href="http://dtheng.com" target="_blank">dtheng.com</a>
 
-`version 1.13`
+`version 1.14`
