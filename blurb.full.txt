@@ -1,1 +1,0 @@
-Daniel Thengvall is a self-taught multidisciplinary programer who has been coding for 10 years, for the past 3 he has been the lead developer at Rixty, Inc. an online payments platform. Daniel has experience writing in java, obj-c, go, js, php and the android sdk. github.com/DTHENG 
