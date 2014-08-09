@@ -54,7 +54,7 @@
                             building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web,
                             I have experience creating iOS and Android mobile apps.</p>
                         <h4>&#160;</h4>
-                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 76KB)</a></p>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);">Resume (PDF, 76KB)</a></p>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
@@ -73,22 +73,22 @@
                 <!-- OUTRO LINKS -->
                 <div class="row links-group">
                     <div class="large-2 medium-2 small-4 columns">
-                        <a href="https://github.com/DTHENG" target="_blank">GitHub</a>
+                        <a href="https://github.com/DTHENG" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">GitHub</a>
                     </div>
                     <div class="large-2 medium-2 small-4 columns">
-                        <a href="http://lnkd.in/bD6S_7J" title="LinkedIn Profile" target="_blank">LinkedIn</a>
+                        <a href="http://lnkd.in/bD6S_7J" title="LinkedIn Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">LinkedIn</a>
                     </div>
                     <div class="large-2 medium-2 small-4 columns">
-                        <a href="https://angel.co/daniel-thengvall" title="AngelList Profile" target="_blank">AngelList</a>
+                        <a href="https://angel.co/daniel-thengvall" title="AngelList Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'AngelList']);">AngelList</a>
                     </div>
                     <div class="large-2 medium-2 small-4 hide-for-small columns">
-                        <a href="https://plus.google.com/+DanielThengvall" title="Google+ Profile" target="_blank">Google+</a>
+                        <a href="https://plus.google.com/+DanielThengvall" title="Google+ Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Google+']);">Google+</a>
                     </div>
                     <div class="large-2 medium-2 small-4 hide-for-small columns">
-                        <a href="https://twitter.com/DTHENG" title="Twitter Profile" target="_blank">Twitter</a>
+                        <a href="https://twitter.com/DTHENG" title="Twitter Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">Twitter</a>
                     </div>
                     <div class="large-2 medium-2 small-4 hide-for-small columns">
-                        <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank">Instagram</a>
+                        <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Instagram']);">Instagram</a>
                     </div>
                 </div>
 
