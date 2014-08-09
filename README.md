@@ -1,12 +1,7 @@
 ### Daniel Thengvall  
 
-I am a self-taught multidisciplinary programer who has been coding for 10 years, for the past 3 I have been Lead Developer at Rixty, Inc., an online payments platform. I have experience writing in many languages such as java, objective-c, go and the android sdk.  
+For the past 3 years, I have been Lead Developer at Rixty, Inc., an online payments platform, building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web, I have experience creating iOS and Android mobile apps. [Resume (PDF, 76 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf)
 
-* * *
+<a href="http://dtheng.com" target="_blank">dtheng.com</a>
 
-- Download Resume [(PDF, 631 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf) or [(PDF compressed, 78 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume_compressed.pdf)
-- [View Resume](https://github.com/DTHENG/resume/blob/master/resume.txt)
-- [AngelList Profile](https://angel.co/daniel-thengvall)
-- [LinkedIn Profile](http://lnkd.in/bD6S_7J)
-
-`version 1.11`
+`version 1.17`
