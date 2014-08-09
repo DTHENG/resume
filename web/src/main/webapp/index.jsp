@@ -5,11 +5,11 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DTHENG</title>
-        <link href="/static/css/foundation.min.css" rel="stylesheet" media="screen">
-        <link href="/static/css/normalize.css" rel="stylesheet" media="screen">
+        <link href="https://s3.amazonaws.com/dtheng.com/foundation.min.css" rel="stylesheet" media="screen">
+        <link href="https://s3.amazonaws.com/dtheng.com/normalize.css" rel="stylesheet" media="screen">
         <link href="/static/css/dtheng.css" rel="stylesheet" media="screen">
-        <script src="/static/js/vendor/modernizr.js"></script>
-        <script src="/static/js/vendor/custom.modernizr.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/modernizr.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/custom.modernizr.js"></script>
     </head>
     <body>
         <div class="row">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="large-4 medium-4 small-4 columns">
                         <h1>&#160;</h1>
-                        <img src="/static/profile.png"/>
+                        <img src="https://s3.amazonaws.com/dtheng.com/profile.png"/>
                     </div>
                     <div class="small-2 columns">
                         <h4>&#160;</h4>
@@ -108,12 +108,12 @@
                 <h4>&#160;</h4>
             </div>
         </div>
-        <script src="/static/js/vendor/jquery.js"></script>
-        <script src="/static/js/vendor/foundation.min.js"></script>
-        <script src="/static/js/vendor/fastclick.js"></script>
-        <script src="/static/js/vendor/placeholder.js"></script>
-        <script src="/static/js/vendor/jquery.autocomplete.js"></script>
-        <script src="/static/js/vendor/jquery.cookie.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/jquery.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/foundation.min.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/fastclick.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/placeholder.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/jquery.autocomplete.js"></script>
+        <script src="https://s3.amazonaws.com/dtheng.com/jquery.cookie.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
