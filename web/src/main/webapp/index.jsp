@@ -53,12 +53,24 @@
                         <p>I am a self-taught multidisciplinary programer who has been coding for 10 years,
                             for the past 3 I have been Lead Developer at Rixty, Inc., an online payments platform.
                             I have experience writing in many languages such as java, objective-c, go and the android sdk.</p>
-                        <p><a href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 78KB)</a></p>
+                        <h4>&#160;</h4>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf">Resume (PDF, 78KB)</a></p>
+                        <h4>&#160;</h4>
+                        <h4>&#160;</h4>
                         <h4>&#160;</h4>
                     </div>
                 </div>
 
-                <!-- INTRO LINKS -->
+                <!-- SKILLS -->
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h4><strong>Skills</strong></h4>
+                        <p>Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML, Ajax, CSS, Javascript, Illustrator, Photoshop, InDesign, Intellij, Eclipse, Android Studio, Unix Shell Programming,  EC2,  S3,  J2EE, JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, DynamoDB, Continuous Integration, Git, Paypal APIs, Google Maps API, Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</p>
+                        <h1>&#160;</h1>
+                    </div>
+                </div>
+
+                <!-- OUTRO LINKS -->
                 <div class="row links-group">
                     <div class="large-2 medium-2 small-4 columns">
                         <a href="https://github.com/DTHENG" target="_blank">GitHub</a>
@@ -80,23 +92,8 @@
                     </div>
                 </div>
 
-                <!-- SKILLS -->
-                <div class="row">
-                    <div class="small-12 columns">
-                        <h1>&#160;</h1>
-                        <h1>&#160;</h1>
-                        <h4 style="text-align:center"><strong>Skills</strong></h4>
-                        <p style="text-align:center">Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML,
-                            Ajax, CSS, Javascript, Illustrator, Photoshop, InDesign, Intellij,
-                            Eclipse, Android Studio, Unix Shell Programming,  EC2,  S3,  J2EE,
-                            JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, DynamoDB,
-                            Continuous Integration, Git, Paypal APIs, Google Maps API,
-                            Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</p>
-                        <h1>&#160;</h1>
-                        <h1>&#160;</h1>
-                    </div>
-                </div>
                 <h1>&#160;</h1>
+
             </div>
             <div class="large-1 medium-1 small-1 columns">
                 <h4>&#160;</h4>
