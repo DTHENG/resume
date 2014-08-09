@@ -1,19 +1,32 @@
 Daniel Thengvall
 
-For the past 3 years, I have been Lead Developer at Rixty, Inc., an online payments platform, building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web, I have experience creating iOS and Android mobile apps.
+For the past 3 years, I have been Lead Developer at Rixty, Inc., an
+online payments platform, building web apps for companies like
+Microsoft, Coinstar and Skrill. Along with building for web, I
+have experience creating iOS and Android mobile apps.
+
 
 Your company
 2014
-I am looking for a company with passion for their product and an ambitious vision for the future.
+I am looking for a company with passion for their product and
+an ambitious vision for the future.
 
 Rixty, Inc.
 2011
-As Lead Developer, I handled things like api integration's, product localization, and internal CRM tools. I played a key role in the design and development of new products and features, including integrations with companies like Coinstar, Skrill and Microsoft.
-In 2012 Rixty was purchased by MOL, a Malaysian online payments company, this allowed for rapid international expansion in latin america and south east asia. Building on an open-source java stack running in EC2, I worked to improve the efficiency and performance with new tools like elastic search as well as other enhancements to the platform.
+As Lead Developer, I handled things like api integration's,
+product localization, and internal CRM tools. I played a key role
+in the design and development of new products and features,
+including integrations with companies like Coinstar, Skrill and Microsoft.
+In 2012 Rixty was purchased by MOL, a Malaysian online
+payments company, this allowed for rapid international expansion
+in latin america and south east asia. Building on an open-source
+java stack running in EC2, I worked to improve the efficiency and
+performance with new tools like elastic search as well as other
+enhancements to the platform.
 
 Art Institute
-Advertising major
 2008
+Advertising major
 
 Started coding
 2004
