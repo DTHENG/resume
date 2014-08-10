@@ -34,7 +34,7 @@
                     </div>
                     <div class="large-4 medium-4 small-4 columns">
                         <h1>&#160;</h1>
-                        <img src="https://s3.amazonaws.com/dtheng.com/profile.png"/>
+                        <img src="/static/profile.jpg" style="border-radius: 100%;padding:6px;"/>
                     </div>
                     <div class="small-2 columns">
                         <h4>&#160;</h4>
