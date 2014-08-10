@@ -23,6 +23,7 @@
 		7A9278EB1995561E0027D0B5 /* DTHENGTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9278EA1995561E0027D0B5 /* DTHENGTests.m */; };
 		7AA85F50199582F700611CB7 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA85F4F199582F700611CB7 /* BaseTableViewController.m */; };
 		7AA85F53199583B800611CB7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA85F52199583B800611CB7 /* HomeViewController.m */; };
+		7AC2E5971996FC6C0071BAB9 /* ResumeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC2E5961996FC6C0071BAB9 /* ResumeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		7AA85F4F199582F700611CB7 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		7AA85F51199583B800611CB7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		7AA85F52199583B800611CB7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		7AC2E5951996FC6C0071BAB9 /* ResumeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeTableViewController.h; sourceTree = "<group>"; };
+		7AC2E5961996FC6C0071BAB9 /* ResumeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				7AA85F4F199582F700611CB7 /* BaseTableViewController.m */,
 				7AA85F51199583B800611CB7 /* HomeViewController.h */,
 				7AA85F52199583B800611CB7 /* HomeViewController.m */,
+				7AC2E5951996FC6C0071BAB9 /* ResumeTableViewController.h */,
+				7AC2E5961996FC6C0071BAB9 /* ResumeTableViewController.m */,
 			);
 			path = DTHENG;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			files = (
 				7A9278CD1995561D0027D0B5 /* AppDelegate.m in Sources */,
 				7AA85F50199582F700611CB7 /* BaseTableViewController.m in Sources */,
+				7AC2E5971996FC6C0071BAB9 /* ResumeTableViewController.m in Sources */,
 				7A9278C91995561D0027D0B5 /* main.m in Sources */,
 				7AA85F53199583B800611CB7 /* HomeViewController.m in Sources */,
 			);

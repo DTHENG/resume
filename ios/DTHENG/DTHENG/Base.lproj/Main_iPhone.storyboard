@@ -88,19 +88,90 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resumeLink" textLabel="yF6-lU-yRm" rowHeight="44" style="IBUITableViewCellStyleDefault" id="jqi-bK-BSb">
+                                <rect key="frame" x="0.0" y="490" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jqi-bK-BSb" id="0yF-hX-zsE">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Resume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yF6-lU-yRm">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cyan="0.66000000000000003" magenta="0.20000000000000001" yellow="1" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" cyan="0.66000000000000003" magenta="0.20000000000000001" yellow="1" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <connections>
+                                    <segue destination="8he-IZ-RuZ" kind="push" id="FG5-D0-s0q"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="socialLink" textLabel="Xnt-V4-WSh" rowHeight="44" style="IBUITableViewCellStyleDefault" id="lND-b2-zZ3">
+                                <rect key="frame" x="0.0" y="534" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lND-b2-zZ3" id="Rr2-Rq-d2Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="link" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xnt-V4-WSh">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cyan="0.66000000000000003" magenta="0.20000000000000001" yellow="1" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="tintColor" cyan="0.66000000000000003" magenta="0.20000000000000001" yellow="1" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="L42-Zl-t4x" id="4C4-x1-i6H"/>
                             <outlet property="delegate" destination="L42-Zl-t4x" id="ltG-0r-gT9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DTHENG" id="Q6b-vn-J6t"/>
+                    <navigationItem key="navigationItem" title="DTHENG" id="Q6b-vn-J6t">
+                        <barButtonItem key="backBarButtonItem" title="  " id="Zfe-uq-JTd"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBy-ti-9qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="67" y="62"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="FWA-1t-zTl">
+            <objects>
+                <tableViewController id="8he-IZ-RuZ" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SnU-gP-QMU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Vzz-n6-svh">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vzz-n6-svh" id="8HR-OC-zWg">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8he-IZ-RuZ" id="cbn-tn-tAx"/>
+                            <outlet property="delegate" destination="8he-IZ-RuZ" id="uJJ-Cm-SdL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aPb-xo-9pY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTc-lR-TXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="513" y="62"/>
+        </scene>
     </scenes>
+    <color key="tintColor" cyan="0.66000000000000003" magenta="0.20000000000000001" yellow="1" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
