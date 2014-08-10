@@ -9,7 +9,7 @@
 @implementation HomeViewController
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 7;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -22,51 +22,21 @@
 
             return cell;
         }
-            
         case 1:
-            return [tableView dequeueReusableCellWithIdentifier:@"nameCell" forIndexPath:indexPath];
-        case 2: {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bioCell" forIndexPath:indexPath];
-
-            UIView *imgView = [[UIView alloc] init];
-            imgView.backgroundColor = [UIColor lightGrayColor];
-            imgView.alpha = 0.2f;
-            imgView.frame = CGRectMake(0, cell.frame.size.height, cell.frame.size.width, 1);
-            [cell.contentView addSubview:imgView];
-
-            return cell;
-        }
-        case 3: {
-            
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"resumeLink" forIndexPath:indexPath];
-            
-            UIView *imgView = [[UIView alloc] init];
-            imgView.backgroundColor = [UIColor lightGrayColor];
-            imgView.alpha = 0.2f;
-            imgView.frame = CGRectMake(0, cell.frame.size.height, cell.frame.size.width, 1);
-            [cell.contentView addSubview:imgView];
-            
-            
-            return cell;
-        }
+            return [tableView dequeueReusableCellWithIdentifier:@"resumeLink" forIndexPath:indexPath];
+        
         default: {
             
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"socialLink" forIndexPath:indexPath];
             
-            UIView *imgView = [[UIView alloc] init];
-            imgView.backgroundColor = [UIColor lightGrayColor];
-            imgView.alpha = 0.2f;
-            imgView.frame = CGRectMake(0, cell.frame.size.height, cell.frame.size.width, 1);
-            [cell.contentView addSubview:imgView];
-            
             switch (indexPath.row) {
-                case 4:
+                case 2:
                     cell.textLabel.text = @"GitHub";
                     break;
-                case 5:
+                case 3:
                     cell.textLabel.text = @"AngelList";
                     break;
-                case 6:
+                case 4:
                     cell.textLabel.text = @"LinkedIn";
             }
             
@@ -80,14 +50,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
-        case 4:
+        case 2:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/DTHENG"]];
             break;
-        case 5:
+        case 3:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://angel.co/daniel-thengvall"]];
             break;
-        case 6:
+        case 4:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://lnkd.in/bD6S_7J"]];
     }
 }
@@ -95,11 +66,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-            return 158;
-        case 1:
-            return 73;
-        case 2:
-            return 173;
+            return 386;
         default:
             return 44;
     }
