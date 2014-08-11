@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="small-12 columns">
                         <h4><strong>Skills</strong></h4>
-                        <p>Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML, Ajax, CSS, Javascript, Illustrator, Photoshop, InDesign, Intellij, Eclipse, Android Studio, Unix Shell Programming,  EC2,  S3,  J2EE, JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, DynamoDB, Continuous Integration, Git, Paypal APIs, Google Maps API, Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</p>
+                        <p>Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML, Ajax, CSS, Javascript, jQuery,  Distributed Systems,  Saas,  CRM,  Illustrator, Photoshop, InDesign, Intellij, Eclipse, Android Studio, Unix Shell Programming,  EC2,  S3,  J2EE, JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, DynamoDB, Continuous Integration, Git, Paypal APIs, Google Maps API, Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</p>
                         <h1>&#160;</h1>
                     </div>
                 </div>
