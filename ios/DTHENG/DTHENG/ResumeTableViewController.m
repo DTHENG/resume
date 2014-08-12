@@ -15,11 +15,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-            return 162;
+            return 170;
         case 1:
-            return 400;
+            return 440;
+        case 4:
+            return 300;
         default:
-            return 100;
+            return 120;
     }
 }
 
@@ -35,7 +37,7 @@
         case 3:
             return [tableView dequeueReusableCellWithIdentifier:@"startedCodingCellPrototype" forIndexPath:indexPath];
         default:
-            return [tableView dequeueReusableCellWithIdentifier:@"artSchoolCellPrototype" forIndexPath:indexPath];
+            return [tableView dequeueReusableCellWithIdentifier:@"skillsCellPrototype" forIndexPath:indexPath];
 
 
     }

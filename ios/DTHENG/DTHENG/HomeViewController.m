@@ -9,7 +9,7 @@
 @implementation HomeViewController
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -24,19 +24,21 @@
         }
         case 1:
             return [tableView dequeueReusableCellWithIdentifier:@"resumeLink" forIndexPath:indexPath];
+        case 2:
+            return [tableView dequeueReusableCellWithIdentifier:@"blank" forIndexPath:indexPath];
         
         default: {
             
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"socialLink" forIndexPath:indexPath];
             
             switch (indexPath.row) {
-                case 2:
+                case 3:
                     cell.textLabel.text = @"GitHub";
                     break;
-                case 3:
+                case 4:
                     cell.textLabel.text = @"AngelList";
                     break;
-                case 4:
+                case 5:
                     cell.textLabel.text = @"LinkedIn";
             }
             
@@ -52,13 +54,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
-        case 2:
+        case 3:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/DTHENG"]];
             break;
-        case 3:
+        case 4:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://angel.co/daniel-thengvall"]];
             break;
-        case 4:
+        case 5:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://lnkd.in/bD6S_7J"]];
     }
 }
@@ -67,8 +69,10 @@
     switch (indexPath.row) {
         case 0:
             return 386;
+        case 2:
+            return 5;
         default:
-            return 44;
+            return 60;
     }
 }
 @end
