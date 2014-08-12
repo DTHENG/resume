@@ -8,6 +8,19 @@
 
 @implementation HomeViewController
 
+- (IBAction)sendMessage:(id)sender {
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:@"Hello Daniel!"];
+    [mc setMessageBody:@"Love your resume! Lets schedule a time to chat!" isHTML:YES];
+    [mc setToRecipients:[NSArray arrayWithObject:@"fender5289@gmail.com"]];
+    [self presentViewController:mc animated:YES completion:NULL];
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 6;
 }

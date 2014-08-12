@@ -124,6 +124,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="DTHENG" id="RB8-Vb-h9R">
                         <barButtonItem key="backBarButtonItem" title="  " id="jEj-kO-xbl"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="wgv-Jp-BsC">
+                            <connections>
+                                <action selector="sendMessage:" destination="kiy-10-WVZ" id="fAf-TS-vXb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGY-sf-akf" userLabel="First Responder" sceneMemberID="firstResponder"/>
