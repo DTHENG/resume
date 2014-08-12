@@ -1,0 +1,16 @@
+a {
+    color: #669900;
+}
+
+a:hover, a:focus {
+    color: #5a7f00;
+}
+
+.links-group a {
+    width:100%;
+    text-align:center;
+}
+
+p {
+    font-size:0.95rem;
+}
