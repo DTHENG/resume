@@ -38,7 +38,7 @@ Java,  PHP,  Objective-C,  Go,  Android SDK,  HTML,  DHTML,  XHTML,
 Ajax,  CSS,  Javascript,  jQuery,  Distributed Systems,  Saas,  CRM,
 Illustrator,  Photoshop,  InDesign,  Intellij,  Eclipse,  Android Studio,
 Unix Shell Programming,  EC2,  S3,  J2EE,  JSP,  Servlets,  JavaBeans,
-XML,  Ajax,  JSON,  Maven,  Ant,  MySQL,  DynamoDB,  Continuous Integration,
+XML,  Ajax,  JSON,  Maven,  Ant,  MySQL,  ORM,  DynamoDB,  Continuous Integration,
 Git,  Xcode,  Paypal APIs,  Google Maps API,  Microsoft APIs,  Facebook APIs,
 Twitter APIs,  Amazon APIs
 
