@@ -289,7 +289,7 @@ In 2012 Rixty was purchased by MOL, a Malaysian online payments company, this al
                                             <rect key="frame" x="20" y="58" width="280" height="222"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <string key="text">Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML, Ajax, CSS, Javascript, Illustrator, Photoshop, InDesign, Intellij, Eclipse, Android Studio, Unix Shell Programming, EC2, S3, J2EE, JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, DynamoDB, Continuous Integration, Git, Paypal APIs, Google Maps API, Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</string>
+                                            <string key="text">Java, PHP, Objective-C, Go, Android SDK, HTML, DHTML, XHTML, Ajax, CSS, Javascript, Illustrator, Photoshop, InDesign, Intellij, Eclipse, Android Studio, Unix Shell Programming, EC2, S3, J2EE, JSP, Servlets, JavaBeans, XML, Ajax, Maven, Ant, MySQL, ORM, DynamoDB, Continuous Integration, Git, Paypal APIs, Google Maps API, Microsoft APIs, Facebook APIs, Twitter APIs, Amazon APIs</string>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
