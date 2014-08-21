@@ -4,4 +4,4 @@ I am a developer/maker/hacker living in San Francisco. Previously worked [@rixty
 
 <a href="http://dtheng.com" target="_blank">dtheng.com</a>
 
-`version 1.24`
+`version 1.25`
