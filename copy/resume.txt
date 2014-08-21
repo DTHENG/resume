@@ -2,8 +2,9 @@ Daniel Thengvall
 
 I am a developer/hacker/maker living in San Francisco. Previously I
 worked @rixty, building stunning web apps for @microsoft, @coinstar
-and @skrill. Along with building for web, I also have experience
-creating iOS and Android apps.
+and @skrill. Along with creating for web, I also have experience
+developing iOS and Android apps.
+
 
 
 Your company

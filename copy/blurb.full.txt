@@ -1,4 +1,4 @@
 Daniel is a developer/hacker/maker living in San Francisco. Previously
 he worked @rixty, building stunning web apps for @microsoft, @coinstar
-and @skrill. Along with building for web, he also has experience
-creating iOS and Android apps.
+and @skrill. Along with creating for web, he also has experience
+developing iOS and Android apps.
