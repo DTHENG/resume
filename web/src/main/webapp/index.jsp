@@ -57,7 +57,7 @@
                             <a href="https://twitter.com/skrill" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Skrill Twitter']);">@skrill</a>.
                             Along with creating for web, I also have experience developing iOS and Android apps.</p>
                         <h4>&#160;</h4>
-                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank"onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);" >Resume (PDF, 76KB)</a></p>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank"onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);" >Resume (PDF, 77KB)</a></p>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
