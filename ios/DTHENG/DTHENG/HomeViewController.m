@@ -68,7 +68,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row) {
         case 3:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/DTHENG"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/DTHENG?tab=activity"]];
             break;
         case 4:
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://angel.co/daniel-thengvall"]];
