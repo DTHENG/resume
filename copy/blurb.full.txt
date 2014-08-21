@@ -1,4 +1,2 @@
-Daniel is a developer/maker/hacker living in San Francisco. Previously
-worked @rixty, building stunning web apps for @microsoft, @coinstar
-and @skrill. Along with creating for web, he also has experience
-developing iOS and Android apps.
+Daniel is a developer/maker/hacker living in San Francisco.
+Currently Senior Badass Engineer @some_company, previously @rixty.
