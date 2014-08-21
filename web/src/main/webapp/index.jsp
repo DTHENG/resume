@@ -50,11 +50,14 @@
                         <h4>&#160;</h4>
                         <h4 style="text-align:center"><strong>Daniel Thengvall</strong></h4>
                         <h4>&#160;</h4>
-                        <p>For the past 3 years, I have been Lead Developer at Rixty, Inc., an online payments platform,
-                            building web apps for companies like Microsoft, Coinstar and Skrill. Along with building for web,
-                            I have experience creating iOS and Android mobile apps.</p>
+                        <p>I am a developer/maker/hacker living in San Francisco. Previously worked
+                            <a href="https://twitter.com/rixty" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Rixty Twitter']);">@rixty</a>, building
+                            stunning web apps for <a href="https://twitter.com/Microsoft" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Microsoft Twitter']);">@microsoft</a>,
+                            <a href="https://twitter.com/coinstar" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Coinstar twitter']);">@coinstar</a> and
+                            <a href="https://twitter.com/skrill" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Skrill Twitter']);">@skrill</a>.
+                            Along with creating for web, I also have experience developing iOS and Android apps.</p>
                         <h4>&#160;</h4>
-                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);">Resume (PDF, 76KB)</a></p>
+                        <p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank"onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);" >Resume (PDF, 77KB)</a></p>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
                         <h4>&#160;</h4>
