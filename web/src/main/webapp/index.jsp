@@ -76,7 +76,7 @@
                 <!-- OUTRO LINKS -->
                 <div class="row links-group">
                     <div class="large-2 medium-2 small-4 columns">
-                        <a href="https://github.com/DTHENG" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">GitHub</a>
+                        <a href="https://github.com/DTHENG?tab=activity" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">GitHub</a>
                     </div>
                     <div class="large-2 medium-2 small-4 columns">
                         <a href="http://lnkd.in/bD6S_7J" title="LinkedIn Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">LinkedIn</a>
@@ -94,9 +94,7 @@
                         <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Instagram']);">Instagram</a>
                     </div>
                 </div>
-
                 <h1>&#160;</h1>
-
             </div>
             <div class="large-1 medium-1 small-1 hide-for-small columns">
                 <h4>&#160;</h4>
