@@ -50,7 +50,7 @@
                         <h4>&#160;</h4>
                         <h4 style="text-align:center"><strong>Daniel Thengvall</strong></h4>
                         <h4>&#160;</h4>
-                        <p>I am a developer/hacker/maker living in San Francisco. Previously I worked
+                        <p>I am a developer/maker/hacker living in San Francisco. Previously I worked
                             <a href="https://twitter.com/rixty" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Rixty Twitter']);">@rixty</a>, building
                             stunning web apps for <a href="https://twitter.com/Microsoft" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Microsoft Twitter']);">@microsoft</a>,
                             <a href="https://twitter.com/coinstar" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Coinstar twitter']);">@coinstar</a> and
