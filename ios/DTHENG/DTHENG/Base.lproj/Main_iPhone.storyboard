@@ -51,7 +51,7 @@
                                             <rect key="frame" x="20" y="226" width="280" height="151"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <string key="text">I am a developer/hacker/maker living in San Francisco. Previously I worked @rixty, building stunning web apps for @microsoft, @coinstar and @skrill. Along with creating for web, I also have experience developing iOS 
+                                            <string key="text">I am a developer/maker/hacker living in San Francisco. Previously worked @rixty, building stunning web apps for @microsoft, @coinstar and @skrill. Along with creating for web, I also have experience developing iOS 
 and Android apps.</string>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
