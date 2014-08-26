@@ -1,4 +1,1 @@
-Daniel is a developer/maker/hacker living in San Francisco. Previously
-worked @rixty, building stunning web apps for @microsoft, @coinstar
-and @skrill. Along with creating for web, he also has experience
-developing iOS and Android apps.
+Daniel is the Lead Software Engineer @JoinSnapCard, lives in San Francisco, worked @rixty.
