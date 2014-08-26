@@ -50,9 +50,9 @@
                         <h4>&#160;</h4>
                         <h4 style="text-align:center"><strong>Daniel Thengvall</strong></h4>
                         <h4>&#160;</h4>
-                        <p>Daniel is a developer/maker/hacker living in San Francisco. Currently an engineer
+                        <p>Daniel is the Lead Software Engineer
                             <a href="https://twitter.com/JoinSnapCard" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Snapcard Twitter']);">@JoinSnapCard</a>,
-                            previously <a href="https://twitter.com/rixty" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Rixty Twitter']);">@rixty</a>.</p>
+                            lives in San Francisco, worked <a href="https://twitter.com/rixty" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Rixty Twitter']);">@rixty</a>.
                         <h4>&#160;</h4>
                         <!--<p><a class="download-resume button small success" href="https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf" target="_blank"onclick="_gaq.push(['_trackEvent', 'Links', 'Resume', 'PDF Download']);" >Resume (PDF, 77KB)</a></p>-->
                         <!--<h4>&#160;</h4>
