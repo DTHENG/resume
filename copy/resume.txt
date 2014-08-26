@@ -1,16 +1,18 @@
 Daniel Thengvall
 
-I am a developer/maker/hacker living in San Francisco. Previously
-worked @rixty, building stunning web apps for @microsoft, @coinstar
-and @skrill. Along with creating for web, I also have experience
-developing iOS and Android apps.
-
+I am a developer/maker/hacker living in San Francisco. Currently an
+engineer @JoinSnapCard, previously @rixty.
 
 
 Your company
-2014
+2025
 I am looking for a company with passion for their product and
 an ambitious vision for the future.
+
+SnapCard
+2014
+As Full Stack Engineer, I am responsible for platform enhancement and
+development.
 
 Rixty, Inc.
 2011
