@@ -1,6 +1,6 @@
 ### Daniel Thengvall  
 
-I am a developer/maker/hacker living in San Francisco. Previously worked [@rixty](https://twitter.com/rixty), building stunning web apps for [@microsoft](https://twitter.com/Microsoft), [@coinstar](https://twitter.com/coinstar) and [@skrill](https://twitter.com/skrill). Along with creating for web, I also have experience developing iOS and Android apps. [Resume (PDF, 77 KB)](https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf)
+I am a developer/maker/hacker living in San Francisco. Currently an engineer [@JoinSnapCard](https://twitter.com/joinsnapcard), previously [@rixty](https://twitter.com/rixty)
 
 <a href="http://dtheng.com" target="_blank">dtheng.com</a>
 
