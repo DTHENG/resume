@@ -4,4 +4,4 @@ I am the Lead Software Engineer [@JoinSnapCard](https://twitter.com/joinsnapcard
 
 <a href="http://dtheng.com" target="_blank">dtheng.com</a>
 
-`version 2.1`
+`version 2.2`
