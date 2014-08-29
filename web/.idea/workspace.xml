@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccfaab36-980a-42e7-b848-ee1d468ff3c3" name="Default" comment="simpler structure">
+    <list default="true" id="ccfaab36-980a-42e7-b848-ee1d468ff3c3" name="Default" comment="added linebreaks">
       <change type="DELETED" beforePath="$PROJECT_DIR$/../android/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../android/.idea/compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../android/.idea/copyright/profiles_settings.xml" afterPath="" />
@@ -98,7 +98,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-WebUtilTest.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/WebUtilTest.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/WebUtilTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
     </list>
     <ignored path="web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,8 +206,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22358723" vertical-offset="0" max-vertical-offset="485">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.095823094" vertical-offset="0" max-vertical-offset="498">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -468,7 +467,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -1028,7 +1027,7 @@
       <workItem from="1409029039986" duration="4973000" />
       <workItem from="1409098923982" duration="701000" />
       <workItem from="1409268809968" duration="215000" />
-      <workItem from="1409347229604" duration="425000" />
+      <workItem from="1409347229604" duration="534000" />
     </task>
     <task id="LOCAL-00001" summary="added readme to web directory">
       <created>1407713054186</created>
@@ -1130,19 +1129,27 @@
       <created>1409347554372</created>
       <updated>1409347554372</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="yet another gitignore bug">
+      <created>1409347670816</created>
+      <updated>1409347670816</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added linebreaks">
+      <created>1409347718148</created>
+      <updated>1409347718148</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26019000" />
+    <option name="totallyTimeSpent" value="26128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1183" height="1174" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60633487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60633487" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1212,7 +1219,9 @@
     <MESSAGE value="enforce gitignore" />
     <MESSAGE value="fixed issue with git ignore file" />
     <MESSAGE value="simpler structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="simpler structure" />
+    <MESSAGE value="yet another gitignore bug" />
+    <MESSAGE value="added linebreaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="added linebreaks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1677,8 +1686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22358723" vertical-offset="0" max-vertical-offset="485">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.095823094" vertical-offset="0" max-vertical-offset="498">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
