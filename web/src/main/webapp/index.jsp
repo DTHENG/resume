@@ -47,9 +47,8 @@
                 <!-- INTRO BLURB -->
                 <div class="row">
                     <div class="small-12 columns">
-                        <h4>&#160;</h4>
                         <h4 style="text-align:center"><strong>Daniel Thengvall</strong></h4>
-                        <h4>&#160;</h4>
+                        <h6 style="line-height:0">&#160;</h6>
                         <p>Daniel is the Lead Software Engineer
                             <a href="https://twitter.com/JoinSnapCard" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Snapcard Twitter']);">@JoinSnapCard</a>,
                             lives in San Francisco, worked <a href="https://twitter.com/rixty" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Blurb', 'Rixty Twitter']);">@rixty</a>.
