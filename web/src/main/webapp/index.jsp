@@ -71,34 +71,13 @@
                 -->
                 <!-- OUTRO LINKS -->
                 <div class="row links-group">
-                    <div class="large-2 medium-2 small-4 columns" style="padding:0">
+                    <div class="small-3 columns" style="padding:0">
                         <a href="https://github.com/DTHENG?tab=activity" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">
                        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
 <svg version="1.1" 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" 	 x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve"> <defs> </defs> <g> 	<path class="foreground" d="M38.3,16.9c-0.1-0.1-0.1-0.2-0.2-0.3c0,0-0.1-0.1-0.1-0.1c0.2-0.5,0.3-1.1,0.3-1.7c0-1.4-0.7-2.8-1.8-3.6 C36.3,11,36.1,11,35.8,11c-1.6,0-3.1,0.8-3.9,2.1c-3.1-1-6.5-1-9.7-0.1c-0.8-1.3-2.2-2.1-3.8-2.1c-0.4,0-0.7,0-1.1,0.1 c-0.2,0-0.3,0.1-0.4,0.2c-1,0.9-1.6,2.1-1.6,3.5c0,0.7,0.2,1.4,0.5,2c0,0,0,0.1-0.1,0.1c-0.8,1.7-1.3,3.7-1.3,5.5 c0,2,0.5,4.1,1.6,6c0.1,0.1,0.1,0.2,0.2,0.3c1.5,1.3,3.1,2.3,4.9,3c-0.3,0.4-0.6,0.8-0.7,1.2c-0.1,0.1-0.2,0.2-0.3,0.2 c-1.3,0.9-1.9,1.3-3.2,0.7c-1.5-0.7-2-1.6-2.4-2.3c-0.1-0.2-0.2-0.4-0.4-0.6c-0.7-1.1-1.9-1.9-3.2-2.5c-0.6-0.2-1.2,0-1.4,0.6 c-0.2,0.6,0,1.2,0.6,1.4c1.3,0.5,2,1.3,2.2,1.7c0.1,0.1,0.2,0.3,0.2,0.4c0.5,0.8,1.2,2.2,3.4,3.2c0.7,0.3,1.4,0.5,2,0.5 c0.9,0,1.6-0.3,2.2-0.6v3.7c0,0.6-0.2,1.3-1.6,1.6c-0.6,0.1-1,0.7-0.8,1.3c0.1,0.5,0.6,0.9,1.1,0.9c0.1,0,0.2,0,0.2,0 c2.1-0.5,3.3-1.9,3.3-3.8V34c0-0.4,0.6-1.1,1.1-1.5c0.2,0,0.4,0.1,0.5,0.1v8c0,0.4-0.5,1.2-1,1.4c-0.5,0.3-0.8,0.9-0.5,1.5 c0.2,0.4,0.6,0.6,1,0.6c0.2,0,0.3,0,0.5-0.1c1.1-0.6,2.2-2.2,2.2-3.4v-7.7c0.2,0,0.5,0,0.7,0c0.3,0,0.6,0,0.9,0V40 c0,1.6,1,3,1.9,3.8c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.6-0.1,0.8-0.4c0.4-0.5,0.3-1.2-0.1-1.6c-0.6-0.5-1.1-1.3-1.1-2.1v-7.5 c0.2,0,0.3-0.1,0.5-0.1c0.8,0.9,1.4,1.8,1.4,2.6c0,0.6,0,1.2-0.1,1.7c-0.1,1.6-0.2,3,0.1,3.9c0.4,1.5,2.2,2.2,2.4,2.3 c0.1,0.1,0.3,0.1,0.4,0.1c0.4,0,0.9-0.3,1-0.7c0.2-0.6,0-1.2-0.6-1.4c-0.3-0.1-1-0.5-1.1-0.9c-0.2-0.5-0.1-2,0-3.2 c0-0.6,0.1-1.2,0.1-1.8c0-1.2-0.6-2.3-1.3-3.3c1.7-0.7,3.4-1.7,4.8-2.9c0.1-0.1,0.2-0.2,0.2-0.3c1-1.9,1.6-4,1.6-6 C39.6,20.6,39.1,18.7,38.3,16.9z M36.2,27.3c-2.5,2.2-5.8,3.4-9.1,3.4c-3.4,0-6.6-1.2-9.1-3.4c-0.8-1.5-1.2-3.2-1.2-4.8 c0-1.4,0.4-3,1-4.4c0.1-0.1,0.2-0.2,0.3-0.2c0.5-0.4,0.5-1.1,0.2-1.5c-0.3-0.5-0.6-1.1-0.6-1.5c0-0.6,0.2-1.2,0.7-1.6 c1.1-0.1,2.1,0.5,2.5,1.5c0.1,0.3,0.3,0.5,0.6,0.7c0.3,0.1,0.6,0.1,0.9,0c3.2-1.2,6.8-1.2,10,0.1c0.3,0.1,0.6,0.1,0.9,0 c0.3-0.1,0.5-0.4,0.6-0.7c0.2-0.8,1-1.4,1.9-1.6c0.4,0.4,0.6,1,0.6,1.6c0,0.5-0.2,0.9-0.4,1.3c-0.3,0.5-0.3,1.1,0.2,1.5 c0.2,0.1,0.4,0.3,0.5,0.5c0.6,1.4,1,2.9,1,4.4C37.4,24.1,37,25.7,36.2,27.3z"/> 	<rect fill="none" width="55" height="55"/> </g> </svg>
                         </a>
                     </div>
-                    <div class="large-2 medium-2 small-4 columns" style="padding:0">
-                        <a href="http://lnkd.in/bD6S_7J" title="LinkedIn Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">
-                        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
-<defs>
-</defs>
-<g>
-	<g>
-		<path class="foreground" d="M12.8,17.9v-4.7h5.7v4.7H12.8z M18.4,21.1v20.6h-5.7V21.1H18.4z"/>
-		<path class="foreground" d="M28.3,21.1V24h0.1c0.7-1.2,1.6-2.1,2.8-2.6c1.1-0.5,2.3-0.8,3.5-0.8c1.5,0,2.8,0.2,3.7,0.6c1,0.4,1.7,1,2.3,1.7
-			c0.6,0.7,1,1.6,1.2,2.7c0.2,1.1,0.3,2.2,0.3,3.5v12.7h-5.7V30.1c0-1.7-0.3-3-0.8-3.8c-0.5-0.8-1.5-1.3-2.8-1.3
-			c-1.5,0-2.7,0.5-3.4,1.4c-0.7,0.9-1,2.4-1,4.5v10.8h-5.7V21.1H28.3z"/>
-	</g>
-	<rect fill="none" width="55" height="55"/>
-</g>
-</svg>
-
-                        </a>
-                    </div>
-                    <div class="large-2 medium-2 small-4 columns" style="padding:0">
+                    <div class="small-3 columns" style="padding:0">
                     
                         <a href="https://angel.co/daniel-thengvall" title="AngelList Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'AngelList']);">
                         <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
@@ -128,34 +107,7 @@
 </svg>
                         </a>
                     </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns" style="padding:0">
-                    
-                        <a href="https://plus.google.com/+DanielThengvall" title="Google+ Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Google+']);">
-                        <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
-<svg version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
-<defs>
-</defs>
-<g>
-	<g>
-		<path class="foreground" d="M26.3,34.3c-0.2,0.9-0.6,1.7-1.2,2.5c-0.6,0.8-1.5,1.4-2.7,1.9c-1.2,0.5-2.7,0.8-4.7,0.8c-0.8,0-1.7-0.1-2.6-0.3
-			c-0.9-0.2-1.7-0.5-2.4-1c-0.7-0.4-1.3-1-1.8-1.7c-0.5-0.7-0.7-1.5-0.8-2.5h4.7c0.2,0.9,0.6,1.5,1.3,1.8c0.6,0.3,1.4,0.5,2.2,0.5
-			c1.3,0,2.3-0.4,2.9-1.2c0.6-0.8,0.9-1.8,0.9-3v-2.2h-0.1c-0.5,0.9-1.2,1.6-2.2,2c-0.9,0.4-1.9,0.6-3,0.6c-1.3,0-2.4-0.2-3.3-0.7
-			c-0.9-0.5-1.7-1.1-2.3-1.9c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.2-0.4-3.3c0-1.1,0.2-2.2,0.5-3.2c0.3-1,0.8-1.9,1.4-2.7
-			c0.6-0.8,1.4-1.4,2.3-1.9c0.9-0.5,2-0.7,3.2-0.7c1.1,0,2.1,0.2,3,0.6c0.8,0.4,1.6,1.1,2.1,2.1h0.1V16h4.5v16
-			C26.6,32.6,26.5,33.4,26.3,34.3z M19.9,28.6c0.5-0.3,0.9-0.6,1.3-1.1c0.3-0.4,0.6-0.9,0.7-1.5c0.2-0.6,0.2-1.2,0.2-1.8
-			c0-0.7-0.1-1.4-0.2-2c-0.1-0.6-0.4-1.2-0.7-1.7c-0.3-0.5-0.7-0.9-1.2-1.2c-0.5-0.3-1.1-0.4-1.9-0.4c-0.7,0-1.2,0.1-1.7,0.4
-			c-0.5,0.3-0.9,0.6-1.2,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.2-0.2,1.8c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.3,1.2,0.6,1.6
-			c0.3,0.5,0.7,0.9,1.2,1.2c0.5,0.3,1.1,0.5,1.8,0.5C18.8,29,19.4,28.9,19.9,28.6z"/>
-		<path class="foreground" d="M45.3,22.9v3.5h-6.6v6.6h-3.5v-6.6h-6.6v-3.5h6.6v-6.6h3.5v6.6H45.3z"/>
-	</g>
-	<rect fill="none" width="55" height="55"/>
-</g>
-</svg>
-                        </a>
-                    </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns" style="padding:0">
+                    <div class="small-3 columns" style="padding:0">
                          <a href="https://twitter.com/DTHENG" title="Twitter Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">
                         <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
 <svg version="1.1"
@@ -179,7 +131,7 @@
 </svg>
                         </a>
                     </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns" style="padding:0">
+                    <div class="small-3 columns" style="padding:0">
                         <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Instagram']);">
                         <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
 <svg style="width:55px;display:block;margin:0 auto;" version="1.1"
@@ -199,22 +151,16 @@
                     </div>
                 </div>
                 <div class="row links-group">
-                    <div class="large-2 medium-2 small-4 columns">
+                    <div class="small-3 columns">
                         <a class="link" href="https://github.com/DTHENG?tab=activity" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">GitHub</a>
                     </div>
-                    <div class="large-2 medium-2 small-4 columns">
-                        <a class="link" href="http://lnkd.in/bD6S_7J" title="LinkedIn Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'LinkedIn']);">LinkedIn</a>
-                    </div>
-                    <div class="large-2 medium-2 small-4 columns">
+                    <div class="small-3 columns">
                         <a class="link" href="https://angel.co/daniel-thengvall" title="AngelList Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'AngelList']);">AngelList</a>
                     </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns">
-                        <a class="link" href="https://plus.google.com/+DanielThengvall" title="Google+ Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Google+']);">Google+</a>
-                    </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns">
+                    <div class="small-3 columns">
                         <a class="link" href="https://twitter.com/DTHENG" title="Twitter Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Twitter']);">Twitter</a>
                     </div>
-                    <div class="large-2 medium-2 small-4 hide-for-small columns">
+                    <div class="small-3 columns">
                         <a class="link" href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Instagram']);">Instagram</a>
                     </div>
                 </div>
