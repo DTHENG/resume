@@ -1,9 +1,10 @@
 a {
-    color: #669900;
+    color: #66A3B2;
+    text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #5a7f00;
+    color: #588C99;
 }
 
 .links-group a.link {
@@ -15,6 +16,7 @@ a:hover, a:focus {
 
 p {
     font-size:0.95rem;
+    line-height:1.6rem;
 }
 
 button.success, .button.success {
@@ -37,11 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 svg {   
-    margin: 0 auto 10px auto;
+    margin: 0 auto 8px auto;
     width: 55px;
     display:block;
 }
 
 svg .foreground {
-    fill: #DEE0DA;
+    fill: #E7F0F2;
 }
