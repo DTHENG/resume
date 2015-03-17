@@ -8,6 +8,10 @@ else
     read SERVER
 fi
 
+echo -e "\x1b[34mWhat release? : "
+read RELEASE
+tput sgr0
+
 ACTIVE_PROCESS_PID="0"
 PORT=80
 
@@ -18,15 +22,17 @@ fi
 
 function uploadFile {
     cd ~/resume/web/target
-    scp dtheng.war root@$SERVER:resume/webapps
+    echo -e "\x1b[34m"
+    scp dtheng-$RELEASE.war root@$SERVER:resume/webapps/dtheng.war
+    tput sgr0
 }
 
 function buildWarFile {
     cd ~/resume/web
     source ~/.profile
+    echo -e "\x1b[34m"
     mvn clean test compile war:war
-    cd target
-    mv dtheng-3.0.war dtheng.war
+    tput sgr0
 }
 
 function parseLine {	
@@ -73,9 +79,10 @@ function run {
     echo "Uploading war file to $SERVER"
     uploadFile
     readOutput
-    echo "Restarting app on http://$SERVER:$PORT/"
+    echo -e "Restarting app on http://\x1b[1m$SERVER\033[00m:\x1b[36m$PORT\033[00m/"
     restartApp
-    echo "Done."
+    echo -e "\x1b[1mDone!"
+    tput sgr0
 }
 
 run

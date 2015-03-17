@@ -2,8 +2,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dtheng</groupId>
     <artifactId>dtheng</artifactId>
-    <version>3.0</version>
-    <name>Skeleton4j - a sleek, intuitive, and powerful java foundation for faster and easier web development</name>
+    <version>2.5.3</version>
+    <name>DTHENG</name>
     <url>http://dtheng.com</url>
     <properties>
         <test>*</test>
