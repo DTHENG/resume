@@ -1,10 +1,10 @@
 a {
-    color: #66A3B2;
+    color: #2980b9;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #588C99;
+    color: #236f99;
 }
 
 .links-group a.link {
@@ -45,5 +45,5 @@ svg {
 }
 
 svg .foreground {
-    fill: #E7F0F2;
+    fill: #2980b9;
 }
