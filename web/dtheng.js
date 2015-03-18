@@ -27,7 +27,8 @@ app.get('/', function (req, res) {
         twitter_link: 'https://twitter.com/DTHENG',
         instagram_link: 'http://instagram.com/dtheng',
         snapcard_link: 'https://twitter.com/JoinSnapCard',
-        rixty_link: 'https://twitter.com/rixty'   
+        rixty_link: 'https://twitter.com/rixty',
+        ga_id: 'UA-18339357-1'   
     }
   )
 })
