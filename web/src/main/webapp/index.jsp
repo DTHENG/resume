@@ -58,7 +58,7 @@
         
                                 <!-- OUTRO LINKS -->
                                 <div class="row links-group">
-                                    <div class="small-4 medium-3 columns" style="padding:0">
+                                    <div class="small-4 medium-3 columns">
                                         <a href="https://github.com/DTHENG?tab=activity" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'GitHub']);">
                                             <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
                                             <svg version="1.1" 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" 	 x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
@@ -69,7 +69,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <div class="small-4 medium-3 columns" style="padding:0">
+                                    <div class="small-4 medium-3 columns">
                                         <a href="https://angel.co/daniel-thengvall" title="AngelList Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'AngelList']);">
                                             <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
                                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
@@ -91,10 +91,10 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <div class="small-4 medium-3 columns" style="padding:0">
+                                    <div class="small-4 medium-3 columns">
                                         <a href="http://instagram.com/dtheng" title="Instagram Profile" target="_blank" onclick="_gaq.push(['_trackEvent', 'Links', 'Social', 'Instagram']);">
                                             <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
-                                            <svg style="width:55px;display:block;margin:0 auto;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="55px" height="55px" viewBox="0 0 55 55" enable-background="new 0 0 55 55" xml:space="preserve">
                                                 <g>
                                                     <path class="foreground" d="M39.1,12.7H15.9c-1.9,0-3.5,1.6-3.5,3.5v22.7c0,1.9,1.6,3.5,3.5,3.5h23.2c1.9,0,3.5-1.6,3.5-3.5V16.2 C42.6,14.2,41,12.7,39.1,12.7z M27.5,21.3c3.4,0,6.2,2.8,6.2,6.2s-2.8,6.2-6.2,6.2s-6.2-2.8-6.2-6.2S24.1,21.3,27.5,21.3z M39.6,39.3H15.4V24.9h3.2c-0.2,0.8-0.4,1.7-0.4,2.6c0,5.1,4.1,9.2,9.2,9.2s9.2-4.1,9.2-9.2c0-0.9-0.1-1.7-0.4-2.6h3.2V39.3z M39.6,20c0,0.6-0.5,1.1-1.1,1.1h-3.3c-0.6,0-1.1-0.5-1.1-1.1v-3.3c0-0.6,0.5-1.1,1.1-1.1h3.3c0.6,0,1.1,0.5,1.1,1.1V20z"/>
                                                     <rect fill="none" width="55" height="55"/>
