@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dtheng</groupId>
     <artifactId>dtheng</artifactId>
-    <version>2.5.3</version>
+    <version>2.5.4</version>
     <name>DTHENG</name>
     <url>http://dtheng.com</url>
     <properties>
