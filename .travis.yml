@@ -1,4 +1,4 @@
 language: java
 install:
 - cd web
-- mvn clean compile war:war
+#- mvn clean compile war:war
