@@ -1,6 +1,6 @@
 {
   "name": "DTHENG",
-  "version": "2.6",
+  "version": "v0.13.0-pre",
   "private": "false",
   "main": "dtheng.js",
   "dependencies": {
