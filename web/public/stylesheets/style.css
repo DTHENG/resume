@@ -1,15 +1,5 @@
-@import url("https://s3.amazonaws.com/dtheng.com/jquery.js");
-@import url("https://s3.amazonaws.com/dtheng.com/foundation.min.js");
-@import url("https://s3.amazonaws.com/dtheng.com/fastclick.js");
-@import url("https://s3.amazonaws.com/dtheng.com/placeholder.js");
-@import url("https://s3.amazonaws.com/dtheng.com/jquery.autocomplete.js");
-@import url("https://s3.amazonaws.com/dtheng.com/jquery.cookie.js");
 @import url("https://s3.amazonaws.com/dtheng.com/foundation.min.css");
 @import url("https://s3.amazonaws.com/dtheng.com/normalize.css");
-/*
- * Store the main color and
- * background color as variables
- */
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -32,13 +22,17 @@ a {
 }
 a:hover,
 a:focus {
-  color: #236f99;
+  color: #1e5d87;
 }
-.links-group a.link {
-  width: 100;
+a:hover svg .foreground,
+a:focus svg .foreground {
+  fill: #1e5d87;
+}
+.links-group span {
+  width: 100%;
   text-align: center;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .links-group .columns {
   padding: 0;
@@ -48,20 +42,65 @@ img {
   padding: 6px;
   margin: 60px 0 0 0;
 }
+@media (min-height: 500px) {
+  img {
+    margin: 80px 0 0 0;
+  }
+}
+@media (min-height: 600px) {
+  img {
+    margin: 90px 0 0 0;
+  }
+}
+@media (min-height: 700px) {
+  img {
+    margin: 100 0 0 0;
+  }
+}
+@media (min-height: 800px) {
+  img {
+    margin: 110px 0 0 0;
+  }
+}
+@media (min-height: 900px) {
+  img {
+    margin: 120px 0 0 0;
+  }
+}
+@media (min-height: 1000px) {
+  img {
+    margin: 130px 0 0 0;
+  }
+}
 p {
   font-size: 0.95rem;
   line-height: 1.6rem;
+  margin: 20px 0 30px 0;
 }
-button.success,
-.button.success {
-  background-color: #690;
-  border-color: #5a7f00;
+@media (min-height: 600px) {
+  p {
+    margin: 25px 0 40px 0;
+  }
 }
-button.success:hover,
-.button.success:hover,
-button.success:focus,
-.button.success:focus {
-  background-color: #5a7f00;
+@media (min-height: 700px) {
+  p {
+    margin: 30px 0 60px 0;
+  }
+}
+@media (min-height: 800px) {
+  p {
+    margin: 35px 0 80px 0;
+  }
+}
+@media (min-height: 900px) {
+  p {
+    margin: 40px 0 100px 0;
+  }
+}
+@media (min-height: 1000px) {
+  p {
+    margin: 45px 0 120px 0;
+  }
 }
 svg {
   margin: 0 auto 8px auto;
@@ -73,10 +112,7 @@ svg .foreground {
 }
 .intro h1 {
   font-size: 20px;
-  margin: 40px 0 10px 0;
-  font-weight: 500;
+  margin: 30px 0 10px 0;
+  font-weight: 600;
   text-align: center;
-}
-.intro p {
-  margin: 30px 0;
 }
