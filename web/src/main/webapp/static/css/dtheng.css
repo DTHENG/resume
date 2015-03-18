@@ -1,10 +1,19 @@
+* {
+    -webkit-font-smoothing:antialiased;
+}
+
+.row.wrapper {
+    max-width: 650px;
+}
+
 a {
-    color: #66A3B2;
+    color: #2980b9;
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover, a:focus {
-    color: #588C99;
+    color: #236f99;
 }
 
 .links-group a.link {
@@ -12,6 +21,16 @@ a:hover, a:focus {
     text-align:center;
     display:block;
     margin-bottom:40px;
+}
+
+.links-group .columns {
+    padding: 0;
+}
+
+img {
+    border-radius: 100%;
+    padding: 6px;
+    margin: 60px 0 0 0;
 }
 
 p {
@@ -45,5 +64,17 @@ svg {
 }
 
 svg .foreground {
-    fill: #E7F0F2;
+    fill: #2980b9;
+}
+
+.intro h1 {
+    font-size: 20px;
+    margin: 40px 0 10px 0;
+    font-weight: 500;
+    text-align:center;
+    
+}
+
+.intro p {
+    margin: 30px 0;
 }
