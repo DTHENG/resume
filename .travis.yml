@@ -1,4 +1,2 @@
-language: java
-install:
-- cd web
-- mvn clean compile war:war
+language: node_js
+
