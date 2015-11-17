@@ -4,5 +4,4 @@
 **/target/**
 npm-debug.log
 *.css
-Makefile
 **/node_modules/**
