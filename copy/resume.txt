@@ -1,27 +1,41 @@
 Daniel Thengvall
 
-I am a full-stack engineer in San Francisco, currently a Senior Software Engineer at Wyre, Inc., formerly worked at SnapCard, Inc. and Rixty, Inc.
+I am a full-stack engineer in San Francisco, currently a Senior Software Engineer
+at Wyre, Inc., formerly worked at SnapCard, Inc. and Rixty, Inc.
 
 
 Your Company
 2017
-I’m looking for a company in the financial technology/payments sector with passion for their product and an ambitious vision for the future.
+I’m looking for a company in the financial technology/payments sector with passion
+for their product and an ambitious vision for the future.
 
 Wyre, Inc.
 2016
-Wyre is a next generation international money transfer company, supporting real time payouts and remittances at a fraction of the cost of other methods. As a senior software engineer I worked to develop the user facing dashboard as well as administrative tools for the compliance and accounting teams.
+Wyre is a next generation international money transfer company, supporting real-time
+payouts and remittances at a fraction of the cost of other methods. As a senior
+software engineer I worked to develop the user facing dashboard as well as
+administrative tools for the compliance and accounting teams.
 
 SnapCard, Inc.
 2014
-SnapCard is a bitcoin payments company, focusing on providing tools for easy management and transfers at the best rate. As a senior software engineer I worked to add new currencies through integrations with third party exchanges. Being part of a growing company I also wore many hats, from training new engineers to building mobile and web applications.
+SnapCard is a bitcoin payments company, focusing on providing tools for easy
+management and transfers at the best rate. As a senior software engineer I worked
+to add new currencies through integrations with third party exchanges. Being part
+of a growing company I also wore many hats, from training new engineers to building
+mobile and web applications.
 
 Rixty, Inc.
 2011
-Rixty is an alternative payment system focusing on customers without credit cards. As a lead developer I managed api integrations (Microsoft, Coinstar and Skrill), localized our platform for new countries like Brazil and build tools for the customer support team.
+Rixty is an alternative payment system focusing on customers without credit cards.
+As a lead developer I managed api integrations (Microsoft, Coinstar and Skrill),
+localized our platform for new countries like Brazil and build tools for the
+customer support team.
 
 
 Skills
-Java, Swift, Angular, HTML/CSS, PHP, MySql, Google Guice, RxJava, RxSwift, Objective C, Android SDK, XML, JSON, Adobe Illustrator, Adobe Photoshop, Xcode, Android Studio, Intellij IDEA, Eclipse IDE
+Java, Swift, Angular, HTML/CSS, PHP, MySql, Google Guice, RxJava, RxSwift,
+Objective C, Android SDK, XML, JSON, Adobe Illustrator, Adobe Photoshop, Xcode,
+Android Studio, Intellij IDEA, Eclipse IDE
 
 
 1140 Sutter St, #406
