@@ -27,7 +27,7 @@ mobile and web applications.
 Rixty, Inc.
 2011 - 2014
 Rixty is an alternative payment system focusing on customers without credit cards.
-As a lead developer I managed api integrations (Microsoft, Coinstar and Skrill),
+As a lead developer I managed api integrations (Microsoft, Coinstar, Skrill),
 localized our platform for new countries like Brazil and build tools for the
 customer support team.
 
@@ -35,7 +35,7 @@ customer support team.
 Skills
 Java, Javascript, TypeScript, Rxjava, RxJs, RxSwift, Objective-C, Swift,
 Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade),
-LESS, Vertx, AWS, docker, Jackson Json
+LESS, Vertx, AWS, docker, Jackson Json, Node.js
 
 
 1140 Sutter St, #406
