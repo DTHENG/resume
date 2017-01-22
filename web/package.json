@@ -11,6 +11,6 @@
     "pug": "2.0.0-beta6"
   },
  "scripts": {
-    "start": "node dtheng"
+    "start": "node dtheng 8080"
   }
 }
