@@ -1,4 +1,4 @@
-var port = 8080;
+var port = process.argv[2];
 
 var express = require('express');
 var stylus = require('stylus');
