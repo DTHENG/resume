@@ -1,16 +1,18 @@
 {
   "name": "DTHENG",
-  "version": "v0.13.0-pre",
+  "version": "1.1.0",
   "private": "false",
   "main": "dtheng.js",
   "dependencies": {
-    "express": "3.0.0alpha4",
+    "express": "4.14.0",
+    "morgan": "1.7.0",
     "nib": "^1.0.4",
     "stylus": "^0.49.1",
     "jade": "^1.7.0",
     "mocha": "2.2.1"
   },
  "scripts": {
+    "start": "node dtheng",
     "test": "make test"
   }
 }
