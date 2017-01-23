@@ -1,5 +1,5 @@
 ### Daniel Thengvall
 
-I am a Senior Software Engineer at [Wyre](https://sendwyre.com), living in San Francisco, previously at [Snapcard](https://snapcard.io), [Rixty](https://rixty.com).
+I am a self-taught full-stack engineer living in San Francisco, currently a Senior Software Engineer at [Wyre](https://sendwyre.com), previously worked for [SnapCard](https://snapcard.io) and [Rixty](https://rixty.com).
 
 <a href="http://dtheng.com" target="_blank">dtheng.com</a>
