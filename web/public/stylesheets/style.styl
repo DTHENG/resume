@@ -1,8 +1,36 @@
 @import url("https://s3.amazonaws.com/dtheng.com/foundation.min.css");
 @import url("https://s3.amazonaws.com/dtheng.com/normalize.css");
 
-tint = #D22026
-dark-tint = #b81c21
+sf = #FF0000
+sf-dark = #E50000
+
+wyre = sf
+wyre-dark = sf-dark
+
+snapcard = sf
+snapcard-dark = sf-dark
+
+rixty = sf
+rixty-dark = sf-dark
+
+web = sf
+web-dark = sf-dark
+
+pdf = sf
+pdf-dark = sf-dark
+
+github = #0068FF
+github-dark = #0066CC
+
+angel = #2B00FF
+angel-dark = #1C00E5
+
+twitter = #CD00FF
+twitter-dark = #B800E5
+
+instagram = #FF0DA3
+instagram-dark = #E50E9D
+
 text = #183645
 
 *
@@ -10,24 +38,101 @@ text = #183645
 
 .row
   &.wrapper
-    max-width 650px
+    max-width 750px
 
 h1, h2, h3, h4, h5, h6, p
   font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   color text
 
 a
-  color tint
   text-decoration none
-  font-weight 500
+  font-weight 600
 
-  &:hover, &:focus
-    color dark-tint
+  &.sf
+    color sf
 
+    &:hover, &:focus, &:visited
+      color sf-dark
+
+  &.wyre
+    color wyre
+
+    &:hover, &:focus, &:visited
+      color wyre-dark
+
+  &.snapcard
+    color snapcard
+
+    &:hover, &:focus, &:visited
+      color snapcard-dark
+
+  &.rixty
+    color rixty
+
+    &:hover, &:focus, &:visited
+      color rixty-dark
+
+  &.web
+    color web
+
+    &:hover, &:focus, &:visited
+      color web-dark
+
+  &.pdf
+    color pdf
+
+    &:hover, &:focus, &:visited
+      color pdf-dark
+
+  &.github
+    color github
     svg
       .foreground
-        fill dark-tint
+        fill github
 
+    &:hover, &:focus, &:visited
+      color github-dark
+      svg
+        .foreground
+          fill github-dark
+
+  &.angellist
+    color angel
+    svg
+      .foreground
+        fill angel
+
+    &:hover, &:focus, &:visited
+      color angel-dark
+      svg
+        .foreground
+          fill angel-dark
+
+  &.twitter
+    color twitter
+    svg
+      .foreground
+        fill twitter
+
+    &:hover, &:focus, &:visited
+      color twitter-dark
+      svg
+        .foreground
+          fill twitter-dark
+
+  &.instagram
+    color instagram
+    svg
+      .foreground
+        fill instagram
+
+    &:hover, &:focus, &:visited
+      color instagram-dark
+      svg
+        .foreground
+          fill instagram-dark
+
+  &:hover, &:focus
     span
       opacity 1
 
@@ -48,47 +153,48 @@ a
 img
   border-radius 100%
   padding 6px
-  margin 60px 0 0 0
+  margin 40px 0 0 0
   transition margin 200ms
-  
+  padding 15px
+
   @media (min-height 500px)
-    margin 80px 0 0 0
+    margin 60px 0 0 0
 
   @media (min-height 600px)
-    margin 90px 0 0 0
+    margin 80px 0 0 0
 
   @media (min-height 700px)
-    margin 100 0 0 0
-
-  @media (min-height 800px)
     margin 110px 0 0 0
 
+  @media (min-height 800px)
+    margin 130px 0 0 0
+
   @media (min-height 900px)
-    margin 120px 0 0 0
+    margin 150px 0 0 0
 
   @media (min-height 1000px)
-    margin 130px 0 0 0
+    margin 180px 0 0 0
 
 p
   font-size 0.95rem
   line-height 1.6rem
-  margin 20px 0 30px 0
+  margin 18px 0 30px 0
   transition margin 200ms
 
   @media (min-height 600px)
-    margin 25px 0 40px 0
+    margin 20px 0 40px 0
 
   @media (min-height 700px)
-    margin 30px 0 60px 0
+    margin 22px 0 60px 0
 
   @media (min-height 800px)
-    margin 35px 0 80px 0
+    margin 24px 0 100px 0
 
   @media (min-height 900px)
-    margin 40px 0 100px 0
+    margin 26px 0 140px 0
 
   @media (min-height 1000px)
-    margin 45px 0 120px 0
+    margin 28px 0 160px 0
 
 svg
   margin 0 auto
@@ -101,7 +207,7 @@ svg
 .intro
   h1
     font-size 20px
-    margin 30px 0 10px 0
-    font-weight 500
+    margin 15px 0 10px 0
+    font-weight 600
     text-align center
     letter-spacing 0.02rem

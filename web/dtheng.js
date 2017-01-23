@@ -22,16 +22,29 @@ app.use(stylus.middleware({
 ));
 app.use(express.static(__dirname + '/public'));
 
+var analyticsId = 'UA-18339357-1';
+
 app.get('/', function (req, res) {
   res.render('index', {
         title: 'DTHENG',
         github_link: 'https://github.com/DTHENG',
         angellist_link: 'https://angel.co/daniel-thengvall',
         twitter_link: 'https://twitter.com/DTHENG',
-        instagram_link: 'http://instagram.com/dtheng',
-        snapcard_link: 'https://twitter.com/JoinSnapCard',
-        rixty_link: 'https://twitter.com/rixty',
-        ga_id: 'UA-18339357-1'
+        instagram_link: 'https://instagram.com/dtheng',
+        snapcard_link: 'https://snapcard.io',
+        rixty_link: 'https://rixty.com',
+        wyre_link: 'https://sendwyre.com',
+        sf_link: 'https://en.wikipedia.org/wiki/San_Francisco',
+        pdf_resume_link: 'https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf',
+        ga_id: analyticsId
+    }
+  );
+});
+
+app.get('/resume', function (req, res) {
+  res.render('resume', {
+        title: 'DTHENG',
+        ga_id: analyticsId
     }
   );
 });
