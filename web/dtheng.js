@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
 
 app.get('/resume', function (req, res) {
   res.render('resume', {
-        title: 'DTHENG',
+        title: 'Resume | DTHENG',
         ga_id: analyticsId
     }
   );
