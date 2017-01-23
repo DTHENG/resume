@@ -1,35 +1,43 @@
 Daniel Thengvall
 
-I am a developer/maker/hacker living in San Francisco. Currently
-Lead Software Engineer SnapCard, Inc., formerly worked at Rixty, Inc.
+I am a self-taught full-stack engineer living in San Francisco, currently a Senior Software
+Engineer at Wyre, previously worked for SnapCard and Rixty.
 
 
 Your Company
-2016
-I am looking for a company with passion for their product and an ambitious vision for the future.
+2017
+I’m looking for a company in the financial technology/payments sector with passion
+for their product and an ambitious vision for the future.
+
+Wyre, Inc.
+2016 - Present
+Wyre is a next generation international money transfer company, supporting real-time
+payouts and remittances at a fraction of the cost of other methods. As a senior software
+engineer I worked to develop the user facing dashboard as well as administrative tools
+for the compliance and accounting teams.
 
 SnapCard, Inc.
-2014
-Working with a small team I helped to develop several new products, including an iOS and Android application. Along with building products I work to maintain existing mobile applications as well as the core server infrastructure on which SnapCard is built.
+2014 - 2016
+SnapCard is a bitcoin payments company, focusing on providing tools for easy
+management and transfers at the best rate. As a senior software engineer I worked
+to add new currencies through integrations with third party exchanges. Being part
+of a growing company I wore many hats, from training new engineers to building
+mobile and web applications.
 
 Rixty, Inc.
-2011
-As Lead Developer, I handled api integrations, localization, customer relationship management tools. Also, I played a key role in the design and development of new products including integrations with Coinstar, Skrill, and Microsoft.
-
-Art Institute of California - San Francisco
-2008
-Advertising major
-
-Started coding
-2004
-Bought a book on ActionScript 2.0
+2011 - 2014
+Rixty is an alternative payment system focusing on customers without credit cards.
+As a lead developer I managed api integrations (Microsoft, Coinstar, Skrill), localized
+the platform for new countries like Brazil and build tools for the customer support team.
 
 
 Skills
-Java, Swift, HTML/CSS/PHP/MYSQL, Google Guice, RxJava, RxSwift, Objective C, Android SDK, XML, JSON, Adobe Illustrator, Adobe Photoshop, Xcode, Android Studio, Intellij IDEA, Eclipse IDE
+Java, Javascript, TypeScript, Rxjava, RxJs, RxSwift, Objective-C, Swift,
+Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade),
+LESS, Vertx, AWS, docker, Jackson Json, Node.js
 
 
-1140 Sutter St, #406
+1140 Sutter St #406,
 San Francisco, CA 94109
 (415) 742-1467
 fender5289@gmail.com
