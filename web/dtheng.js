@@ -2,6 +2,7 @@ var port = process.argv[2];
 var keyPath = process.argv[3];
 var certPath = process.argv[4];
 var caPath = process.argv[5];
+var httpPort = process.argv[5];
 
 var express = require('express');
 var stylus = require('stylus');
@@ -63,8 +64,15 @@ if (keyPath) {
       .listen(port, function () {
         console.log("https://localhost:"+ port +"/");
       });
+
+    // http to https redirect
+    var http = express.createServer();
+    http.get('*', function(req, res) {
+        res.redirect('https://dtheng.com' + req.url);
+    })
+    http.listen(httpPort);
+    console.log("http://localhost:"+ httpPort +"/");
+
 } else {
     app.listen(port);
-    console.log("http://localhost:"+ port +"/");
 }
-
