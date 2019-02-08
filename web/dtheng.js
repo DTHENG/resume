@@ -6,6 +6,7 @@ var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
 var logger = require('morgan');
+var https = require('https');
 
 var app = express();
 
