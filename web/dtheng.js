@@ -14,7 +14,7 @@ function compile(str, path) {
 }
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
-app.use(logger('dev'));
+app.use(logger('combined'));
 app.use(stylus.middleware({
     src: __dirname + '/public',
     compile: compile
