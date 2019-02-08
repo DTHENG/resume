@@ -9,8 +9,5 @@
     "nib": "1.1.2",
     "stylus": "0.54.5",
     "pug": "2.0.0-beta6"
-  },
- "scripts": {
-    "start": "node dtheng 8080"
   }
 }
