@@ -58,14 +58,7 @@ app.get('/resume', function (req, res) {
 
 if (keyPath) {
 
-    app.all('*', (req, res, next) => {
-        console.log("req.secure", req.secure, req.hostname, req.url);
-        if (req.secure) {
-            return next();
-        }
-        res.redirect('https://dtheng.com' + req.url);
-    });
-
+    // https server
     https.createServer({
         key: fs.readFileSync(keyPath),
         cert: fs.readFileSync(certPath),
@@ -75,10 +68,18 @@ if (keyPath) {
         console.log("https://localhost:"+ port +"/");
       });
 
-    http.createServer(app).listen(httpPort, () => {
+    // http server
+    let httpApp = express();
+    httpApp.set('port', httpPort);
+    httpApp.get('*', (req, res, next) => {
+        res.redirect('https://dtheng.com' + req.url);
+    });
+    http.createServer(httpApp).listen(httpPort, () => {
         console.log("http://localhost:"+ httpPort +"/");
-    })
-
+    });
 } else {
+
+    // development server
     app.listen(port);
+    console.log("http://localhost:"+ httpPort +"/");
 }
