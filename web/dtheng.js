@@ -59,6 +59,7 @@ app.get('/resume', function (req, res) {
 if (keyPath) {
 
     app.all('*', (req, res, next) => {
+        console.log("req.secure", req.secure, req.hostname, req.url);
         if (req.secure) {
             return next();
         }
