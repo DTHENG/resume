@@ -2,7 +2,7 @@ var port = process.argv[2];
 var keyPath = process.argv[3];
 var certPath = process.argv[4];
 var caPath = process.argv[5];
-var httpPort = process.argv[5];
+var httpPort = process.argv[6];
 
 var express = require('express');
 var stylus = require('stylus');
