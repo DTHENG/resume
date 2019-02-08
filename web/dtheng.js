@@ -57,6 +57,14 @@ app.get('/resume', function (req, res) {
 });
 
 if (keyPath) {
+
+    app.all('*', (req, res, next) => {
+        if (req.secure) {
+            return next();
+        }
+        res.redirect('https://dtheng.com' + req.url);
+    });
+
     https.createServer({
         key: fs.readFileSync(keyPath),
         cert: fs.readFileSync(certPath),
@@ -66,11 +74,9 @@ if (keyPath) {
         console.log("https://localhost:"+ port +"/");
       });
 
-    // http to https redirect
-    http.createServer(function (req, res) {
-        res.redirect('https://dtheng.com' + req.url);
-    }).listen(httpPort)
-    console.log("http://localhost:"+ httpPort +"/");
+    http.createServer(app).listen(httpPort, () => {
+        console.log("http://localhost:"+ httpPort +"/");
+    })
 
 } else {
     app.listen(port);
