@@ -8,6 +8,7 @@ var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
 var logger = require('morgan');
+var http = require('http');
 var https = require('https');
 var fs = require('fs');
 
@@ -66,11 +67,9 @@ if (keyPath) {
       });
 
     // http to https redirect
-    var http = express.createServer();
-    http.get('*', function(req, res) {
+    http.createServer(function (req, res) {
         res.redirect('https://dtheng.com' + req.url);
-    })
-    http.listen(httpPort);
+    }).listen(httpPort)
     console.log("http://localhost:"+ httpPort +"/");
 
 } else {
