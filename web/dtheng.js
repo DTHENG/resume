@@ -1,4 +1,6 @@
 var port = process.argv[2];
+var keyPath = process.argv[3];
+var certPath = process.argv[4];
 
 var express = require('express');
 var stylus = require('stylus');
@@ -49,6 +51,13 @@ app.get('/resume', function (req, res) {
   );
 });
 
-app.listen(port);
+// app.listen(port);
+https.createServer({
+    key: fs.readFileSync(keyPath),
+    cert: fs.readFileSync(certPath)
+  }, app)
+  .listen(port, function () {
+    console.log("http://localhost:"+ port +"/");
+  });
 
-console.log("http://localhost:"+ port +"/");
+
