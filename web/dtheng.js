@@ -1,9 +1,16 @@
 var port = process.argv[2];
+var keyPath = process.argv[3];
+var certPath = process.argv[4];
+var caPath = process.argv[5];
+var httpPort = process.argv[6];
 
 var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
 var logger = require('morgan');
+var http = require('http');
+var https = require('https');
+var fs = require('fs');
 
 var app = express();
 
@@ -49,6 +56,30 @@ app.get('/resume', function (req, res) {
   );
 });
 
-app.listen(port);
+if (keyPath) {
 
-console.log("http://localhost:"+ port +"/");
+    // https server
+    https.createServer({
+        key: fs.readFileSync(keyPath),
+        cert: fs.readFileSync(certPath),
+        ca: fs.readFileSync(caPath)
+      }, app)
+      .listen(port, function () {
+        console.log("https://localhost:"+ port +"/");
+      });
+
+    // http server
+    let httpApp = express();
+    httpApp.set('port', httpPort);
+    httpApp.get('*', (req, res, next) => {
+        res.redirect('https://dtheng.com' + req.url);
+    });
+    http.createServer(httpApp).listen(httpPort, () => {
+        console.log("http://localhost:"+ httpPort +"/");
+    });
+} else {
+
+    // development server
+    app.listen(port);
+    console.log("http://localhost:"+ httpPort +"/");
+}
