@@ -1,7 +1,5 @@
-*.iml
-**/.idea/*
 *.DS_Store
-**/target/**
+target
 npm-debug.log
 *.css
-**/node_modules/**
+node_modules
