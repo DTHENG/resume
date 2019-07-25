@@ -81,5 +81,5 @@ if (keyPath) {
 
     // development server
     app.listen(port);
-    console.log("http://localhost:"+ httpPort +"/");
+    console.log("http://localhost:"+ port +"/");
 }
