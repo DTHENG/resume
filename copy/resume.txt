@@ -4,12 +4,12 @@ I am a software engineer living in San Francisco, for the past decade I have bee
 writing financial systems in Java, previously worked for Wyre, SnapCard and Rixty.
 
 Your Company
-2019 - Present
+2019 – Present
 I’m looking for a company in the financial technology/payments sector with passion
 for their product and an ambitious vision for the future.
 
 Wyre, Inc.
-2016 - 2019
+2016 – 2019
 Wyre is the leading infrastructure provider in crypto. After trading over $3.5 billion 
 in cryptocurrency assets and completing over $750 million in bank-to-bank FX payments, 
 Wyre has established a network of relationships with leading banks and exchanges. As a 
@@ -21,7 +21,7 @@ In October of 2016, SnapCard, Inc. rebranded to Wyre, Inc.
 - - -
 
 SnapCard, Inc.
-2014 - 2016
+2014 – 2016
 SnapCard is a bitcoin payments company, focusing on providing tools for easy
 management and transfers at the best rate. As a Senior Software Engineer I worked
 to add new currencies through integrations with third party exchanges. Being part
@@ -29,7 +29,7 @@ of a growing company I wore many hats, from training new engineers to building
 mobile and web applications.
 
 Rixty, Inc.
-2011 - 2014
+2011 – 2014
 Rixty is an alternative payment system focusing on consumers without credit cards.
 As Lead Developer I managed api integrations with companies like Microsoft, Coinstar 
 and Skrill. I also worke to localize the platform for new countries like Brazil 
