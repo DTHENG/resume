@@ -32,7 +32,7 @@ Rixty, Inc.
 2011 – 2014
 Rixty is an alternative payment system focusing on consumers without credit cards.
 As Lead Developer I managed api integrations with companies like Microsoft, Coinstar 
-and Skrill. I also worke to localize the platform for new countries like Brazil 
+and Skrill. I also worked to localize the platform for new countries like Brazil 
 and built tools for the customer support team.
 
 
