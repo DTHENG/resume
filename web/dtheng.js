@@ -44,7 +44,7 @@ app.get('/', function (req, res) {
         sf_link: 'https://en.wikipedia.org/wiki/San_Francisco',
         pdf_resume_link: 'https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf',
         ga_id: analyticsId,
-        cruise_link: 'https://getcruise.com/'
+        cruise_link: 'https://getcruise.com'
     }
   );
 });
