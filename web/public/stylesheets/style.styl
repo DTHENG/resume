@@ -4,6 +4,9 @@
 sf = #2B00FF
 sf-dark = #1C00E5
 
+cruise = sf
+cruise-dark = sf-dark
+
 wyre = sf
 wyre-dark = sf-dark
 
@@ -53,6 +56,12 @@ a
 
     &:hover, &:focus, &:visited
       color sf-dark
+
+  &.cruise
+    color cruise
+
+    &:hover, &:focus, &:visited
+      color cruise-dark
 
   &.wyre
     color wyre
@@ -191,20 +200,21 @@ a
     margin 18px 0 30px 0
     transition margin 200ms
 
-    @media (min-height 600px)
-      margin 20px 0 40px 0
+    &.resume-links
+      @media (min-height 600px)
+        margin 20px 0 40px 0
 
-    @media (min-height 700px)
-      margin 22px 0 60px 0
+      @media (min-height 700px)
+        margin 22px 0 60px 0
 
-    @media (min-height 800px)
-      margin 24px 0 100px 0
+      @media (min-height 800px)
+        margin 24px 0 100px 0
 
-    @media (min-height 900px)
-      margin 26px 0 140px 0
+      @media (min-height 900px)
+        margin 26px 0 110px 0
 
-    @media (min-height 1000px)
-      margin 28px 0 160px 0
+      @media (min-height 1000px)
+        margin 28px 0 120px 0
 
   svg
     margin 0 auto
