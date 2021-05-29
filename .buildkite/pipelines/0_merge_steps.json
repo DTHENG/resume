@@ -1,7 +1,7 @@
 [
 	{
-		"label": ":docker: Build",
-		"key": "build-image",
+		"label": ":page_with_curl: Resume Image",
+		"key": "resume-image",
 		"plugins": [
 			{
 				"docker-login#v2.0.1": {
@@ -14,7 +14,8 @@
 				"docker-compose#v3.7.0": {
 					"build": "resume",
 					"no-cache": true,
-					"image-repository": "gcr.io/smooth-verve-252121/resume"
+					"image-repository": "gcr.io/smooth-verve-252121/resume",
+					"push": "resume:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
 				}
 			}
 		]

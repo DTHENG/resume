@@ -1,7 +1,7 @@
 [
 	{
 		"label": ":docker: Deploy Image",
-		"key": "build-deploy-image",
+		"key": "deploy-image",
 		"plugins": [
 			{
 				"docker-login#v2.0.1": {
@@ -20,27 +20,8 @@
 		]
 	},
 	{
-		"label": ":docker: Push",
-		"key": "push-image",
-		"depends_on": "build-image",
-		"plugins": [
-			{
-				"docker-login#v2.0.1": {
-					"username": "_json_key",
-					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
-					"server": "https://gcr.io"
-				}
-			},
-			{
-				"docker-compose#v3.7.0": {
-					"push": "resume:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
-				}
-			}
-		]
-	},
-	{
 		"label": ":k8s: Deploy",
-		"depends_on": ["push-image"],
+		"depends_on": ["resume-image", "deploy-image"],
 		"commands": ["bash deploy.sh deployment resume resume"],
 		"plugins": [
 			{
