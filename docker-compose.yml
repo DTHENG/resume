@@ -8,3 +8,7 @@ services:
     build:
       context: .
       dockerfile: resume.Dockerfile
+  client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile

@@ -1,21 +1,51 @@
 [
 	{
-		"label": ":page_with_curl: Resume Image",
-		"key": "resume-image",
+		"label": ":eslint: Lint",
+		"key": "lint",
+		"commands": ["npm run lint"],
 		"plugins": [
 			{
-				"docker-login#v2.0.1": {
-					"username": "_json_key",
-					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
-					"server": "https://gcr.io"
+				"docker-compose#v3.7.0": {
+					"run": "client"
 				}
-			},
+			}
+		]
+	},
+	{
+		"label": ":building_construction: Build",
+		"key": "build",
+		"depends_on": "lint",
+		"commands": ["npm run build"],
+		"plugins": [
 			{
 				"docker-compose#v3.7.0": {
-					"build": "resume",
-					"no-cache": true,
-					"image-repository": "gcr.io/smooth-verve-252121/resume",
-					"push": "resume:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
+					"run": "client"
+				}
+			}
+		]
+	},
+	{
+		"label": ":test_tube: Unit Tests",
+		"key": "unit-test",
+		"depends_on": "build",
+		"commands": ["npm run test"],
+		"plugins": [
+			{
+				"docker-compose#v3.7.0": {
+					"run": "client"
+				}
+			}
+		]
+	},
+	{
+		"label": ":coverage: Test Coverage",
+		"key": "test-coverage",
+		"depends_on": "unit-test",
+		"commands": ["npm run test:cov"],
+		"plugins": [
+			{
+				"docker-compose#v3.7.0": {
+					"run": "client"
 				}
 			}
 		]
