@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  deploy:
+    build:
+      context: .
+      dockerfile: deploy.Dockerfile
+  resume:
+    build:
+      context: .
+      dockerfile: resume.Dockerfile

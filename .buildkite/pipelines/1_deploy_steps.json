@@ -1,0 +1,61 @@
+[
+	{
+		"label": ":docker: Deploy Image",
+		"key": "build-deploy-image",
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"build": "deploy",
+					"no-cache": true,
+					"image-repository": "gcr.io/smooth-verve-252121/resume_deploy"
+				}
+			}
+		]
+	},
+	{
+		"label": ":docker: Push",
+		"key": "push-image",
+		"depends_on": "build-image",
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"push": "deploy:gcr.io/smooth-verve-252121/resume:$$BUILDKITE_COMMIT"
+				}
+			}
+		]
+	},
+	{
+		"label": ":k8s: Deploy",
+		"depends_on": ["push-image"],
+		"commands": ["bash deploy.sh deployment resume resume"],
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"run": "deploy",
+					"env": ["GOOGLE_APPLICATION_CREDENTIALS", "BUILDKITE_COMMIT"]
+				}
+			}
+		]
+	}
+]

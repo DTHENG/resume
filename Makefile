@@ -8,7 +8,7 @@ test:
 	yarn --cwd client test
 
 run: 
-	yarn --cwd client build && yarn --cwd server start
+	yarn --cwd client build && yarn --cwd server build && yarn --cwd server start
 
 start: 
 	yarn --cwd client start

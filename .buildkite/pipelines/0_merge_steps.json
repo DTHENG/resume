@@ -1,0 +1,22 @@
+[
+	{
+		"label": ":docker: Build",
+		"key": "build-image",
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"build": "resume",
+					"no-cache": true,
+					"image-repository": "gcr.io/smooth-verve-252121/resume"
+				}
+			}
+		]
+	}
+]
