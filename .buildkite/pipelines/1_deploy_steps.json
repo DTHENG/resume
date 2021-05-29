@@ -14,7 +14,7 @@
 				"docker-compose#v3.7.0": {
 					"build": "deploy",
 					"no-cache": true,
-					"image-repository": "gcr.io/smooth-verve-252121/resume_deploy"
+					"image-repository": "gcr.io/smooth-verve-252121/resume"
 				}
 			}
 		]
