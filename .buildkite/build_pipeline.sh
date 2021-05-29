@@ -10,4 +10,4 @@ for f in $(ls .buildkite/pipelines/*.json); do
   export RAW_PIPELINES="$RAW_PIPELINES$(cat $f)"
 done
 
-echo "$RAW_PIPELINES" | jq '.[]' | jq -s | sed "s/\$BILDKITE_COMMIT/${BILDKITE_COMMIT}/"
+echo "$RAW_PIPELINES" | jq '.[]' | jq -s | sed "s/\$BUILDKITE_COMMIT/${BUILDKITE_COMMIT}/"
