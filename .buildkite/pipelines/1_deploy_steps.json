@@ -33,7 +33,7 @@
 			},
 			{
 				"docker-compose#v3.7.0": {
-					"push": "deploy:gcr.io/smooth-verve-252121/resume:$$BUILDKITE_COMMIT"
+					"push": "deploy:gcr.io/smooth-verve-252121/resume:latest"
 				}
 			}
 		]
@@ -53,7 +53,7 @@
 			{
 				"docker-compose#v3.7.0": {
 					"run": "deploy",
-					"env": ["GOOGLE_APPLICATION_CREDENTIALS", "BUILDKITE_COMMIT"]
+					"env": ["GOOGLE_APPLICATION_CREDENTIALS"]
 				}
 			}
 		]
