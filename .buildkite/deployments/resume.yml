@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: resume
-          command: ["cd server && npm run start"]
+          command: ["npm run start:prod"]
           ports:
             - containerPort: 3456
           livenessProbe:

@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build": "tsc",
-		"start": "node dist/index.js"
+		"start": "CLIENT_PATH=../client node dist/index.js",
+		"start:prod": "CLIENT_PATH=client node dist/index.js"
 	},
 	"dependencies": {
 		"typescript": "4.3.2",

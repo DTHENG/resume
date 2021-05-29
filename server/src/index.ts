@@ -3,7 +3,7 @@ import { resolve } from "path";
 
 const app = express();
 
-app.use(express.static(resolve("../client/build")));
+app.use(express.static(resolve(`${process.env.CLIENT_PATH}/build`)));
 
 app.listen("3456");
 
