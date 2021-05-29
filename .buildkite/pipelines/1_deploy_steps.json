@@ -33,7 +33,7 @@
 			},
 			{
 				"docker-compose#v3.7.0": {
-					"push": "deploy:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
+					"push": "resume:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
 				}
 			}
 		]

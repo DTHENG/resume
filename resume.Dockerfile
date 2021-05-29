@@ -8,8 +8,9 @@ RUN yarn
 RUN yarn build
 
 # Server
-WORKDIR /
+RUN mkdir -p /server
 COPY server/ .
+WORKDIR /server
 RUN yarn
 RUN npm install
 RUN npm run build
