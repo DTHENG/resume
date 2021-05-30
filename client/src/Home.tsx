@@ -115,7 +115,7 @@ function Home() {
 			<OuterWrapper>
 				<InnerWrapper>
 					<PortraitWrapper>
-						<Portrait src="https://s3.amazonaws.com/dtheng.com/profile.jpg" />
+						<Portrait src="https://storage.googleapis.com/com-dtheng/profile.jpg" />
 					</PortraitWrapper>
 					<Name>Daniel Thengvall</Name>
 					<BlurbWrapper data-testid="blurb">{blurb}</BlurbWrapper>
