@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Link } from "./layout";
 import {
 	formatBlurb,
@@ -106,16 +106,19 @@ const SocialLinkTitle = styled.span`
 
 function Home() {
 	const blurb = formatBlurb(getBlurb());
+	const [loaded, setLoaded] = useState(false);
+
+	window.addEventListener("load", () => setLoaded(true), false);
 
 	return (
-		<Container className="container">
+		<Container className="container" style={{ opacity: loaded ? 1 : 0 }}>
 			<OuterWrapper>
 				<InnerWrapper>
 					<PortraitWrapper>
 						<Portrait src="https://s3.amazonaws.com/dtheng.com/profile.jpg" />
 					</PortraitWrapper>
 					<Name>Daniel Thengvall</Name>
-					<BlurbWrapper>{blurb}</BlurbWrapper>
+					<BlurbWrapper data-testid="blurb">{blurb}</BlurbWrapper>
 					<ResumeLinks>
 						<Link
 							href="/resume"
@@ -127,6 +130,7 @@ function Home() {
 									label: "Resume HTML",
 								});
 							}}
+							data-testid="htmlResumeLink"
 						>
 							Web
 						</Link>{" "}
@@ -142,6 +146,7 @@ function Home() {
 									label: "Resume PDF",
 								});
 							}}
+							data-testid="pdfResumeLink"
 						>
 							PDF
 						</Link>{" "}
@@ -149,8 +154,16 @@ function Home() {
 					</ResumeLinks>
 					<SocialLinksWrapper>
 						{socialLinks.map((link: SocialLink, index) => {
-							const { icon, href, title, category, action, label, color } =
-								link;
+							const {
+								icon,
+								href,
+								title,
+								category,
+								action,
+								label,
+								color,
+								testId,
+							} = link;
 							return (
 								<SocialLinkItem
 									key={index}
@@ -165,6 +178,7 @@ function Home() {
 										});
 									}}
 									colorScheme={color}
+									data-testid={testId}
 								>
 									<SocialLinkIcon>{icon}</SocialLinkIcon>
 									<SocialLinkTitle>{title}</SocialLinkTitle>

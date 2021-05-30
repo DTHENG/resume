@@ -14,6 +14,7 @@ export interface BlurbLink {
 	category: string;
 	action: string;
 	label: string;
+	testId?: string | null;
 }
 
 export interface SocialLink {
@@ -24,6 +25,7 @@ export interface SocialLink {
 	action: string;
 	label: string;
 	color: SocialLinkColorScheme;
+	testId?: string | null;
 }
 
 export interface SocialLinkColorScheme {
@@ -46,6 +48,9 @@ export const applyLinks = (
 	blurbText: string,
 	links: BlurbLink[]
 ): JSX.Element => {
+	if (links.length == 0) {
+		return <span>{blurbText}</span>;
+	}
 	const linkPositions: { link: BlurbLink; start: number; end: number }[] = links
 		.filter((link) => blurbText.indexOf(link.text) > -1)
 		.map((link) => ({
@@ -58,7 +63,7 @@ export const applyLinks = (
 	const elements: JSX.Element[] = [<span>{textBeforeFirstLink}</span>];
 	for (let i = 0; i < linkPositions.length; i++) {
 		const { link, end } = linkPositions[i];
-		const { text, url, category, action, label } = link;
+		const { text, url, category, action, label, testId } = link;
 		elements.push(
 			<Link
 				href={url}
@@ -70,6 +75,7 @@ export const applyLinks = (
 						label,
 					});
 				}}
+				data-testid={testId}
 			>
 				{text}
 			</Link>
@@ -97,6 +103,7 @@ export const socialLinks: SocialLink[] = [
 			default: "#9d00fb",
 			hover: "#5700f4",
 		},
+		testId: "gitHubTestId",
 	},
 	{
 		icon: angelListIcon,
