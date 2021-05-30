@@ -22,6 +22,48 @@
 		]
 	},
 	{
+		"label": ":docker: PDF Image",
+		"key": "pdf-gen-image",
+		"depends_on": "test-coverage",
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"build": "pdf-gen",
+					"no-cache": true,
+					"image-repository": "gcr.io/smooth-verve-252121/buildkite"
+				}
+			}
+		]
+	},
+	{
+		"label": ":gcloud: Upload PDF",
+		"depends_on": ["pdf-gen-image"],
+		"commands": ["npm run build"],
+		"plugins": [
+			{
+				"docker-login#v2.0.1": {
+					"username": "_json_key",
+					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+					"server": "https://gcr.io"
+				}
+			},
+			{
+				"docker-compose#v3.7.0": {
+					"run": "pdf-gen",
+					"env": ["GOOGLE_APPLICATION_CREDENTIALS"]
+				}
+			}
+		]
+	},
+
+	{
 		"label": ":docker: Deploy Image",
 		"key": "deploy-image",
 		"depends_on": "test-coverage",

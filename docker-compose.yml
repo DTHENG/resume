@@ -12,3 +12,7 @@ services:
     build:
       context: .
       dockerfile: client.Dockerfile
+  pdf-gen:
+    build:
+      context: .
+      dockerfile: pdf-gen.Dockerfile
