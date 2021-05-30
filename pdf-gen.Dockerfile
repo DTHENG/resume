@@ -8,3 +8,4 @@ RUN mkdir -p /pdf-gen
 WORKDIR /pdf-gen
 COPY pdf-gen/ .
 
+RUN yarn

@@ -19,5 +19,4 @@ RUN mkdir -p /server
 WORKDIR /server
 COPY server/ .
 RUN yarn
-RUN npm install
-RUN npm run build
+RUN yarn build
