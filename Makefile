@@ -1,5 +1,5 @@
 install: 
-	yarn --cwd client install && yarn --cwd server install
+	yarn --cwd client install && yarn --cwd server install && yarn --cwd pdf-gen install
 
 lint: 
 	yarn --cwd client lint
@@ -22,4 +22,5 @@ start:
 	yarn --cwd client start
 
 	
-	
+build-pdf:
+	yarn --cwd pdf-gen build

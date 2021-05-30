@@ -74,6 +74,9 @@
 		"text": "Java, Javascript, TypeScript, RxJava, RxJs, RxSwift, Objective-C, Swift, Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade), LESS, Vertx, AWS, docker, Jackson Json, Node.js"
 	},
 	{
+		"type": "SPACE"
+	},
+	{
 		"type": "LINK",
 		"text": "fender5289@gmail.com",
 		"url": "mailto:fender5289@gmail.com",
@@ -122,6 +125,7 @@
 		"url": "https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf",
 		"category": "Links",
 		"action": "Resume",
-		"label": "PDF Download"
+		"label": "PDF Download",
+		"webOnly": true
 	}
 ]
