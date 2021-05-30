@@ -45,7 +45,7 @@
 	{
 		"label": ":gcloud: Upload PDF",
 		"depends_on": ["pdf-gen-image"],
-		"commands": ["npm run build"],
+		"commands": ["bash scripts/build-pdf.sh"],
 		"plugins": [
 			{
 				"docker-login#v2.0.1": {
