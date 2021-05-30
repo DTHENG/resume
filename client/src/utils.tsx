@@ -48,7 +48,7 @@ export const applyLinks = (
 	blurbText: string,
 	links: BlurbLink[]
 ): JSX.Element => {
-	if (links.length == 0) {
+	if (links.length === 0) {
 		return <span>{blurbText}</span>;
 	}
 	const linkPositions: { link: BlurbLink; start: number; end: number }[] = links
