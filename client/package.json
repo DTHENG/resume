@@ -27,8 +27,8 @@
 		"@types/styled-components": "5.1.9"
 	},
 	"scripts": {
-		"start": "PORT=4567 REACT_APP_BLURB_JSON=$(cat ../copy/blurb.full.json) REACT_APP_ANALYTICS_ID=UA-18339357-1 REACT_APP_DEBUG_ANALYTICS=true react-scripts start",
-		"build": "REACT_APP_BLURB_JSON=$(cat ../copy/blurb.full.json) react-scripts build && react-snapshot",
+		"start": "PORT=4567 REACT_APP_BLURB_JSON=$(cat ../copy/blurb.full.json) REACT_APP_RESUME_JSON=$(cat ../copy/resume.json) REACT_APP_ANALYTICS_ID=UA-18339357-1 REACT_APP_DEBUG_ANALYTICS=true react-scripts start",
+		"build": "REACT_APP_BLURB_JSON=$(cat ../copy/blurb.full.json) REACT_APP_RESUME_JSON=$(cat ../copy/resume.json) react-scripts build && react-snapshot",
 		"test": "react-scripts test --watchAll=false --max-warnings=0 --testMatch \"**/*.test.tsx\"",
 		"test:cov": "react-scripts test --watchAll=false \"--coverage\" --testMatch \"**/*.test.tsx\"",
 		"lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix --max-warnings=0"

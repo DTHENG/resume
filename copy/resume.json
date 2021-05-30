@@ -63,6 +63,9 @@
 		"bold": "Lead Developer"
 	},
 	{
+		"type": "SPACE"
+	},
+	{
 		"type": "HEADING",
 		"text": "Skills"
 	},
@@ -72,11 +75,19 @@
 	},
 	{
 		"type": "LINK",
+		"text": "fender5289@gmail.com",
+		"url": "mailto:fender5289@gmail.com",
+		"category": "Links",
+		"action": "Resume",
+		"label": "Email link"
+	},
+	{
+		"type": "LINK",
 		"text": "dtheng.com",
 		"url": "https://dtheng.com",
 		"category": "Links",
 		"action": "Resume",
-		"label": "Resume Website"
+		"label": "Website link"
 	},
 	{
 		"type": "LINK",
@@ -84,7 +95,7 @@
 		"url": "https://github.com/DTHENG",
 		"category": "Links",
 		"action": "Resume",
-		"label": "GitHub"
+		"label": "GitHub link"
 	},
 	{
 		"type": "LINK",
@@ -92,7 +103,7 @@
 		"url": "https://angel.co/daniel-thengvall",
 		"category": "Links",
 		"action": "Resume",
-		"label": "AngelList"
+		"label": "Angel List link"
 	},
 	{
 		"type": "LINK",
@@ -100,7 +111,7 @@
 		"url": "https://lnkd.in/bD6S_7J",
 		"category": "Links",
 		"action": "Resume",
-		"label": "LinkedIn"
+		"label": "Linked in link"
 	},
 	{
 		"type": "SPACE"

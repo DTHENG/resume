@@ -1,7 +1,15 @@
 import React from "react";
 import ReactGA from "react-ga";
 import { angelListIcon, gitHubIcon, instagramIcon, twitterIcon } from "./icons";
-import { Link } from "./layout";
+import {
+	Link,
+	ResumeBlockQuote,
+	ResumeDates,
+	ResumeHeading,
+	ResumeLink,
+	ResumeText,
+	ResumeTitle,
+} from "./layout";
 
 export interface Blurb {
 	text: string;
@@ -142,3 +150,104 @@ export const socialLinks: SocialLink[] = [
 		},
 	},
 ];
+
+export enum ResumeComponentType {
+	TITLE = "TITLE",
+	PARAGRAPH = "PARAGRAPH",
+	HEADING = "HEADING",
+	DATES = "DATES",
+	BLOCK_QUOTE = "BLOCK_QUOTE",
+	LINK = "LINK",
+	SPACE = "SPACE",
+}
+
+export interface ResumeComponent {
+	type: ResumeComponentType;
+	text?: string | null;
+	bold?: string | null;
+	url?: string | null;
+	category?: string | null;
+	action?: string | null;
+	label?: string | null;
+}
+
+export const getResume = (): ResumeComponent[] => {
+	if (process.env.REACT_APP_RESUME_JSON) {
+		return JSON.parse(process.env.REACT_APP_RESUME_JSON);
+	}
+	throw new Error("REACT_APP_RESUME_JSON not set!");
+};
+
+export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
+	return (
+		<>
+			{resume.map((component, index) => {
+				const { type, text, bold, url, category, action, label } = component;
+				switch (type) {
+					case ResumeComponentType.TITLE:
+						return <ResumeTitle key={index}>{text ?? ""}</ResumeTitle>;
+					case ResumeComponentType.PARAGRAPH:
+						let isPreviousComponentDateType = false;
+						if (
+							index > 0 &&
+							resume[index - 1].type === ResumeComponentType.DATES
+						) {
+							isPreviousComponentDateType = true;
+						}
+						if (bold && text && text.indexOf(bold) > -1) {
+							const boldStart = text.indexOf(bold);
+							const boldEnd = boldStart + bold.length;
+							const beforeText = text.substring(0, boldStart);
+							const afterText = text.substring(boldEnd, text.length);
+							return (
+								<ResumeText key={index} hasDates={isPreviousComponentDateType}>
+									{beforeText}
+									<b>{bold}</b>
+									{afterText}
+								</ResumeText>
+							);
+						}
+						return (
+							<ResumeText key={index} hasDates={isPreviousComponentDateType}>
+								{text ?? ""}
+							</ResumeText>
+						);
+					case ResumeComponentType.HEADING:
+						return <ResumeHeading key={index}>{text ?? ""}</ResumeHeading>;
+					case ResumeComponentType.DATES:
+						return <ResumeDates key={index}>{text ?? ""}</ResumeDates>;
+					case ResumeComponentType.BLOCK_QUOTE:
+						return (
+							<ResumeBlockQuote>
+								<i key={index}>{text ?? ""}</i>
+							</ResumeBlockQuote>
+						);
+					case ResumeComponentType.LINK:
+						return (
+							<div>
+								<ResumeLink
+									key={index}
+									href={url ?? ""}
+									target="_blank"
+									onClick={() => {
+										if (!category || !action || !label) return;
+										ReactGA.event({
+											category,
+											action,
+											label,
+										});
+									}}
+								>
+									{text ?? ""}
+								</ResumeLink>
+							</div>
+						);
+					case ResumeComponentType.SPACE:
+						return <br />;
+					default:
+						return <div key={index}>{text ?? ""}</div>;
+				}
+			})}
+		</>
+	);
+};
