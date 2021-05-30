@@ -1,5 +1,7 @@
 import React from "react";
 import ReactGA from "react-ga";
+import { angelListIcon, gitHubIcon, instagramIcon, twitterIcon } from "./icons";
+import { Link } from "./layout";
 
 export interface Blurb {
 	text: string;
@@ -12,6 +14,21 @@ export interface BlurbLink {
 	category: string;
 	action: string;
 	label: string;
+}
+
+export interface SocialLink {
+	icon: JSX.Element;
+	href: string;
+	title: string;
+	category: string;
+	action: string;
+	label: string;
+	color: SocialLinkColorScheme;
+}
+
+export interface SocialLinkColorScheme {
+	default: string;
+	hover: string;
 }
 
 export const getBlurb = (): Blurb => {
@@ -43,7 +60,7 @@ export const applyLinks = (
 		const { link, end } = linkPositions[i];
 		const { text, url, category, action, label } = link;
 		elements.push(
-			<a
+			<Link
 				href={url}
 				title={label}
 				onClick={() => {
@@ -55,7 +72,7 @@ export const applyLinks = (
 				}}
 			>
 				{text}
-			</a>
+			</Link>
 		);
 		if (i === linkPositions.length - 1) {
 			elements.push(<span>{blurbText.substring(end, blurbText.length)}</span>);
@@ -67,3 +84,54 @@ export const applyLinks = (
 	}
 	return <>{elements}</>;
 };
+
+export const socialLinks: SocialLink[] = [
+	{
+		icon: gitHubIcon,
+		href: "https://github.com/DTHENG",
+		title: "GitHub",
+		category: "Links",
+		action: "Social",
+		label: "GitHub",
+		color: {
+			default: "#9d00fb",
+			hover: "#5700f4",
+		},
+	},
+	{
+		icon: angelListIcon,
+		href: "https://angel.co/daniel-thengvall",
+		title: "AngelList",
+		category: "Links",
+		action: "Social",
+		label: "AngelList",
+		color: {
+			default: "#c300c2",
+			hover: "#94009b",
+		},
+	},
+	{
+		icon: twitterIcon,
+		href: "https://twitter.com/DTHENG",
+		title: "Twitter",
+		category: "Links",
+		action: "Social",
+		label: "Twitter",
+		color: {
+			default: "#e90080",
+			hover: "#d70031",
+		},
+	},
+	{
+		icon: instagramIcon,
+		href: "https://instagram.com/dtheng",
+		title: "Instagram",
+		category: "Links",
+		action: "Social",
+		label: "Instagram",
+		color: {
+			default: "#fb0046",
+			hover: "#f80000",
+		},
+	},
+];

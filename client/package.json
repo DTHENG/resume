@@ -22,7 +22,9 @@
 		"@types/react-router-dom": "5.1.7",
 		"bootstrap": "5.0.1",
 		"react-ga": "3.3.0",
-		"@types/react-ga": "2.3.0"
+		"@types/react-ga": "2.3.0",
+		"styled-components": "5.3.0",
+		"@types/styled-components": "5.1.9"
 	},
 	"scripts": {
 		"start": "PORT=4567 REACT_APP_BLURB_JSON=$(cat ../copy/blurb.full.json) REACT_APP_ANALYTICS_ID=UA-18339357-1 REACT_APP_DEBUG_ANALYTICS=true react-scripts start",
