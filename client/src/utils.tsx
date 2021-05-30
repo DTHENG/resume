@@ -169,6 +169,7 @@ export interface ResumeComponent {
 	category?: string | null;
 	action?: string | null;
 	label?: string | null;
+	testId?: string | null;
 }
 
 export const getResume = (): ResumeComponent[] => {
@@ -182,10 +183,15 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
 	return (
 		<>
 			{resume.map((component, index) => {
-				const { type, text, bold, url, category, action, label } = component;
+				const { type, text, bold, url, category, action, label, testId } =
+					component;
 				switch (type) {
 					case ResumeComponentType.TITLE:
-						return <ResumeTitle key={index}>{text ?? ""}</ResumeTitle>;
+						return (
+							<ResumeTitle key={index} data-testid={testId}>
+								{text ?? ""}
+							</ResumeTitle>
+						);
 					case ResumeComponentType.PARAGRAPH:
 						let isPreviousComponentDateType = false;
 						if (
@@ -200,26 +206,44 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
 							const beforeText = text.substring(0, boldStart);
 							const afterText = text.substring(boldEnd, text.length);
 							return (
-								<ResumeText key={index} hasDates={isPreviousComponentDateType}>
+								<ResumeText
+									key={index}
+									hasDates={isPreviousComponentDateType}
+									data-testid={testId}
+								>
 									{beforeText}
-									<b>{bold}</b>
+									<b data-testid={testId ? `${testId}_bold` : ""}>{bold}</b>
 									{afterText}
 								</ResumeText>
 							);
 						}
 						return (
-							<ResumeText key={index} hasDates={isPreviousComponentDateType}>
+							<ResumeText
+								key={index}
+								hasDates={isPreviousComponentDateType}
+								data-testid={testId}
+							>
 								{text ?? ""}
 							</ResumeText>
 						);
 					case ResumeComponentType.HEADING:
-						return <ResumeHeading key={index}>{text ?? ""}</ResumeHeading>;
+						return (
+							<ResumeHeading key={index} data-testid={testId}>
+								{text ?? ""}
+							</ResumeHeading>
+						);
 					case ResumeComponentType.DATES:
-						return <ResumeDates key={index}>{text ?? ""}</ResumeDates>;
+						return (
+							<ResumeDates key={index} data-testid={testId}>
+								{text ?? ""}
+							</ResumeDates>
+						);
 					case ResumeComponentType.BLOCK_QUOTE:
 						return (
 							<ResumeBlockQuote>
-								<i key={index}>{text ?? ""}</i>
+								<i key={index} data-testid={testId}>
+									{text ?? ""}
+								</i>
 							</ResumeBlockQuote>
 						);
 					case ResumeComponentType.LINK:
@@ -237,15 +261,20 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
 											label,
 										});
 									}}
+									data-testid={testId}
 								>
 									{text ?? ""}
 								</ResumeLink>
 							</div>
 						);
 					case ResumeComponentType.SPACE:
-						return <br />;
+						return <br data-testid={testId} />;
 					default:
-						return <div key={index}>{text ?? ""}</div>;
+						return (
+							<div key={index} data-testid={testId}>
+								{text ?? ""}
+							</div>
+						);
 				}
 			})}
 		</>
