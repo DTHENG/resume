@@ -9,6 +9,10 @@ COPY client/ .
 RUN yarn
 RUN yarn build
 
+RUN mkdir -p /copy
+WORKDIR /copy
+COPY copy/ .
+
 # Server
 RUN mkdir -p /server
 WORKDIR /server
