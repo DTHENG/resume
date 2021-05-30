@@ -1,5 +1,7 @@
 FROM node:current-alpine3.13
 
+ENV REACT_APP_ANALYTICS_ID=UA-18339357-1
+
 # Client 
 RUN mkdir -p /client
 WORKDIR /client

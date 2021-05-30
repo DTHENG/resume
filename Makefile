@@ -13,6 +13,8 @@ test:
 test-coverage: 
 	yarn --cwd client test:cov
 
+run: export REACT_APP_ANALYTICS_ID=UA-18339357-1
+run: export REACT_APP_DEBUG_ANALYTICS=true
 run: 
 	yarn --cwd client build && yarn --cwd server build && yarn --cwd server start
 

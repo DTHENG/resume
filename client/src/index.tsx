@@ -6,6 +6,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import Home from "./Home";
 import Resume from "./Resume";
 import NotFound from "./NotFound";
+import ReactGA from "react-ga";
+
+ReactGA.initialize(process.env.REACT_APP_ANALYTICS_ID ?? "", {
+	debug: process.env.REACT_APP_DEBUG_ANALYTICS === "true",
+});
 
 render(
 	<React.StrictMode>
