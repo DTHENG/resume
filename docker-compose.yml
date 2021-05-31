@@ -16,3 +16,7 @@ services:
     build:
       context: .
       dockerfile: pdf-gen.Dockerfile
+  pdf-gen-standalone:
+    build:
+      context: .
+      dockerfile: pdf-gen-standalone.Dockerfile

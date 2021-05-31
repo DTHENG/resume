@@ -49,5 +49,17 @@
 				}
 			}
 		]
+	},
+	{
+		"label": ":eslint: PDF Lint",
+		"key": "pdf-lint",
+		"commands": ["npm run lint"],
+		"plugins": [
+			{
+				"docker-compose#v3.7.0": {
+					"run": "pdf-gen-standalone"
+				}
+			}
+		]
 	}
 ]
