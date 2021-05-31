@@ -34,9 +34,9 @@ export const ResumeDates = styled.span`
   font-weight: 400;
 `;
 
-export const ResumeText = styled.p<{ hasDates: boolean }>`
+export const ResumeText = styled.p<{ smallFont: boolean }>`
   margin-top: 5px;
-  margin-bottom: ${(props) => (!props.hasDates ? '60px' : '0')};
+  ${(props) => (props.smallFont ? 'font-size: 0.85rem;' : '')}
 `;
 
 export const ResumeLink = styled(Link)`

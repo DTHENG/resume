@@ -170,6 +170,7 @@ export interface ResumeComponent {
   action?: string | null;
   label?: string | null;
   testId?: string | null;
+  smallFont?: boolean | null;
 }
 
 export const getResume = (): ResumeComponent[] => {
@@ -183,8 +184,17 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
   return (
     <>
       {resume.map((component, index) => {
-        const { type, text, bold, url, category, action, label, testId } =
-          component;
+        const {
+          type,
+          text,
+          bold,
+          url,
+          category,
+          action,
+          label,
+          testId,
+          smallFont,
+        } = component;
         switch (type) {
           case ResumeComponentType.TITLE:
             return (
@@ -193,13 +203,6 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
               </ResumeTitle>
             );
           case ResumeComponentType.PARAGRAPH:
-            let isPreviousComponentDateType = false;
-            if (
-              index > 0 &&
-              resume[index - 1].type === ResumeComponentType.DATES
-            ) {
-              isPreviousComponentDateType = true;
-            }
             if (bold && text && text.indexOf(bold) > -1) {
               const boldStart = text.indexOf(bold);
               const boldEnd = boldStart + bold.length;
@@ -208,8 +211,8 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
               return (
                 <ResumeText
                   key={index}
-                  hasDates={isPreviousComponentDateType}
                   data-testid={testId}
+                  smallFont={smallFont != null ? smallFont : false}
                 >
                   {beforeText}
                   <b data-testid={testId ? `${testId}_bold` : ''}>{bold}</b>
@@ -220,8 +223,8 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
             return (
               <ResumeText
                 key={index}
-                hasDates={isPreviousComponentDateType}
                 data-testid={testId}
+                smallFont={smallFont != null ? smallFont : false}
               >
                 {text ?? ''}
               </ResumeText>

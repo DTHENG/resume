@@ -54,6 +54,34 @@ describe('Resume', () => {
     expect(textElement).toBeInTheDocument();
   });
 
+  test('renders paragraph, small font', () => {
+    process.env.REACT_APP_RESUME_JSON = JSON.stringify([
+      {
+        type: ResumeComponentType.PARAGRAPH,
+        text: "I'm a paragraph",
+        smallFont: true,
+      },
+    ]);
+    render(<Resume />);
+    const textElement = screen.getByText(/I'm a paragraph/i);
+    expect(textElement).toBeInTheDocument();
+  });
+
+  test('renders paragraph, small font + bold', () => {
+    process.env.REACT_APP_RESUME_JSON = JSON.stringify([
+      {
+        type: ResumeComponentType.PARAGRAPH,
+        text: "I'm a paragraph",
+        smallFont: true,
+        bold: 'paragraph',
+        testId: 'smallBoldTestId',
+      },
+    ]);
+    render(<Resume />);
+    const textElement = screen.getByTestId('smallBoldTestId');
+    expect(textElement.textContent).toBe("I'm a paragraph");
+  });
+
   test('renders heading', () => {
     process.env.REACT_APP_RESUME_JSON = JSON.stringify([
       {
@@ -204,20 +232,5 @@ describe('Resume', () => {
     render(<Resume />);
     const textElement = screen.getByText(/I'm bold!/i);
     expect(textElement.tagName).toBe('B');
-  });
-
-  test('previous component is date component', () => {
-    process.env.REACT_APP_RESUME_JSON = JSON.stringify([
-      {
-        type: ResumeComponentType.DATES,
-      },
-      {
-        type: ResumeComponentType.PARAGRAPH,
-        testId: 'paragraphTestId',
-      },
-    ]);
-    render(<Resume />);
-    const paragraphElement = screen.getByTestId('paragraphTestId');
-    expect(paragraphElement).toBeDefined();
   });
 });
