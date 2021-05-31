@@ -1,40 +1,40 @@
 {
-	"text": "Daniel is a software engineer in San Francisco, works at Cruise, previously worked at Wyre, SnapCard and Rixty.",
-	"links": [
-		{
-			"text": "San Francisco",
-			"url": "https://en.wikipedia.org/wiki/San_Francisco",
-			"category": "Links",
-			"action": "Blurb",
-			"label": "SF Wiki"
-		},
-		{
-			"text": "Cruise",
-			"url": "https://getcruise.com/",
-			"category": "Links",
-			"action": "Blurb",
-			"label": "Cruise Website"
-		},
-		{
-			"text": "Wyre",
-			"url": "https://sendwyre.com/",
-			"category": "Links",
-			"action": "Blurb",
-			"label": "Wyre Website"
-		},
-		{
-			"text": "SnapCard",
-			"url": "https://snapcard.io",
-			"category": "Links",
-			"action": "Blurb",
-			"label": "Snapcard Website"
-		},
-		{
-			"text": "Rixty",
-			"url": "https://rixty.com",
-			"category": "Links",
-			"action": "Blurb",
-			"label": "Rixty Website"
-		}
-	]
+  "text": "Daniel is a software engineer in San Francisco, works at Cruise, previously worked at Wyre, SnapCard and Rixty.",
+  "links": [
+    {
+      "text": "San Francisco",
+      "url": "https://en.wikipedia.org/wiki/San_Francisco",
+      "category": "Links",
+      "action": "Blurb",
+      "label": "SF Wiki"
+    },
+    {
+      "text": "Cruise",
+      "url": "https://getcruise.com/",
+      "category": "Links",
+      "action": "Blurb",
+      "label": "Cruise Website"
+    },
+    {
+      "text": "Wyre",
+      "url": "https://sendwyre.com/",
+      "category": "Links",
+      "action": "Blurb",
+      "label": "Wyre Website"
+    },
+    {
+      "text": "SnapCard",
+      "url": "https://snapcard.io",
+      "category": "Links",
+      "action": "Blurb",
+      "label": "Snapcard Website"
+    },
+    {
+      "text": "Rixty",
+      "url": "https://rixty.com",
+      "category": "Links",
+      "action": "Blurb",
+      "label": "Rixty Website"
+    }
+  ]
 }
