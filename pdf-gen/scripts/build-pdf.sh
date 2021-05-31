@@ -3,7 +3,6 @@
 echo "Starting build pdf script"
 
 # Auth
-cd ..
 bash auth.sh
 
 # Run 

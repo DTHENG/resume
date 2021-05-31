@@ -9,3 +9,5 @@ WORKDIR /pdf-gen
 COPY pdf-gen/ .
 
 RUN npm install
+
+WORKDIR /
