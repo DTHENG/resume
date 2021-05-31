@@ -1,9 +1,9 @@
 {
-	"short_name": "DTHENG",
-	"name": "Daniel Thengvall",
-	"icons": [],
-	"start_url": ".",
-	"display": "standalone",
-	"theme_color": "#2b00ff",
-	"background_color": "#ffffff"
+  "short_name": "DTHENG",
+  "name": "Daniel Thengvall",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2b00ff",
+  "background_color": "#ffffff"
 }

@@ -122,7 +122,7 @@
 	{
 		"type": "LINK",
 		"text": "PDF Version",
-		"url": "https://github.com/DTHENG/resume/raw/master/DanielThengvallResume.pdf",
+		"url": "https://storage.googleapis.com/com-dtheng/DanielThengvallResume.pdf",
 		"category": "Links",
 		"action": "Resume",
 		"label": "PDF Download",
