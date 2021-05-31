@@ -1,4 +1,3 @@
-import { Storage } from '@google-cloud/storage';
 import { uploadFile } from '../gcs-client';
 
 const mockedBucket = {
