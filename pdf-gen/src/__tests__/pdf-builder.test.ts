@@ -8,6 +8,7 @@ jest.mock('pdf-lib');
 jest.mock('fs');
 jest.mock('path');
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const mockDocument: any = {
   setTitle: jest.fn(),
   setAuthor: jest.fn(),
@@ -61,9 +62,7 @@ describe('pdf-builder', () => {
   it('should throw error, resume json missing', async () => {
     jest.spyOn(fs, 'existsSync').mockReturnValue(false);
     jest.spyOn(path, 'resolve').mockReturnValue('');
-    const createSpy = jest
-      .spyOn(PDFDocument, 'create')
-      .mockResolvedValue(mockDocument);
+    jest.spyOn(PDFDocument, 'create').mockResolvedValue(mockDocument);
     expect(buildResume('/fake/out/file.pdf')).rejects.toThrowError(
       new Error('Unable to find resume json file!'),
     );

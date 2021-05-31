@@ -6,6 +6,7 @@ import * as path from 'path';
 jest.mock('fs');
 jest.mock('path');
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mockFont: any = {
   widthOfTextAtSize: (text: string) => text.length,
 };
@@ -13,6 +14,7 @@ const mockFont: any = {
 describe('utils', () => {
   describe('toEntries', () => {
     it('should return no entries', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -23,6 +25,7 @@ describe('utils', () => {
     });
 
     it('should return no non-web entries', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -42,6 +45,7 @@ describe('utils', () => {
     });
 
     it('should return title entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -64,12 +68,14 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(9);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(40);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
     });
 
     it('should return heading entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -92,12 +98,14 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(9);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(45);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
     });
 
     it('should return blockquote entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -119,6 +127,7 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(7.5);
       expect(result.text[0].options.x).toEqual(88);
       expect(result.text[0].options.y).toEqual(50);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Italic.ttf',
       );
@@ -130,6 +139,7 @@ describe('utils', () => {
     });
 
     it('should return paragraph entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -152,12 +162,14 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(9);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(60);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
     });
 
     it('should return space entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -179,12 +191,14 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(9);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(60);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
     });
 
     it('should return dates entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -207,12 +221,14 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(7);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(60);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
     });
 
     it('should return link entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
       jest.spyOn(path, 'resolve').mockImplementation((file) => file);
       jest
@@ -235,6 +251,7 @@ describe('utils', () => {
       expect(result.text[0].options.size).toEqual(8);
       expect(result.text[0].options.x).toEqual(80);
       expect(result.text[0].options.y).toEqual(60);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
