@@ -2,7 +2,7 @@
 	{
 		"label": ":k8s: Deploy",
 		"key": "deploy",
-		"depends_on": ["resume-image", "deploy-image"],
+		"depends_on": ["resume-image", "deploy-image", "pdf-gen-image"],
 		"commands": ["bash deploy.sh deployment resume resume"],
 		"plugins": [
 			{
@@ -22,7 +22,7 @@
 	},
 	{
 		"label": ":gcloud: Upload PDF",
-		"depends_on": ["pdf-gen-image", "deploy"],
+		"depends_on": ["deploy"],
 		"commands": ["bash build-pdf.sh"],
 		"plugins": [
 			{

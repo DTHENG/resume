@@ -21,9 +21,15 @@ run:
 start: 
 	yarn --cwd client start
 
-lint-pdf: 
+pdf-lint: 
 	yarn --cwd pdf-gen lint
 	
-build-pdf:
+pdf-build:
 	yarn --cwd pdf-gen build
+
+pdf-test:
+	yarn --cwd pdf-gen test
+
+pdf-test-coverage:
+	yarn --cwd pdf-gen test:cov
 

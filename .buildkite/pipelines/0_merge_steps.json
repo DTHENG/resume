@@ -61,5 +61,31 @@
 				}
 			}
 		]
+	},
+	{
+		"label": ":test_tube: PDF Unit Tests",
+		"key": "pdf-unit-test",
+		"depends_on": "pdf-lint",
+		"commands": ["npm run test"],
+		"plugins": [
+			{
+				"docker-compose#v3.7.0": {
+					"run": "pdf-gen-standalone"
+				}
+			}
+		]
+	},
+	{
+		"label": ":coverage: PDF Test Coverage",
+		"key": "pdf-test-coverage",
+		"depends_on": "pdf-unit-test",
+		"commands": ["npm run test:cov"],
+		"plugins": [
+			{
+				"docker-compose#v3.7.0": {
+					"run": "pdf-gen-standalone"
+				}
+			}
+		]
 	}
 ]

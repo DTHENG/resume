@@ -24,7 +24,7 @@
 	{
 		"label": ":docker: PDF Image",
 		"key": "pdf-gen-image",
-		"depends_on": "pdf-lint",
+		"depends_on": "pdf-test-coverage",
 		"plugins": [
 			{
 				"docker-login#v2.0.1": {
