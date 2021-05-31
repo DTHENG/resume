@@ -2,6 +2,7 @@
   {
     "label": ":k8s: Deploy",
     "key": "deploy",
+    "branches": "master",
     "depends_on": ["resume-image", "deploy-image", "pdf-gen-image"],
     "commands": ["bash deploy.sh deployment resume resume"],
     "plugins": [
@@ -22,6 +23,8 @@
   },
   {
     "label": ":gcloud: Upload PDF",
+    "key": "upload-pdf-to-gcs",
+    "branches": "master",
     "depends_on": ["deploy"],
     "commands": ["bash build-pdf.sh"],
     "plugins": [

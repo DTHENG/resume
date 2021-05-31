@@ -2,6 +2,7 @@
   {
     "label": ":docker: Resume Image",
     "key": "resume-image",
+    "branches": "master",
     "depends_on": "test-coverage",
     "plugins": [
       {
@@ -24,6 +25,7 @@
   {
     "label": ":docker: PDF Image",
     "key": "pdf-gen-image",
+    "branches": "master",
     "depends_on": "pdf-test-coverage",
     "plugins": [
       {
@@ -45,6 +47,7 @@
   {
     "label": ":docker: Deploy Image",
     "key": "deploy-image",
+    "branches": "master",
     "depends_on": "test-coverage",
     "plugins": [
       {
