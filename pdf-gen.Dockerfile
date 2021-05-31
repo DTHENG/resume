@@ -7,6 +7,7 @@ COPY copy/ .
 RUN mkdir -p /pdf-gen
 WORKDIR /pdf-gen
 COPY pdf-gen/ .
+RUN npm install
 
 WORKDIR /
 COPY pdf-gen/scripts/build-pdf.sh .
