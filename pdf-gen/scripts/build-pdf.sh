@@ -3,7 +3,9 @@
 echo "Starting build pdf script"
 
 # Auth
-bash ../auth.sh
+cd ..
+bash auth.sh
 
 # Run 
+cd pdf-gen
 npm run build
