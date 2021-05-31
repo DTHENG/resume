@@ -1,6 +1,5 @@
-import PdfGen from './pdf-gen';
+import { buildAndUpload } from './pdf-gen';
 
-new PdfGen()
-  .buildAndUpload()
+buildAndUpload()
   .then(() => console.log('Complete!'))
   .catch((error) => console.log('Error generating pdf', error));
