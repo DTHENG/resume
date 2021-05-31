@@ -1,43 +1,43 @@
 [
-	{
-		"label": ":k8s: Deploy",
-		"key": "deploy",
-		"depends_on": ["resume-image", "deploy-image", "pdf-gen-image"],
-		"commands": ["bash deploy.sh deployment resume resume"],
-		"plugins": [
-			{
-				"docker-login#v2.0.1": {
-					"username": "_json_key",
-					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
-					"server": "https://gcr.io"
-				}
-			},
-			{
-				"docker-compose#v3.7.0": {
-					"run": "deploy",
-					"env": ["GOOGLE_APPLICATION_CREDENTIALS", "BUILDKITE_COMMIT"]
-				}
-			}
-		]
-	},
-	{
-		"label": ":gcloud: Upload PDF",
-		"depends_on": ["deploy"],
-		"commands": ["bash build-pdf.sh"],
-		"plugins": [
-			{
-				"docker-login#v2.0.1": {
-					"username": "_json_key",
-					"password-env": "GOOGLE_APPLICATION_CREDENTIALS",
-					"server": "https://gcr.io"
-				}
-			},
-			{
-				"docker-compose#v3.7.0": {
-					"run": "pdf-gen",
-					"env": ["GOOGLE_APPLICATION_CREDENTIALS"]
-				}
-			}
-		]
-	}
+  {
+    "label": ":k8s: Deploy",
+    "key": "deploy",
+    "depends_on": ["resume-image", "deploy-image", "pdf-gen-image"],
+    "commands": ["bash deploy.sh deployment resume resume"],
+    "plugins": [
+      {
+        "docker-login#v2.0.1": {
+          "username": "_json_key",
+          "password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+          "server": "https://gcr.io"
+        }
+      },
+      {
+        "docker-compose#v3.7.0": {
+          "run": "deploy",
+          "env": ["GOOGLE_APPLICATION_CREDENTIALS", "BUILDKITE_COMMIT"]
+        }
+      }
+    ]
+  },
+  {
+    "label": ":gcloud: Upload PDF",
+    "depends_on": ["deploy"],
+    "commands": ["bash build-pdf.sh"],
+    "plugins": [
+      {
+        "docker-login#v2.0.1": {
+          "username": "_json_key",
+          "password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+          "server": "https://gcr.io"
+        }
+      },
+      {
+        "docker-compose#v3.7.0": {
+          "run": "pdf-gen",
+          "env": ["GOOGLE_APPLICATION_CREDENTIALS"]
+        }
+      }
+    ]
+  }
 ]

@@ -1,91 +1,91 @@
 [
-	{
-		"label": ":eslint: Lint",
-		"key": "lint",
-		"commands": ["npm run lint"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "client"
-				}
-			}
-		]
-	},
-	{
-		"label": ":building_construction: Build",
-		"key": "build",
-		"depends_on": "lint",
-		"commands": ["npm run build"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "client"
-				}
-			}
-		]
-	},
-	{
-		"label": ":test_tube: Unit Tests",
-		"key": "unit-test",
-		"depends_on": "build",
-		"commands": ["npm run test"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "client"
-				}
-			}
-		]
-	},
-	{
-		"label": ":coverage: Test Coverage",
-		"key": "test-coverage",
-		"depends_on": "unit-test",
-		"commands": ["npm run test:cov"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "client"
-				}
-			}
-		]
-	},
-	{
-		"label": ":eslint: PDF Lint",
-		"key": "pdf-lint",
-		"commands": ["npm run lint"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "pdf-gen-standalone"
-				}
-			}
-		]
-	},
-	{
-		"label": ":test_tube: PDF Unit Tests",
-		"key": "pdf-unit-test",
-		"depends_on": "pdf-lint",
-		"commands": ["npm run test"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "pdf-gen-standalone"
-				}
-			}
-		]
-	},
-	{
-		"label": ":coverage: PDF Test Coverage",
-		"key": "pdf-test-coverage",
-		"depends_on": "pdf-unit-test",
-		"commands": ["npm run test:cov"],
-		"plugins": [
-			{
-				"docker-compose#v3.7.0": {
-					"run": "pdf-gen-standalone"
-				}
-			}
-		]
-	}
+  {
+    "label": ":eslint: Lint",
+    "key": "lint",
+    "commands": ["npm run lint"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "client"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":building_construction: Build",
+    "key": "build",
+    "depends_on": "lint",
+    "commands": ["npm run build"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "client"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":test_tube: Unit Tests",
+    "key": "unit-test",
+    "depends_on": "build",
+    "commands": ["npm run test"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "client"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":coverage: Test Coverage",
+    "key": "test-coverage",
+    "depends_on": "unit-test",
+    "commands": ["npm run test:cov"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "client"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":eslint: PDF Lint",
+    "key": "pdf-lint",
+    "commands": ["npm run lint"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "pdf-gen-standalone"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":test_tube: PDF Unit Tests",
+    "key": "pdf-unit-test",
+    "depends_on": "pdf-lint",
+    "commands": ["npm run test"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "pdf-gen-standalone"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":coverage: PDF Test Coverage",
+    "key": "pdf-test-coverage",
+    "depends_on": "pdf-unit-test",
+    "commands": ["npm run test:cov"],
+    "plugins": [
+      {
+        "docker-compose#v3.7.0": {
+          "run": "pdf-gen-standalone"
+        }
+      }
+    ]
+  }
 ]
