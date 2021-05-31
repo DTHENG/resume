@@ -3,7 +3,7 @@
 echo "Starting build pdf script"
 
 # Auth
-bash auth.sh
+AUTH_ONLY=true bash deploy.sh
 
 # Run 
 cd pdf-gen
