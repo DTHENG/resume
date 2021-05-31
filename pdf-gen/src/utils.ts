@@ -28,6 +28,7 @@ export interface ResumeComponent {
   label?: string | null;
   testId?: string | null;
   webOnly?: boolean | null;
+  smallFont?: boolean | null;
 }
 
 export type DrawTextEntry = { text: string; options: PDFPageDrawTextOptions };
@@ -57,7 +58,9 @@ export const toEntries = async (
     readFileSync(resolve('fonts/OpenSans-Italic.ttf')),
   );
 
-  let runningY = 40;
+  const x = inchesToPixels(1.25);
+  let runningY = inchesToPixels(1);
+  const width = inchesToPixels(6);
   const rectangles: PDFPageDrawRectangleOptions[] = [];
   return {
     text: resume
@@ -65,77 +68,195 @@ export const toEntries = async (
         component.webOnly != null ? !component.webOnly : true,
       )
       .map((component) => {
-        const { text, type } = component;
+        const { text, type, bold, smallFont } = component;
 
         let font = normalFont;
-        let fontSize = 9;
+        let fontSize = inchesToPixels(0.14);
         let marginBottom = 0;
         let marginTop = 0;
 
         switch (type) {
           case ResumeComponentType.TITLE:
             font = boldFont;
-            marginTop = 20;
-            marginBottom = 13;
+            marginBottom = inchesToPixels(0.25);
             break;
           case ResumeComponentType.HEADING:
             font = boldFont;
-            marginTop = 15;
-            marginBottom = 3;
+            marginTop = inchesToPixels(0.25);
+            marginBottom = inchesToPixels(0.05);
             break;
           case ResumeComponentType.BLOCK_QUOTE:
             font = italicFont;
-            fontSize = 7.5;
-            marginTop = 10;
-            marginBottom = 10;
+            fontSize = inchesToPixels(0.115);
+            marginTop = inchesToPixels(0.08);
+            marginBottom = inchesToPixels(0.13);
             break;
           case ResumeComponentType.PARAGRAPH:
-            marginBottom = 3;
+            marginBottom = inchesToPixels(0.06);
+            if (smallFont != null && smallFont) {
+              fontSize = inchesToPixels(0.12);
+            }
             break;
           case ResumeComponentType.SPACE:
-            marginBottom = 15;
+            fontSize = 0;
+            marginBottom = inchesToPixels(0.2);
             break;
           case ResumeComponentType.DATES:
-            fontSize = 7;
-            marginBottom = 7;
+            fontSize = inchesToPixels(0.11);
+            marginBottom = inchesToPixels(0.1);
             break;
           case ResumeComponentType.LINK:
-            fontSize = 8;
-            marginBottom = 4;
+            fontSize = inchesToPixels(0.12);
+            marginBottom = inchesToPixels(0.05);
             break;
         }
         const startingY = marginTop + runningY;
-        const textRows = getTextAsRows(text ?? '', font, fontSize, 390);
-        const entries = textRows.map((rowText) => {
-          const entry = {
-            text: rowText,
-            options: {
-              x: type === ResumeComponentType.BLOCK_QUOTE ? 88 : 80,
-              y: pageHeight - (marginTop + runningY),
-              size: fontSize,
-              font,
-              color: rgb(0, 0, 0),
-            },
-          };
-          runningY += marginTop + fontSize + marginBottom;
-          return entry;
-        });
+        let fullTextBoldStart: number | null = null;
+        let fullTextBoldEnd: number | null = null;
+        if (bold && text.indexOf(bold) > -1) {
+          fullTextBoldStart = text.indexOf(bold);
+          fullTextBoldEnd = fullTextBoldStart + bold.length;
+        }
+        const textRows = getTextAsRows(text ?? '', font, fontSize, width);
+        let textEnd = 0;
+        const entries: DrawTextEntry[] = textRows
+          .map((rowText, index) => {
+            const textStart = textEnd + (index === 0 ? 0 : 1);
+            textEnd += rowText.length + (index === 0 ? 0 : 1);
+            const [boldStart, boldEnd] = getBoldStartAndEndForRow(
+              rowText,
+              bold,
+              fullTextBoldStart,
+              fullTextBoldEnd,
+              textStart,
+              textEnd,
+            );
+            const entries: DrawTextEntry[] = [];
+            if (boldStart != null && boldEnd != null) {
+              const prefixText = rowText.substring(0, boldStart);
+              const suffixText = rowText.substring(boldEnd, rowText.length);
+              const boldText = rowText.substring(boldStart, boldEnd);
+              const prefixTextWidth = font.widthOfTextAtSize(
+                prefixText,
+                fontSize,
+              );
+              const boldTextWidth = boldFont.widthOfTextAtSize(
+                boldText,
+                fontSize,
+              );
+              const suffixTextWidth = boldFont.widthOfTextAtSize(
+                suffixText,
+                fontSize,
+              );
+              let runningX = x;
+              if (prefixTextWidth > 0) {
+                entries.push({
+                  text: prefixText,
+                  options: {
+                    x: runningX,
+                    y: pageHeight - (marginTop + runningY),
+                    size: fontSize,
+                    font,
+                    color: rgb(0, 0, 0),
+                  },
+                });
+                runningX += prefixTextWidth;
+              }
+              entries.push({
+                text: boldText,
+                options: {
+                  x: runningX,
+                  y: pageHeight - (marginTop + runningY),
+                  size: fontSize,
+                  font: boldFont,
+                  color: rgb(0, 0, 0),
+                },
+              });
+              runningX += boldTextWidth;
+              if (suffixTextWidth > 0) {
+                entries.push({
+                  text: suffixText,
+                  options: {
+                    x: runningX,
+                    y: pageHeight - (marginTop + runningY),
+                    size: fontSize,
+                    font,
+                    color: rgb(0, 0, 0),
+                  },
+                });
+              }
+            } else {
+              entries.push({
+                text: rowText,
+                options: {
+                  x:
+                    type === ResumeComponentType.BLOCK_QUOTE
+                      ? x + inchesToPixels(0.11)
+                      : x,
+                  y: pageHeight - (marginTop + runningY),
+                  size: fontSize,
+                  font,
+                  color: rgb(0, 0, 0),
+                },
+              });
+            }
+            runningY += marginTop + fontSize + marginBottom;
+            return entries;
+          })
+          .reduce(flattenArray, []);
         if (type === ResumeComponentType.BLOCK_QUOTE) {
           rectangles.push({
-            x: 80,
-            y: pageHeight - (startingY + 6),
-            width: 1.4,
+            x,
+            y: pageHeight - (startingY + inchesToPixels(0.085)),
+            width: inchesToPixels(0.021),
             height: runningY - startingY,
             color: rgb(0, 0, 0),
           });
         }
         return entries;
       })
-      .reduce((allEntries, entries) => allEntries.concat(entries), []),
+      .reduce(flattenArray, []),
     rectangles,
   };
 };
 
+export const flattenArray = <T>(all: T[], array: T[]): T[] => all.concat(array);
+
+export const getBoldStartAndEndForRow = (
+  rowText: string,
+  bold: string | null,
+  fullTextBoldStart: number | null,
+  fullTextBoldEnd: number | null,
+  textStart: number,
+  textEnd: number,
+): (number | null)[] => {
+  if (!bold || fullTextBoldStart == null || fullTextBoldEnd == null)
+    return [null, null];
+  let boldStart: number | null = null;
+  let boldEnd: number | null = null;
+  if (
+    fullTextBoldStart != null &&
+    fullTextBoldEnd != null &&
+    (fullTextBoldStart >= textStart || fullTextBoldEnd <= textEnd)
+  ) {
+    // Full text
+    if (fullTextBoldStart >= textStart && fullTextBoldEnd <= textEnd) {
+      boldStart = fullTextBoldStart - textStart;
+      boldEnd = fullTextBoldStart - textStart + bold.length;
+
+      // Partial leading
+    } else if (fullTextBoldStart >= textStart && fullTextBoldStart <= textEnd) {
+      boldStart = fullTextBoldStart - textStart;
+      boldEnd = rowText.length;
+
+      // Partial leading
+    } else if (fullTextBoldEnd >= textStart && fullTextBoldEnd <= textEnd) {
+      boldStart = 0;
+      boldEnd = fullTextBoldEnd - textStart;
+    }
+  }
+  return [boldStart, boldEnd];
+};
 export const getTextAsRows = (
   text: string,
   font: PDFFont,
@@ -168,4 +289,8 @@ export const getTextAsRows = (
   });
 
   return result;
+};
+
+export const inchesToPixels = (inches: number): number => {
+  return inches * 65;
 };

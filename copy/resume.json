@@ -71,7 +71,8 @@
   },
   {
     "type": "PARAGRAPH",
-    "text": "Java, Javascript, TypeScript, RxJava, RxJs, RxSwift, Objective-C, Swift, Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade), LESS, Vertx, AWS, docker, Jackson Json, Node.js"
+    "text": "Java, Javascript, TypeScript, RxJava, RxJs, RxSwift, Objective-C, Swift, Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade), LESS, Vertx, AWS, docker, Jackson Json, Node.js",
+    "smallFont": true
   },
   {
     "type": "SPACE"

@@ -1,13 +1,13 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { PDFDocument } from 'pdf-lib';
 import { resolve } from 'path';
-import { getResume, toEntries } from './utils';
+import { getResume, inchesToPixels, toEntries } from './utils';
 import fontkit from '@pdf-lib/fontkit';
 
 export const buildResume = async (outputFile: string): Promise<void> => {
   const doc = await PDFDocument.create();
   doc.registerFontkit(fontkit);
-  const page = doc.addPage([550, 710]);
+  const page = doc.addPage([inchesToPixels(8.5), inchesToPixels(11)]);
   const { height } = page.getSize();
   const resumeData = getResume();
   const { text, rectangles } = await toEntries(resumeData, height, doc);

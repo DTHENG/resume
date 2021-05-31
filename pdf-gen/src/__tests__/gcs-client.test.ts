@@ -1,4 +1,9 @@
 import { uploadFile } from '../gcs-client';
+import * as fs from 'fs';
+import * as path from 'path';
+
+jest.mock('fs');
+jest.mock('path');
 
 const mockedBucket = {
   upload: jest.fn(),
@@ -16,10 +21,11 @@ jest.mock('@google-cloud/storage', () => {
 
 describe('gcs-client', () => {
   it('should upload file', async () => {
+    jest.spyOn(fs, 'existsSync').mockReturnValue(true);
+    jest.spyOn(path, 'resolve').mockReturnValue('');
     const bucketSpy = jest.spyOn(mockedStorage, 'bucket');
     const uploadSpy = jest.spyOn(mockedBucket, 'upload');
     await uploadFile('/fake/document/path.pdf', 'fake-bucket');
-
     expect(bucketSpy).toHaveBeenCalledTimes(1);
     expect(bucketSpy).toHaveBeenCalledWith('fake-bucket');
     expect(uploadSpy).toHaveBeenCalledTimes(1);
