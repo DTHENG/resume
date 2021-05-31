@@ -234,17 +234,13 @@ export const getBoldStartAndEndForRow = (
     return [null, null];
   let boldStart: number | null = null;
   let boldEnd: number | null = null;
-  if (
-    fullTextBoldStart != null &&
-    fullTextBoldEnd != null &&
-    (fullTextBoldStart >= textStart || fullTextBoldEnd <= textEnd)
-  ) {
+  if (fullTextBoldStart >= textStart || fullTextBoldEnd <= textEnd) {
     // Full text
     if (fullTextBoldStart >= textStart && fullTextBoldEnd <= textEnd) {
       boldStart = fullTextBoldStart - textStart;
       boldEnd = fullTextBoldStart - textStart + bold.length;
 
-      // Partial leading
+      // Partial trailing
     } else if (fullTextBoldStart >= textStart && fullTextBoldStart <= textEnd) {
       boldStart = fullTextBoldStart - textStart;
       boldEnd = rowText.length;
@@ -257,6 +253,7 @@ export const getBoldStartAndEndForRow = (
   }
   return [boldStart, boldEnd];
 };
+
 export const getTextAsRows = (
   text: string,
   font: PDFFont,
