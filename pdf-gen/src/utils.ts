@@ -144,7 +144,7 @@ export const getTextAsRows = (
 ): string[] => {
   const currentWidth = font.widthOfTextAtSize(text ?? '', fontSize);
   if (currentWidth < maxWidth) {
-    return [text];
+    return [text ?? ''];
   }
   const brokenText = text.split(' ');
   const result: string[] = [];
@@ -156,6 +156,9 @@ export const getTextAsRows = (
     if (width > maxWidth) {
       result.push(runningText);
       runningText = value;
+      if (index === brokenText.length - 1) {
+        result.push(runningText);
+      }
       return;
     }
     runningText = runningTextWithValue;
