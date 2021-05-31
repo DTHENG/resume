@@ -21,6 +21,9 @@ run:
 start: 
 	yarn --cwd client start
 
+lint-pdf: 
+	yarn --cwd pdf-gen lint
 	
 build-pdf:
 	yarn --cwd pdf-gen build
+
