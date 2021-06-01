@@ -1,6 +1,5 @@
 *.DS_Store
 target
 npm-debug.log
-*.css
 node_modules
 *.idlk
