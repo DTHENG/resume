@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  deploy:
+    build:
+      context: .
+      dockerfile: deploy.Dockerfile
+  resume:
+    build:
+      context: .
+      dockerfile: resume.Dockerfile
+  client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+  pdf-gen:
+    build:
+      context: .
+      dockerfile: pdf-gen.Dockerfile
+  pdf-gen-standalone:
+    build:
+      context: .
+      dockerfile: pdf-gen-standalone.Dockerfile

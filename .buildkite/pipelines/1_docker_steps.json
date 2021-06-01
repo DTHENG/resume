@@ -1,0 +1,69 @@
+[
+  {
+    "label": ":docker: Resume Image",
+    "key": "resume-image",
+    "branches": "master",
+    "depends_on": "test-coverage",
+    "plugins": [
+      {
+        "docker-login#v2.0.1": {
+          "username": "_json_key",
+          "password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+          "server": "https://gcr.io"
+        }
+      },
+      {
+        "docker-compose#v3.7.0": {
+          "build": "resume",
+          "no-cache": true,
+          "image-repository": "gcr.io/smooth-verve-252121/resume",
+          "push": "resume:gcr.io/smooth-verve-252121/resume:$BUILDKITE_COMMIT"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":docker: PDF Image",
+    "key": "pdf-gen-image",
+    "branches": "master",
+    "depends_on": "pdf-test-coverage",
+    "plugins": [
+      {
+        "docker-login#v2.0.1": {
+          "username": "_json_key",
+          "password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+          "server": "https://gcr.io"
+        }
+      },
+      {
+        "docker-compose#v3.7.0": {
+          "build": "pdf-gen",
+          "no-cache": true,
+          "image-repository": "gcr.io/smooth-verve-252121/buildkite"
+        }
+      }
+    ]
+  },
+  {
+    "label": ":docker: Deploy Image",
+    "key": "deploy-image",
+    "branches": "master",
+    "depends_on": "test-coverage",
+    "plugins": [
+      {
+        "docker-login#v2.0.1": {
+          "username": "_json_key",
+          "password-env": "GOOGLE_APPLICATION_CREDENTIALS",
+          "server": "https://gcr.io"
+        }
+      },
+      {
+        "docker-compose#v3.7.0": {
+          "build": "deploy",
+          "no-cache": true,
+          "image-repository": "gcr.io/smooth-verve-252121/buildkite"
+        }
+      }
+    ]
+  }
+]
