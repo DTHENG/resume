@@ -3,6 +3,7 @@
     "label": ":eslint: Lint",
     "key": "lint",
     "commands": ["npm run lint"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -16,6 +17,7 @@
     "key": "build",
     "depends_on": "lint",
     "commands": ["npm run build"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -29,6 +31,7 @@
     "key": "unit-test",
     "depends_on": "build",
     "commands": ["npm run test"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -42,6 +45,7 @@
     "key": "test-coverage",
     "depends_on": "unit-test",
     "commands": ["npm run test:cov"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -54,6 +58,7 @@
     "label": ":eslint: PDF Lint",
     "key": "pdf-lint",
     "commands": ["npm run lint"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -67,6 +72,7 @@
     "key": "pdf-unit-test",
     "depends_on": "pdf-lint",
     "commands": ["npm run test"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
@@ -80,6 +86,7 @@
     "key": "pdf-test-coverage",
     "depends_on": "pdf-unit-test",
     "commands": ["npm run test:cov"],
+    "branches": "!master",
     "plugins": [
       {
         "docker-compose#v3.7.0": {
