@@ -5,7 +5,8 @@
   },
   {
     "type": "PARAGRAPH",
-    "text": "I am a software engineer living in San Francisco, currently a Software Engineer at Cruise, previously worked at Wyre, SnapCard and Rixty."
+    "text": "I am an engineer living in San Francisco, currently a Senior Software Engineer at Cruise, previously worked at Wyre, SnapCard and Rixty.",
+    "bold": "Senior Software Engineer"
   },
   {
     "type": "HEADING",
