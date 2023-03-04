@@ -1,4 +1,4 @@
-FROM node:current-alpine3.13
+FROM node:16.14.0
 
 ENV REACT_APP_ANALYTICS_ID=UA-18339357-1
 
