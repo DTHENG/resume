@@ -1,0 +1,75 @@
+name: Merge
+
+on:
+  push:
+    branches-ignore: [master]
+
+env:
+  FORCE_COLOR: 3
+
+jobs:
+  lint:
+    name: "🧹 Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: yarn lint
+        working-directory: ./client
+        run: |
+          yarn
+          yarn lint
+  build:
+    name: "🏗️ Build"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: yarn build
+        working-directory: ./client
+        run: |
+          yarn
+          yarn build
+  test:
+    name: "🧪 Unit Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: yarn test:cov
+        working-directory: ./client
+        run: |
+          yarn
+          yarn test:cov
+  lint-pdf:
+    name: "🧹 PDF Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: npm run lint
+        working-directory: ./pdf-gen
+        run: |
+          npm ci
+          npm run lint
+  test-pdf:
+    name: "🧪 PDF Unit Tests"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: npm run test:cov
+        working-directory: ./pdf-gen
+        run: |
+          npm ci
+          npm run test:cov
