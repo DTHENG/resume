@@ -9,7 +9,7 @@ env:
 
 jobs:
   build-and-push-resume:
-    name: "Build & Push Resume"
+    name: "Build & Push"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,7 +25,7 @@ jobs:
           push: true
           tags: dtheng/resume:latest, dtheng/resume:${{ github.sha }}
   upload-pdf-resume:
-    name: "Upload PDF Resume"
+    name: "Upload PDF"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -44,6 +44,7 @@ jobs:
         with:
           path: "pdf-gen/tmp/DanielThengvallResume.pdf"
           destination: "com-dtheng"
+          process_gcloudignore: false
   deploy:
     name: "Deploy"
     runs-on: ubuntu-latest
