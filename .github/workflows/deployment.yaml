@@ -48,4 +48,4 @@ jobs:
       - uses: "google-github-actions/upload-cloud-storage@v1"
         with:
           path: "pdf-gen/tmp/DanielThengvallResume.pdf"
-          destination: "com-dtheng/DanielThengvallResume.pdf"
+          destination: "com-dtheng"
