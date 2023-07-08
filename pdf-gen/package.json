@@ -9,7 +9,6 @@
     "test:cov": "jest --coverage --no-cache"
   },
   "dependencies": {
-    "@google-cloud/storage": "5.8.5",
     "@pdf-lib/fontkit": "1.1.1",
     "@types/jest": "26.0.23",
     "@types/node": "15.6.1",

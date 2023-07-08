@@ -60,11 +60,11 @@ jobs:
           location: ${{ secrets.GKE_ZONE }}
       - uses: fjogeleit/yaml-update-action@v0.13.1
         with:
-          valueFile: "deployments/resume.yml"
+          valueFile: "resume.yml"
           propertyPath: "spec.template.spec.containers[0].image"
           value: dtheng/resume:${{ github.sha }}
           commitChange: false
       - name: Start Deployment
-        run: kubectl apply -f deployments/resume.yml
+        run: kubectl apply -f resume.yml
       - name: Wait for Completion
         run: kubectl rollout status --timeout=480s deployment/resume
