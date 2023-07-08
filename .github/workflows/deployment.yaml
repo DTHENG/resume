@@ -6,8 +6,6 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}
-  GKE_ZONE: ${{ secrets.GKE_ZONE }}
 
 jobs:
   build-and-push-resume:
@@ -58,8 +56,8 @@ jobs:
       - uses: "google-github-actions/setup-gcloud@v1"
       - uses: "google-github-actions/get-gke-credentials@v1"
         with:
-          cluster_name: ${{ vars.GKE_CLUSTER }}
-          location: ${{ vars.GKE_ZONE }}
+          cluster_name: ${{ secrets.GKE_CLUSTER }}
+          location: ${{ secrets.GKE_ZONE }}
       - uses: fjogeleit/yaml-update-action@v0.13.1
         with:
           valueFile: "deployments/resume.yml"
