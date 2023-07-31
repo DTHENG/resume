@@ -2,8 +2,7 @@ name: Merge
 
 on:
   push:
-    branches: "master"
-    # branches-ignore: [master]
+    branches-ignore: [master]
 
 env:
   FORCE_COLOR: 3
