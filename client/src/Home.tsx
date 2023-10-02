@@ -115,7 +115,14 @@ function Home() {
       <OuterWrapper>
         <InnerWrapper>
           <PortraitWrapper>
-            <Portrait src="https://storage.googleapis.com/com-dtheng/profile.jpg" />
+            <Portrait
+              src={
+                process.env.REACT_APP_LOCAL_PROFILE_IMAGE &&
+                process.env.REACT_APP_LOCAL_PROFILE_IMAGE === 'true'
+                  ? '/profile.jpg'
+                  : 'https://storage.googleapis.com/com-dtheng/profile.jpg'
+              }
+            />
           </PortraitWrapper>
           <Name>Daniel Thengvall</Name>
           <BlurbWrapper data-testid="blurb">{blurb}</BlurbWrapper>

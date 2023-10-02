@@ -15,6 +15,7 @@ test-coverage:
 
 run: export REACT_APP_ANALYTICS_ID=UA-18339357-1
 run: export REACT_APP_DEBUG_ANALYTICS=true
+run: export REACT_APP_LOCAL_PROFILE_IMAGE=true
 run: 
 	yarn --cwd client build && yarn --cwd server build && yarn --cwd server start
 
