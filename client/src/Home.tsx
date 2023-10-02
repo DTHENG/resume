@@ -116,6 +116,7 @@ function Home() {
         <InnerWrapper>
           <PortraitWrapper>
             <Portrait
+              data-testid="profileImage"
               src={
                 process.env.REACT_APP_LOCAL_PROFILE_IMAGE &&
                 process.env.REACT_APP_LOCAL_PROFILE_IMAGE === 'true'
