@@ -182,4 +182,20 @@ describe('Home', () => {
     render(<Home />);
     expect(addEventListenerSpy).toHaveBeenCalled();
   });
+
+  test('renders with gcs bucket profile picture url', () => {
+    render(<Home />);
+    const image = screen.getByTestId('profileImage');
+    expect(image).toHaveAttribute(
+      'src',
+      'https://storage.googleapis.com/com-dtheng/profile.jpg',
+    );
+  });
+
+  test('renders with local profile picture url', () => {
+    process.env.REACT_APP_LOCAL_PROFILE_IMAGE = 'true';
+    render(<Home />);
+    const image = screen.getByTestId('profileImage');
+    expect(image).toHaveAttribute('src', '/profile.jpg');
+  });
 });
