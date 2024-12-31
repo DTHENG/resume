@@ -82,40 +82,30 @@
     "type": "LINK",
     "text": "fender5289@gmail.com",
     "url": "mailto:fender5289@gmail.com",
-    "category": "Links",
-    "action": "Resume",
     "label": "Email link"
   },
   {
     "type": "LINK",
     "text": "dtheng.com",
     "url": "https://dtheng.com",
-    "category": "Links",
-    "action": "Resume",
     "label": "Website link"
   },
   {
     "type": "LINK",
     "text": "github.com/DTHENG",
     "url": "https://github.com/DTHENG",
-    "category": "Links",
-    "action": "Resume",
     "label": "GitHub link"
   },
   {
     "type": "LINK",
     "text": "angel.co/daniel-thengvall",
     "url": "https://angel.co/daniel-thengvall",
-    "category": "Links",
-    "action": "Resume",
     "label": "Angel List link"
   },
   {
     "type": "LINK",
     "text": "lnkd.in/bD6S_7J",
     "url": "https://lnkd.in/bD6S_7J",
-    "category": "Links",
-    "action": "Resume",
     "label": "Linked in link"
   },
   {
@@ -125,8 +115,6 @@
     "type": "LINK",
     "text": "PDF Version",
     "url": "https://storage.googleapis.com/com-dtheng/DanielThengvallResume.pdf",
-    "category": "Links",
-    "action": "Resume",
     "label": "PDF Download",
     "webOnly": true
   }
