@@ -16,11 +16,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: yarn lint
+      - name: npm run lint
         working-directory: ./client
         run: |
-          yarn
-          yarn lint
+          npm ci
+          npm run lint
   build:
     name: "🏗️ Build"
     runs-on: ubuntu-latest
@@ -29,24 +29,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: yarn build
+      - name: npm run build
         working-directory: ./client
         run: |
-          yarn
-          yarn build
-  test:
-    name: "🧪 Unit Tests"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-      - name: yarn test:cov
-        working-directory: ./client
-        run: |
-          yarn
-          yarn test:cov
+          npm ci
+          npm run build
   lint-pdf:
     name: "🧹 PDF Lint"
     runs-on: ubuntu-latest

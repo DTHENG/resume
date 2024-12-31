@@ -28,7 +28,7 @@ jobs:
           tags: value=${{ github.sha }}
       - uses: docker/build-push-action@v4
         with:
-          file: ./../../resume.Dockerfile
+          file: ./../../Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

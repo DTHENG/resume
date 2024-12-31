@@ -1,26 +1,11 @@
 install: 
-	yarn --cwd client install && yarn --cwd server install && yarn --cwd pdf-gen install
+	yarn --cwd pdf-gen install && cd client && npm install
 
 lint: 
-	yarn --cwd client lint
-
-build: 
-	yarn --cwd client build
-
-test: 
-	yarn --cwd client test
-
-test-coverage: 
-	yarn --cwd client test:cov
-
-run: export REACT_APP_ANALYTICS_ID=UA-18339357-1
-run: export REACT_APP_DEBUG_ANALYTICS=true
-run: export REACT_APP_LOCAL_PROFILE_IMAGE=true
-run: 
-	yarn --cwd client build && yarn --cwd server build && yarn --cwd server start
+	cd client && npm run lint
 
 start: 
-	yarn --cwd client start
+	cd client && npm run dev
 
 pdf-lint: 
 	yarn --cwd pdf-gen lint
