@@ -19,8 +19,10 @@ export default function IndexPage() {
             "https://storage.googleapis.com/com-dtheng/profile.jpg"
           }
         />
-        <h1 className="font-semibold text-xl mb-0.5">Daniel Thengvall</h1>
-        <p className="mb-3">San Francisco, CA</p>
+        <div className="flex flex-col items-center justify-center ">
+          <h1 className="font-semibold text-lg mb-2">Daniel Thengvall</h1>
+          <p className="mb-2 text-xs">San Francisco, CA</p>
+        </div>
         <div className="md:w-5/12 text-base mb-4 px-6">
           {formatResume(getCoverBlurb())}
         </div>

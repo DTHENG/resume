@@ -4,76 +4,147 @@
     "text": "Daniel Thengvall"
   },
   {
-    "type": "PARAGRAPH",
-    "text": "I am an engineer living in San Francisco, currently a Senior Software Engineer at Cruise, previously worked at Wyre, SnapCard and Rixty.",
-    "bold": "Senior Software Engineer"
+    "type": "SUB_TITLE",
+    "text": "San Francisco",
+    "links": [
+      {
+        "text": "Get in Touch",
+        "url": "mailto:fender5289@gmail.com",
+        "label": "Email link"
+      },
+      {
+        "text": "PDF Version",
+        "url": "https://storage.googleapis.com/com-dtheng/DanielThengvallResume.pdf",
+        "label": "PDF Download"
+      }
+    ]
   },
   {
-    "type": "HEADING",
-    "text": "GM Cruise LLC"
-  },
-  {
-    "type": "DATES",
-    "text": "2019 – Present"
-  },
-  {
-    "type": "PARAGRAPH",
-    "text": "Cruise is building the world’s most advanced, all-electric, self-driving cars to safely connect people to the places, things, and experiences they care about. We believe self-driving cars will help save lives, reimagine cities, redefine time in transit, and restore freedom of movement for many."
-  },
-  {
-    "type": "HEADING",
-    "text": "Wyre Inc."
-  },
-  {
-    "type": "DATES",
-    "text": "2016 – 2019"
+    "type": "DIVIDER"
   },
   {
     "type": "PARAGRAPH",
-    "text": "Wyre is the leading infrastructure provider in crypto. After trading over $3.5 billion in cryptocurrency assets and completing over $750 million in bank-to-bank FX payments, Wyre has established a network of relationships with leading banks and exchanges. As a Senior Software Engineer I worked to develop the user-facing applications along with administrative tools for the compliance, customer support and accounting teams.",
-    "bold": "Senior Software Engineer"
+    "text": "I am a software engineer with over 14 years of professional experience, currently a Senior Software Engineer at Cruise where I focus on building secure, high-availability systems for autonomous vehicles. With deep expertise in telephony integrations, distributed systems, and compliance-driven development, I excel in designing and implementing robust services at scale. I enjoy collaborating across teams, mentoring fellow engineers, and continuously improving organizational processes."
   },
   {
-    "type": "BLOCK_QUOTE",
-    "text": "In October of 2016, SnapCard, Inc. rebranded to Wyre, Inc."
+    "type": "DIVIDER"
   },
   {
-    "type": "HEADING",
-    "text": "SnapCard Inc."
+    "type": "HEADING_2",
+    "position": "Senior Software Engineer",
+    "company": "GM Cruise LLC",
+    "dates": "2019 - Present",
+    "location": "San Francisco"
   },
   {
-    "type": "DATES",
-    "text": "2014 – 2016"
+    "type": "BULLET",
+    "text": "Telephony Platform & Services: Designed and built a Telephony Platform to separate call logic from the core backend, improving reliability and maintainability.",
+    "bold": "Telephony Platform & Services:"
+  },
+  {
+    "type": "BULLET",
+    "text": "Case Management & Twilio Expert: Acted as the go-to SME for Twilio call flows and telephony debugging; led complex projects (e.g., vehicle multi-conferencing, call recording, TTY/RTT for deaf riders).",
+    "bold": "Case Management & Twilio Expert:"
+  },
+  {
+    "type": "BULLET",
+    "text": "On-Call & Incident Response: Frequently served as incident lead, conducted root-cause analyses for telephony issues, and provided clear postmortems to stakeholders and executives.",
+    "bold": "On-Call & Incident Response:"
+  },
+  {
+    "type": "BULLET",
+    "text": "Notable Initiatives",
+    "bold": "Notable Initiatives"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "Telephony Heartbeat: Implemented a real-time service to monitor call health and alert vehicle riders + on-call engineers during outages.",
+    "bold": "Telephony Heartbeat:"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "Interior Camera Playback: Extended video playback solutions to new vehicle types, unblocking key regulatory requirements.",
+    "bold": "Interior Camera Playback:"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "Metrics & Analytics: Partnered with the Data Science teams to build pipelines for ingesting metrics into BigQuery/Looker, enabling real-time insights and scaling the fleet.",
+    "bold": "Metrics & Analytics:"
+  },
+  {
+    "type": "DIVIDER"
+  },
+  {
+    "type": "HEADING_2",
+    "position": "Senior Software Engineer",
+    "company": "Wyre Inc.",
+    "dates": "2014 - 2019",
+    "location": "San Francisco"
   },
   {
     "type": "PARAGRAPH",
-    "text": "SnapCard is a bitcoin payments company, focusing on providing tools for easy management and transfers at the best rate. As a Senior Software Engineer I worked to add new currencies through integrations with third party exchanges. Being part of a growing company I wore many hats, from training new engineers to building mobile and web applications.",
-    "bold": "Senior Software Engineer"
+    "text": "Contributed to Wyre’s high-volume cryptocurrency trading platform, focusing on user-facing apps and backend integrations with banks and exchanges. Developed dashboards for compliance and accounting teams, streamlining investigations and internal workflows. Onboarded new cryptocurrencies and payment rails, requiring robust API design, high security standards, and precise error handling."
   },
   {
-    "type": "HEADING",
-    "text": "Rixty Inc."
+    "type": "DIVIDER"
   },
   {
-    "type": "DATES",
-    "text": "2011 – 2014"
+    "type": "HEADING_2",
+    "position": "Lead Developer",
+    "company": "Rixty, Inc.",
+    "dates": "2011 - 2014",
+    "location": "San Francisco"
   },
   {
     "type": "PARAGRAPH",
-    "text": "Rixty is an alternative payment system focusing on consumers without credit cards. As Lead Developer I managed api integrations with companies like Microsoft, Coinstar and Skrill. I also worked to localize the platform for new countries like Brazil and built tools for the customer support team.",
-    "bold": "Lead Developer"
+    "text": "Managed API integrations (Xbox, Skrill, Coinstar) enabling users without credit cards to purchase digital goods. Led localization efforts for new markets, including Brazil, and built internal support tools for an international customer base."
   },
   {
-    "type": "SPACE"
+    "type": "DIVIDER"
   },
   {
     "type": "HEADING",
     "text": "Skills"
   },
   {
-    "type": "PARAGRAPH",
-    "text": "Java, Javascript, TypeScript, RxJava, RxJs, RxSwift, Objective-C, Swift, Android, MySQL, DynamoDB, Jooq, Google Guice, Angular, Pug (formerly Jade), LESS, Vertx, AWS, docker, Jackson Json, Node.js",
-    "smallFont": true
+    "type": "BULLET",
+    "text": "Languages & Frameworks: TypeScript, Golang, Java, React, Jest, Redux, Redux-Saga, RxJava, Node.js, Angular, Vert.x",
+    "bold": "Languages & Frameworks:"
+  },
+  {
+    "type": "BULLET",
+    "text": "Cloud & Data: Google Cloud, Kubernetes, PostgreSQL, Cloud Spanner, Redis, AWS, Docker, MySQL, BigQuery, Looker, Pub/Sub, JOOQ, PagerDuty",
+    "bold": "Cloud & Data:"
+  },
+  {
+    "type": "BULLET",
+    "text": "Telephony & Communications: Twilio, SIP, WebRTC, Conferencing APIs",
+    "bold": "Telephony & Communications:"
+  },
+  {
+    "type": "BULLET",
+    "text": "System Design: Microservices, high availability, multi-region architectures, observability (metrics, logs, tracing)",
+    "bold": "System Design:"
+  },
+  {
+    "type": "BULLET",
+    "text": "Other",
+    "bold": "Other"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "CI/CD Pipelines: Buildkite, GitHub Actions, Terraform",
+    "bold": "CI/CD Pipelines:"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "Distributed Troubleshooting: Datadog, Stackdriver, Humio",
+    "bold": "Distributed Troubleshooting:"
+  },
+  {
+    "type": "SUB_BULLET",
+    "text": "Security Best Practices: Vault, JWT, RBAC/ABAC",
+    "bold": "Security Best Practices:"
   },
   {
     "type": "SPACE"
@@ -98,15 +169,9 @@
   },
   {
     "type": "LINK",
-    "text": "angel.co/daniel-thengvall",
-    "url": "https://angel.co/daniel-thengvall",
-    "label": "Angel List link"
-  },
-  {
-    "type": "LINK",
     "text": "lnkd.in/bD6S_7J",
     "url": "https://lnkd.in/bD6S_7J",
-    "label": "Linked in link"
+    "label": "LinkedIn link"
   },
   {
     "type": "SPACE"

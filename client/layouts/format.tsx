@@ -6,6 +6,11 @@ export enum ResumeComponentType {
   BLOCK_QUOTE = "BLOCK_QUOTE",
   LINK = "LINK",
   SPACE = "SPACE",
+  HEADING_2 = "HEADING_2",
+  DIVIDER = "DIVIDER",
+  BULLET = "BULLET",
+  SUB_BULLET = "SUB_BULLET",
+  SUB_TITLE = "SUB_TITLE",
 }
 
 export interface Link {
@@ -16,12 +21,16 @@ export interface Link {
 
 export interface ResumeComponent {
   type: ResumeComponentType;
-  text?: string | null;
-  bold?: string | null;
-  url?: string | null;
-  testId?: string | null;
-  smallFont?: boolean | null;
+  text?: string;
+  bold?: string;
+  url?: string;
+  testId?: string;
+  smallFont?: boolean;
   links?: Link[];
+  position?: string;
+  company?: string;
+  dates?: string;
+  location?: string;
 }
 
 export const getResume = (): ResumeComponent[] => {
@@ -38,82 +47,148 @@ export const getCoverBlurb = (): ResumeComponent[] => {
   throw new Error("NEXT_PUBLIC_COVER_BLURB_JSON not set!");
 };
 
+export const WithBoldText = (props: {
+  component: ResumeComponent;
+}): JSX.Element => {
+  const { bold, text, smallFont, testId, links } = props.component;
+
+  if (bold && text && text.indexOf(bold) > -1) {
+    const boldStart = text.indexOf(bold);
+    const boldEnd = boldStart + bold.length;
+    const beforeText = text.substring(0, boldStart);
+    const afterText = text.substring(boldEnd, text.length);
+    let linkMatches: Link[] = [];
+
+    if (links != null) {
+      linkMatches = links.filter((link) => link.text === bold);
+    }
+
+    return (
+      <p
+        className={`${smallFont != null && smallFont === true ? "text-xs" : "text-sm"}`}
+        data-testid={testId}
+      >
+        {beforeText}
+        {linkMatches.length > 0 && (
+          <a
+            className="font-bold link"
+            data-testid={testId ? `${testId}_bold` : ""}
+            href={linkMatches[0].url}
+            title={linkMatches[0].label}
+          >
+            {bold}
+          </a>
+        )}
+        {linkMatches.length === 0 && (
+          <span
+            className="font-bold"
+            data-testid={testId ? `${testId}_bold` : ""}
+          >
+            {bold}
+          </span>
+        )}
+        {afterText}
+      </p>
+    );
+  }
+
+  return (
+    <p
+      className={`${smallFont != null && smallFont === true ? "text-xs" : "text-sm"}`}
+      data-testid={testId}
+    >
+      {text ?? ""}
+    </p>
+  );
+};
+
 export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
   return (
     <>
       {resume.map((component, index) => {
-        const { type, text, bold, url, testId, smallFont, links } = component;
+        const {
+          type,
+          text,
+          url,
+          testId,
+          links,
+          position,
+          company,
+          dates,
+          location,
+        } = component;
 
         switch (type) {
           case ResumeComponentType.TITLE:
             return (
               <p
                 key={index}
-                className="text-xl font-bold mb-5"
+                className="text-lg font-bold mb-5"
                 data-testid={testId}
               >
                 {text ?? ""}
               </p>
             );
-          case ResumeComponentType.PARAGRAPH:
-            if (bold && text && text.indexOf(bold) > -1) {
-              const boldStart = text.indexOf(bold);
-              const boldEnd = boldStart + bold.length;
-              const beforeText = text.substring(0, boldStart);
-              const afterText = text.substring(boldEnd, text.length);
-              let linkMatches: Link[] = [];
-
-              if (links != null) {
-                linkMatches = links.filter((link) => link.text === bold);
-              }
-
-              return (
-                <p
-                  key={index}
-                  className={`${smallFont != null && smallFont === true ? "text-sm" : ""}`}
-                  data-testid={testId}
-                >
-                  {beforeText}
-                  {linkMatches.length > 0 && (
-                    <a
-                      className="font-bold link"
-                      data-testid={testId ? `${testId}_bold` : ""}
-                      href={linkMatches[0].url}
-                      title={linkMatches[0].label}
-                    >
-                      {bold}
-                    </a>
-                  )}
-                  {linkMatches.length === 0 && (
-                    <span
-                      className="font-bold"
-                      data-testid={testId ? `${testId}_bold` : ""}
-                    >
-                      {bold}
-                    </span>
-                  )}
-                  {afterText}
-                </p>
-              );
-            }
-
+          case ResumeComponentType.SUB_TITLE:
             return (
-              <p
+              <div
                 key={index}
-                className={`${smallFont != null && smallFont === true ? "text-sm" : ""}`}
-                data-testid={testId}
+                className="flex flex-row justify-between items-center"
               >
-                {text ?? ""}
-              </p>
+                <p className=" text-sm" data-testid={testId}>
+                  {text ?? ""}
+                </p>
+                <div className="flex flex-row gap-x-3">
+                  {(links ?? []).map((link, index) => (
+                    <a
+                      key={index}
+                      className="link text-sm font-bold"
+                      data-testid={testId}
+                      href={link.url ?? ""}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {link.text ?? ""}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          case ResumeComponentType.PARAGRAPH:
+            return <WithBoldText key={index} component={component} />;
+          case ResumeComponentType.BULLET:
+            return (
+              <ul key={index} className="list-disc pl-6">
+                <li>
+                  <WithBoldText component={component} />
+                </li>
+              </ul>
+            );
+          case ResumeComponentType.SUB_BULLET:
+            return (
+              <ul key={index} className="list-disc pl-12">
+                <li>
+                  <WithBoldText component={component} />
+                </li>
+              </ul>
             );
           case ResumeComponentType.HEADING:
             return (
               <p
                 key={index}
-                className="mt-8 font-semibold text-lg"
+                className="font-semibold text-sm"
                 data-testid={testId}
               >
                 {text ?? ""}
+              </p>
+            );
+          case ResumeComponentType.HEADING_2:
+            return (
+              <p key={index} className="mb-2 text-sm" data-testid={testId}>
+                <span className="font-semibold">{position ?? ""}</span> |{" "}
+                <span className="font-semibold">{company ?? ""}</span>
+                {" | "}
+                <span>{dates ?? ""}</span>, <span>{location ?? ""}</span>
               </p>
             );
           case ResumeComponentType.DATES:
@@ -135,7 +210,7 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
             return (
               <div key={index}>
                 <a
-                  className="link"
+                  className="link text-sm"
                   data-testid={testId}
                   href={url ?? ""}
                   rel="noreferrer"
@@ -147,6 +222,8 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
             );
           case ResumeComponentType.SPACE:
             return <br key={index} data-testid={testId} />;
+          case ResumeComponentType.DIVIDER:
+            return <hr key={index} className="my-4" />;
           default:
             return (
               <div key={index} data-testid={testId}>
