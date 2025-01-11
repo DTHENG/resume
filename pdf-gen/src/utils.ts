@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'fs';
 import {
   PDFDocument,
   PDFFont,
+  PDFPageDrawCircleOptions,
   PDFPageDrawRectangleOptions,
   PDFPageDrawTextOptions,
   rgb,
@@ -16,6 +17,11 @@ export enum ResumeComponentType {
   BLOCK_QUOTE = 'BLOCK_QUOTE',
   LINK = 'LINK',
   SPACE = 'SPACE',
+  HEADING_2 = 'HEADING_2',
+  DIVIDER = 'DIVIDER',
+  BULLET = 'BULLET',
+  SUB_BULLET = 'SUB_BULLET',
+  SUB_TITLE = 'SUB_TITLE',
 }
 
 export interface ResumeComponent {
@@ -29,6 +35,10 @@ export interface ResumeComponent {
   testId?: string | null;
   webOnly?: boolean | null;
   smallFont?: boolean | null;
+  position?: string;
+  company?: string;
+  dates?: string;
+  location?: string;
 }
 
 export type DrawTextEntry = { text: string; options: PDFPageDrawTextOptions };
@@ -47,6 +57,7 @@ export const toEntries = async (
 ): Promise<{
   text: DrawTextEntry[];
   rectangles: PDFPageDrawRectangleOptions[];
+  circles: PDFPageDrawCircleOptions[];
 }> => {
   const normalFont = await doc.embedFont(
     readFileSync(resolve('fonts/OpenSans-Regular.ttf')),
@@ -59,30 +70,43 @@ export const toEntries = async (
   );
 
   const x = inchesToPixels(1.25);
-  let runningY = inchesToPixels(1);
+  let runningY = inchesToPixels(0.6);
   const width = inchesToPixels(6);
   const rectangles: PDFPageDrawRectangleOptions[] = [];
+  const circles: PDFPageDrawCircleOptions[] = [];
   return {
     text: resume
       .filter((component) =>
         component.webOnly != null ? !component.webOnly : true,
       )
       .map((component) => {
-        const { text, type, bold, smallFont } = component;
+        const {
+          text,
+          type,
+          bold,
+          smallFont,
+          position,
+          company,
+          dates,
+          location,
+        } = component;
 
         let font = normalFont;
-        let fontSize = inchesToPixels(0.14);
+        let fontSize = inchesToPixels(0.12);
         let marginBottom = 0;
         let marginTop = 0;
 
         switch (type) {
           case ResumeComponentType.TITLE:
             font = boldFont;
-            marginBottom = inchesToPixels(0.25);
+            marginBottom = inchesToPixels(0.15);
+            break;
+          case ResumeComponentType.SUB_TITLE:
             break;
           case ResumeComponentType.HEADING:
+          case ResumeComponentType.HEADING_2:
             font = boldFont;
-            marginTop = inchesToPixels(0.25);
+            marginTop = inchesToPixels(0.05);
             marginBottom = inchesToPixels(0.05);
             break;
           case ResumeComponentType.BLOCK_QUOTE:
@@ -92,23 +116,99 @@ export const toEntries = async (
             marginBottom = inchesToPixels(0.13);
             break;
           case ResumeComponentType.PARAGRAPH:
-            marginBottom = inchesToPixels(0.06);
+          case ResumeComponentType.BULLET:
+          case ResumeComponentType.SUB_BULLET:
+            marginTop = inchesToPixels(0.04);
+            marginBottom = inchesToPixels(0.02);
             if (smallFont != null && smallFont) {
-              fontSize = inchesToPixels(0.12);
+              fontSize = inchesToPixels(0.1);
             }
             break;
           case ResumeComponentType.SPACE:
             fontSize = 0;
-            marginBottom = inchesToPixels(0.2);
+            marginBottom = inchesToPixels(0.4);
+            break;
+          case ResumeComponentType.DIVIDER:
+            fontSize = 0;
             break;
           case ResumeComponentType.DATES:
             fontSize = inchesToPixels(0.11);
             marginBottom = inchesToPixels(0.1);
             break;
           case ResumeComponentType.LINK:
-            fontSize = inchesToPixels(0.12);
             marginBottom = inchesToPixels(0.05);
             break;
+        }
+
+        if (type === ResumeComponentType.HEADING_2) {
+          let heading2X = x;
+          const heading2Entries: DrawTextEntry[] = [];
+          const positionText: DrawTextEntry = {
+            text: position ?? '',
+            options: {
+              x: heading2X,
+              y: pageHeight - (marginTop + runningY),
+              size: fontSize,
+              font,
+              color: rgb(0, 0, 0),
+            },
+          };
+          heading2Entries.push(positionText);
+          heading2X += boldFont.widthOfTextAtSize(position ?? '', fontSize);
+
+          const pipeOneText: DrawTextEntry = {
+            text: ' | ',
+            options: {
+              x: heading2X,
+              y: pageHeight - (marginTop + runningY),
+              size: fontSize,
+              font: normalFont,
+              color: rgb(0, 0, 0),
+            },
+          };
+          heading2Entries.push(pipeOneText);
+          heading2X += normalFont.widthOfTextAtSize(' | ', fontSize);
+
+          const companyText: DrawTextEntry = {
+            text: company ?? '',
+            options: {
+              x: heading2X,
+              y: pageHeight - (marginTop + runningY),
+              size: fontSize,
+              font,
+              color: rgb(0, 0, 0),
+            },
+          };
+          heading2Entries.push(companyText);
+          heading2X += boldFont.widthOfTextAtSize(company ?? '', fontSize);
+
+          const pipeTwoText: DrawTextEntry = {
+            text: ' | ',
+            options: {
+              x: heading2X,
+              y: pageHeight - (marginTop + runningY),
+              size: fontSize,
+              font: normalFont,
+              color: rgb(0, 0, 0),
+            },
+          };
+          heading2Entries.push(pipeTwoText);
+          heading2X += normalFont.widthOfTextAtSize(' | ', fontSize);
+
+          const datesAndLocationText: DrawTextEntry = {
+            text: `${dates}, ${location}`,
+            options: {
+              x: heading2X,
+              y: pageHeight - (marginTop + runningY),
+              size: fontSize,
+              font: italicFont,
+              color: rgb(0, 0, 0),
+            },
+          };
+          heading2Entries.push(datesAndLocationText);
+
+          runningY += marginTop + fontSize + marginBottom;
+          return heading2Entries;
         }
         const startingY = marginTop + runningY;
         let fullTextBoldStart: number | null = null;
@@ -117,7 +217,26 @@ export const toEntries = async (
           fullTextBoldStart = text.indexOf(bold);
           fullTextBoldEnd = fullTextBoldStart + bold.length;
         }
-        const textRows = getTextAsRows(text ?? '', font, fontSize, width);
+        let xOffset = 0;
+        switch (type) {
+          case ResumeComponentType.BLOCK_QUOTE:
+            xOffset = inchesToPixels(0.11);
+            break;
+          case ResumeComponentType.BULLET:
+            xOffset = inchesToPixels(0.15);
+            break;
+          case ResumeComponentType.SUB_BULLET:
+            xOffset = inchesToPixels(0.3);
+            break;
+        }
+
+        const adjustedWidth = width - xOffset;
+        const textRows = getTextAsRows(
+          text ?? '',
+          font,
+          fontSize,
+          adjustedWidth,
+        );
         let textEnd = 0;
         const entries: DrawTextEntry[] = textRows
           .map((rowText, index) => {
@@ -132,6 +251,7 @@ export const toEntries = async (
               textEnd,
             );
             const entries: DrawTextEntry[] = [];
+            const adjustedX = x + xOffset;
             if (boldStart != null && boldEnd != null) {
               const prefixText = rowText.substring(0, boldStart);
               const suffixText = rowText.substring(boldEnd, rowText.length);
@@ -148,7 +268,7 @@ export const toEntries = async (
                 suffixText,
                 fontSize,
               );
-              let runningX = x;
+              let runningX = adjustedX;
               if (prefixTextWidth > 0) {
                 entries.push({
                   text: prefixText,
@@ -189,10 +309,7 @@ export const toEntries = async (
               entries.push({
                 text: rowText,
                 options: {
-                  x:
-                    type === ResumeComponentType.BLOCK_QUOTE
-                      ? x + inchesToPixels(0.11)
-                      : x,
+                  x: adjustedX,
                   y: pageHeight - (marginTop + runningY),
                   size: fontSize,
                   font,
@@ -213,10 +330,37 @@ export const toEntries = async (
             color: rgb(0, 0, 0),
           });
         }
+        if (type === ResumeComponentType.DIVIDER) {
+          rectangles.push({
+            x,
+            y: pageHeight - (startingY + inchesToPixels(0.01)),
+            width: width,
+            height: inchesToPixels(0.008),
+            color: rgb(0.8, 0.8, 0.8),
+          });
+          runningY += inchesToPixels(0.2);
+        }
+        if (type === ResumeComponentType.BULLET) {
+          circles.push({
+            x: x + inchesToPixels(0.07),
+            y: pageHeight - (startingY - inchesToPixels(0.04)),
+            size: inchesToPixels(0.012),
+            color: rgb(0, 0, 0),
+          });
+        }
+        if (type === ResumeComponentType.SUB_BULLET) {
+          circles.push({
+            x: x + inchesToPixels(0.22),
+            y: pageHeight - (startingY - inchesToPixels(0.04)),
+            size: inchesToPixels(0.012),
+            color: rgb(0, 0, 0),
+          });
+        }
         return entries;
       })
       .reduce(flattenArray, []),
     rectangles,
+    circles,
   };
 };
 

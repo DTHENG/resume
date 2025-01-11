@@ -10,9 +10,14 @@ export const buildResume = async (outputFile: string): Promise<void> => {
   const page = doc.addPage([inchesToPixels(8.5), inchesToPixels(11)]);
   const { height } = page.getSize();
   const resumeData = getResume();
-  const { text, rectangles } = await toEntries(resumeData, height, doc);
+  const { text, rectangles, circles } = await toEntries(
+    resumeData,
+    height,
+    doc,
+  );
   text.forEach((entry) => page.drawText(entry.text, entry.options));
   rectangles.forEach((rectangle) => page.drawRectangle(rectangle));
+  circles.forEach((circle) => page.drawCircle(circle));
   doc.setTitle("Daniel Thengvall's Resume");
   doc.setAuthor('Daniel Thengvall');
   doc.setSubject(readFileSync(resolve('../copy/blurb.160.txt')).toString());
