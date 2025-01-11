@@ -1,40 +1,21 @@
-{
-  "text": "Daniel is an engineer living in San Francisco, currently a Senior Software Engineer at Cruise, previously worked at Wyre, SnapCard and Rixty.",
-  "links": [
-    {
-      "text": "San Francisco",
-      "url": "https://en.wikipedia.org/wiki/San_Francisco",
-      "category": "Links",
-      "action": "Blurb",
-      "label": "SF Wiki"
-    },
-    {
-      "text": "Cruise",
-      "url": "https://getcruise.com/",
-      "category": "Links",
-      "action": "Blurb",
-      "label": "Cruise Website"
-    },
-    {
-      "text": "Wyre",
-      "url": "https://sendwyre.com/",
-      "category": "Links",
-      "action": "Blurb",
-      "label": "Wyre Website"
-    },
-    {
-      "text": "SnapCard",
-      "url": "https://snapcard.io",
-      "category": "Links",
-      "action": "Blurb",
-      "label": "Snapcard Website"
-    },
-    {
-      "text": "Rixty",
-      "url": "https://rixty.com",
-      "category": "Links",
-      "action": "Blurb",
-      "label": "Rixty Website"
-    }
-  ]
-}
+[
+  {
+    "type": "PARAGRAPH",
+    "text": "Daniel is a software engineer with over 14 years of experience designing and deploying large-scale, mission-critical systems. He most recently worked on high-availability services and telephony solutions for autonomous vehicles at Cruise.",
+    "bold": "Cruise",
+    "links": [
+      {
+        "text": "Cruise",
+        "url": "https://getcruise.com/",
+        "label": "Cruise Website"
+      }
+    ]
+  },
+  {
+    "type": "SPACE"
+  },
+  {
+    "type": "PARAGRAPH",
+    "text": "Before that, he worked at a series of fintech startups, focusing on payment integrations, crypto infrastructure, and compliance-driven development. Outside of engineering, he enjoys traveling with his wife, distance running across the city, and bouldering."
+  }
+]

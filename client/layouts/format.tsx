@@ -8,6 +8,12 @@ export enum ResumeComponentType {
   SPACE = "SPACE",
 }
 
+export interface Link {
+  text: string;
+  url: string;
+  label: string;
+}
+
 export interface ResumeComponent {
   type: ResumeComponentType;
   text?: string | null;
@@ -15,6 +21,7 @@ export interface ResumeComponent {
   url?: string | null;
   testId?: string | null;
   smallFont?: boolean | null;
+  links?: Link[];
 }
 
 export const getResume = (): ResumeComponent[] => {
@@ -24,11 +31,18 @@ export const getResume = (): ResumeComponent[] => {
   throw new Error("NEXT_PUBLIC_RESUME_JSON not set!");
 };
 
+export const getCoverBlurb = (): ResumeComponent[] => {
+  if (process.env.NEXT_PUBLIC_COVER_BLURB_JSON) {
+    return JSON.parse(process.env.NEXT_PUBLIC_COVER_BLURB_JSON);
+  }
+  throw new Error("NEXT_PUBLIC_COVER_BLURB_JSON not set!");
+};
+
 export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
   return (
     <>
       {resume.map((component, index) => {
-        const { type, text, bold, url, testId, smallFont } = component;
+        const { type, text, bold, url, testId, smallFont, links } = component;
 
         switch (type) {
           case ResumeComponentType.TITLE:
@@ -47,6 +61,11 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
               const boldEnd = boldStart + bold.length;
               const beforeText = text.substring(0, boldStart);
               const afterText = text.substring(boldEnd, text.length);
+              let linkMatches: Link[] = [];
+
+              if (links != null) {
+                linkMatches = links.filter((link) => link.text === bold);
+              }
 
               return (
                 <p
@@ -55,12 +74,24 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
                   data-testid={testId}
                 >
                   {beforeText}
-                  <span
-                    className="font-bold"
-                    data-testid={testId ? `${testId}_bold` : ""}
-                  >
-                    {bold}
-                  </span>
+                  {linkMatches.length > 0 && (
+                    <a
+                      className="font-bold link"
+                      data-testid={testId ? `${testId}_bold` : ""}
+                      href={linkMatches[0].url}
+                      title={linkMatches[0].label}
+                    >
+                      {bold}
+                    </a>
+                  )}
+                  {linkMatches.length === 0 && (
+                    <span
+                      className="font-bold"
+                      data-testid={testId ? `${testId}_bold` : ""}
+                    >
+                      {bold}
+                    </span>
+                  )}
                   {afterText}
                 </p>
               );
