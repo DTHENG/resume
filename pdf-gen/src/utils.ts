@@ -230,7 +230,7 @@ export const toEntries = async (
             break;
         }
 
-        const adjustedWidth = width - xOffset;
+        const adjustedWidth = width - xOffset - inchesToPixels(0.1);
         const textRows = getTextAsRows(
           text ?? '',
           font,
@@ -264,10 +264,6 @@ export const toEntries = async (
                 boldText,
                 fontSize,
               );
-              const suffixTextWidth = boldFont.widthOfTextAtSize(
-                suffixText,
-                fontSize,
-              );
               let runningX = adjustedX;
               if (prefixTextWidth > 0) {
                 entries.push({
@@ -293,18 +289,16 @@ export const toEntries = async (
                 },
               });
               runningX += boldTextWidth;
-              if (suffixTextWidth > 0) {
-                entries.push({
-                  text: suffixText,
-                  options: {
-                    x: runningX,
-                    y: pageHeight - (marginTop + runningY),
-                    size: fontSize,
-                    font,
-                    color: rgb(0, 0, 0),
-                  },
-                });
-              }
+              entries.push({
+                text: suffixText,
+                options: {
+                  x: runningX,
+                  y: pageHeight - (marginTop + runningY),
+                  size: fontSize,
+                  font,
+                  color: rgb(0, 0, 0),
+                },
+              });
             } else {
               entries.push({
                 text: rowText,
