@@ -26,7 +26,7 @@ describe('utils', () => {
         .spyOn(mockDocument, 'embedFont')
         .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
       const result = await toEntries([], 100, mockDocument);
-      expect(result).toEqual({ text: [], rectangles: [] });
+      expect(result).toEqual({ text: [], rectangles: [], circles: [] });
     });
 
     it('should return no non-web entries', async () => {
@@ -46,7 +46,7 @@ describe('utils', () => {
         100,
         mockDocument,
       );
-      expect(result).toEqual({ text: [], rectangles: [] });
+      expect(result).toEqual({ text: [], rectangles: [], circles: [] });
     });
 
     it('should return title entry', async () => {
@@ -70,12 +70,42 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Title');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
+      );
+    });
+
+    it('should return sub title entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.SUB_TITLE,
+            text: 'Sub Title',
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(1);
+      expect(result.rectangles).toHaveLength(0);
+      expect(result.text[0].text).toBe('Sub Title');
+      expect(result.text[0].options).toBeDefined();
+      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.x).toEqual(81.25);
+      expect(result.text[0].options.y).toEqual(61);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      expect((result.text[0].options.font as any).file).toBe(
+        'fonts/OpenSans-Regular.ttf',
       );
     });
 
@@ -100,13 +130,67 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Heading');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(18.75);
+      expect(result.text[0].options.y).toEqual(57.75);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
+    });
+
+    it('should return header 2 entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.HEADING_2,
+            position: 'Position',
+            company: 'Company',
+            dates: 'From - To',
+            location: 'Location',
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(5);
+      expect(result.rectangles).toHaveLength(0);
+      expect(result.text[0].text).toBe('Position');
+      expect(result.text[1].text).toBe(' | ');
+      expect(result.text[2].text).toBe('Company');
+      expect(result.text[3].text).toBe(' | ');
+      expect(result.text[4].text).toBe('From - To, Location');
+    });
+
+    it('should return header 2 entry, no data', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.HEADING_2,
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(5);
+      expect(result.rectangles).toHaveLength(0);
+      expect(result.text[0].text).toBe('');
+      expect(result.text[1].text).toBe(' | ');
+      expect(result.text[2].text).toBe('');
+      expect(result.text[3].text).toBe(' | ');
+      expect(result.text[4].text).toBe('undefined, undefined');
     });
 
     it('should return blockquote entry', async () => {
@@ -131,7 +215,7 @@ describe('utils', () => {
       expect(result.text[0].options).toBeDefined();
       expect(result.text[0].options.size).toEqual(7.4750000000000005);
       expect(result.text[0].options.x).toEqual(88.4);
-      expect(result.text[0].options.y).toEqual(29.799999999999997);
+      expect(result.text[0].options.y).toEqual(55.8);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Italic.ttf',
@@ -140,7 +224,80 @@ describe('utils', () => {
       expect(result.rectangles[0].height).toEqual(15.924999999999997);
       expect(result.rectangles[0].width).toEqual(1.365);
       expect(result.rectangles[0].x).toEqual(81.25);
-      expect(result.rectangles[0].y).toEqual(24.27499999999999);
+      expect(result.rectangles[0].y).toEqual(50.275);
+    });
+
+    it('should return divider entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.DIVIDER,
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(1);
+      expect(result.text[0].text).toBe('');
+      expect(result.rectangles).toHaveLength(1);
+      expect(result.rectangles[0].height).toEqual(0.52);
+      expect(result.rectangles[0].width).toEqual(390);
+    });
+
+    it('should return bullet entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.BULLET,
+            text: 'Bullet',
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(1);
+      expect(result.text[0].text).toBe('Bullet');
+      expect(result.circles).toHaveLength(1);
+      expect(result.circles[0].size).toEqual(0.78);
+      expect(result.circles[0].x).toEqual(85.8);
+      expect(result.circles[0].y).toEqual(61);
+    });
+
+    it('should return sub bullet entry', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      jest.spyOn(fs, 'readFileSync').mockImplementation((file) => file as any);
+      jest.spyOn(path, 'resolve').mockImplementation((file) => file);
+      jest
+        .spyOn(mockDocument, 'embedFont')
+        .mockImplementation((file) => Promise.resolve({ ...mockFont, file }));
+      const result = await toEntries(
+        [
+          {
+            type: ResumeComponentType.SUB_BULLET,
+            text: 'Sub Bullet',
+          },
+        ],
+        100,
+        mockDocument,
+      );
+      expect(result.text).toHaveLength(1);
+      expect(result.text[0].text).toBe('Sub Bullet');
+      expect(result.circles).toHaveLength(1);
+      expect(result.circles[0].size).toEqual(0.78);
+      expect(result.circles[0].x).toEqual(95.55);
+      expect(result.circles[0].y).toEqual(61);
     });
 
     it('should return paragraph entry', async () => {
@@ -164,9 +321,9 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Paragraph');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -195,9 +352,9 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Paragraph');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(6.5);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -226,27 +383,27 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('The quick brown ');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
       expect(result.text[1].text).toBe('fox jumps');
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(9.100000000000001);
+      expect(result.text[1].options.size).toEqual(7.8);
       expect(result.text[1].options.x).toEqual(97.25);
-      expect(result.text[1].options.y).toEqual(35);
+      expect(result.text[1].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[1].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
       expect(result.text[2].text).toBe(' over the lazy dog');
       expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(9.100000000000001);
+      expect(result.text[2].options.size).toEqual(7.8);
       expect(result.text[2].options.x).toEqual(106.25);
-      expect(result.text[2].options.y).toEqual(35);
+      expect(result.text[2].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[2].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -277,9 +434,9 @@ describe('utils', () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
       );
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -288,31 +445,31 @@ describe('utils', () => {
         'Duis aute irure dolor in reprehenderit',
       );
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(9.100000000000001);
+      expect(result.text[1].options.size).toEqual(7.8);
       expect(result.text[1].options.x).toEqual(313.25);
-      expect(result.text[1].options.y).toEqual(35);
+      expect(result.text[1].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[1].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
       expect(result.text[2].text).toBe(
-        ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in',
+        ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,',
       );
       expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(9.100000000000001);
+      expect(result.text[2].options.size).toEqual(7.8);
       expect(result.text[2].options.x).toEqual(351.25);
-      expect(result.text[2].options.y).toEqual(35);
+      expect(result.text[2].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[2].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
       expect(result.text[3].text).toBe(
-        'culpa qui officia deserunt mollit anim id est laborum.',
+        'sunt in culpa qui officia deserunt mollit anim id est laborum.',
       );
       expect(result.text[3].options).toBeDefined();
-      expect(result.text[3].options.size).toEqual(9.100000000000001);
+      expect(result.text[3].options.size).toEqual(7.8);
       expect(result.text[3].options.x).toEqual(81.25);
-      expect(result.text[3].options.y).toEqual(22);
+      expect(result.text[3].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[3].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -337,46 +494,37 @@ describe('utils', () => {
         100,
         mockDocument,
       );
-      expect(result.text).toHaveLength(4);
+      expect(result.text).toHaveLength(3);
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe(
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, ',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,',
       );
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(9.100000000000001);
+      expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
-      expect(result.text[1].text).toBe('sunt in');
+      expect(result.text[1].text).toBe('sunt in culpa qui');
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(9.100000000000001);
-      expect(result.text[1].options.x).toEqual(464.25);
-      expect(result.text[1].options.y).toEqual(35);
+      expect(result.text[1].options.size).toEqual(7.8);
+      expect(result.text[1].options.x).toEqual(81.25);
+      expect(result.text[1].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[1].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
       );
-      expect(result.text[2].text).toBe('culpa qui');
-      expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(9.100000000000001);
-      expect(result.text[2].options.x).toEqual(81.25);
-      expect(result.text[2].options.y).toEqual(22);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      expect((result.text[2].options.font as any).file).toBe(
-        'fonts/OpenSans-SemiBold.ttf',
-      );
-      expect(result.text[3].text).toBe(
+      expect(result.text[2].text).toBe(
         ' officia deserunt mollit anim id est laborum.',
       );
-      expect(result.text[3].options).toBeDefined();
-      expect(result.text[3].options.size).toEqual(9.100000000000001);
-      expect(result.text[3].options.x).toEqual(90.25);
-      expect(result.text[3].options.y).toEqual(22);
+      expect(result.text[2].options).toBeDefined();
+      expect(result.text[2].options.size).toEqual(7.8);
+      expect(result.text[2].options.x).toEqual(98.25);
+      expect(result.text[2].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      expect((result.text[3].options.font as any).file).toBe(
+      expect((result.text[2].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
       );
     });
@@ -403,7 +551,7 @@ describe('utils', () => {
       expect(result.text[0].options).toBeDefined();
       expect(result.text[0].options.size).toEqual(0);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -433,7 +581,7 @@ describe('utils', () => {
       expect(result.text[0].options).toBeDefined();
       expect(result.text[0].options.size).toEqual(7.15);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -463,7 +611,7 @@ describe('utils', () => {
       expect(result.text[0].options).toBeDefined();
       expect(result.text[0].options.size).toEqual(7.8);
       expect(result.text[0].options.x).toEqual(81.25);
-      expect(result.text[0].options.y).toEqual(35);
+      expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[0].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',

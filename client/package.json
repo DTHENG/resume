@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_PUBLIC_RESUME_JSON=$(cat ../copy/resume.json) next dev --turbo",
-    "build": "NEXT_PUBLIC_RESUME_JSON=$(cat ../copy/resume.json) next build",
+    "dev": "NEXT_PUBLIC_RESUME_JSON=$(cat ../copy/resume.json) NEXT_PUBLIC_COVER_BLURB_JSON=$(cat ../copy/blurb.full.json) next dev --turbo",
+    "build": "NEXT_PUBLIC_RESUME_JSON=$(cat ../copy/resume.json) NEXT_PUBLIC_COVER_BLURB_JSON=$(cat ../copy/blurb.full.json) next build",
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },

@@ -20,6 +20,7 @@ export const mockDocument: any = {
     getSize: jest.fn(() => ({ height: 100 })),
     drawText: jest.fn(),
     drawRectangle: jest.fn(),
+    drawCircle: jest.fn(),
   })),
   registerFontkit: jest.fn(),
   embedFont: jest.fn(() => ({
@@ -81,6 +82,10 @@ describe('pdf-builder', () => {
         },
         {
           type: ResumeComponentType.BLOCK_QUOTE,
+          text: 'Blockquote',
+        },
+        {
+          type: ResumeComponentType.BULLET,
           text: 'Blockquote',
         },
       ]),
