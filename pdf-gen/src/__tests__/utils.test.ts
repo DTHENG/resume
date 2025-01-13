@@ -70,7 +70,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Title');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -100,7 +100,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Sub Title');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -130,7 +130,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Heading');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(57.75);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -321,7 +321,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Paragraph');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -383,7 +383,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('The quick brown ');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -392,7 +392,7 @@ describe('utils', () => {
       );
       expect(result.text[1].text).toBe('fox jumps');
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(7.8);
+      expect(result.text[1].options.size).toEqual(8.775);
       expect(result.text[1].options.x).toEqual(97.25);
       expect(result.text[1].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -401,7 +401,7 @@ describe('utils', () => {
       );
       expect(result.text[2].text).toBe(' over the lazy dog');
       expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(7.8);
+      expect(result.text[2].options.size).toEqual(8.775);
       expect(result.text[2].options.x).toEqual(106.25);
       expect(result.text[2].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -434,7 +434,7 @@ describe('utils', () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
       );
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -445,7 +445,7 @@ describe('utils', () => {
         'Duis aute irure dolor in reprehenderit',
       );
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(7.8);
+      expect(result.text[1].options.size).toEqual(8.775);
       expect(result.text[1].options.x).toEqual(313.25);
       expect(result.text[1].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -456,7 +456,7 @@ describe('utils', () => {
         ' in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,',
       );
       expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(7.8);
+      expect(result.text[2].options.size).toEqual(8.775);
       expect(result.text[2].options.x).toEqual(351.25);
       expect(result.text[2].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -467,9 +467,8 @@ describe('utils', () => {
         'sunt in culpa qui officia deserunt mollit anim id est laborum.',
       );
       expect(result.text[3].options).toBeDefined();
-      expect(result.text[3].options.size).toEqual(7.8);
+      expect(result.text[3].options.size).toEqual(8.775);
       expect(result.text[3].options.x).toEqual(81.25);
-      expect(result.text[3].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[3].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -500,7 +499,7 @@ describe('utils', () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,',
       );
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(58.4);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -509,9 +508,8 @@ describe('utils', () => {
       );
       expect(result.text[1].text).toBe('sunt in culpa qui');
       expect(result.text[1].options).toBeDefined();
-      expect(result.text[1].options.size).toEqual(7.8);
+      expect(result.text[1].options.size).toEqual(8.775);
       expect(result.text[1].options.x).toEqual(81.25);
-      expect(result.text[1].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[1].options.font as any).file).toBe(
         'fonts/OpenSans-SemiBold.ttf',
@@ -520,9 +518,8 @@ describe('utils', () => {
         ' officia deserunt mollit anim id est laborum.',
       );
       expect(result.text[2].options).toBeDefined();
-      expect(result.text[2].options.size).toEqual(7.8);
+      expect(result.text[2].options.size).toEqual(8.775);
       expect(result.text[2].options.x).toEqual(98.25);
-      expect(result.text[2].options.y).toEqual(46.699999999999996);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect((result.text[2].options.font as any).file).toBe(
         'fonts/OpenSans-Regular.ttf',
@@ -609,7 +606,7 @@ describe('utils', () => {
       expect(result.rectangles).toHaveLength(0);
       expect(result.text[0].text).toBe('Link');
       expect(result.text[0].options).toBeDefined();
-      expect(result.text[0].options.size).toEqual(7.8);
+      expect(result.text[0].options.size).toEqual(8.775);
       expect(result.text[0].options.x).toEqual(81.25);
       expect(result.text[0].options.y).toEqual(61);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

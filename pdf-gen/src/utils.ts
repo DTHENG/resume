@@ -92,7 +92,7 @@ export const toEntries = async (
         } = component;
 
         let font = normalFont;
-        let fontSize = inchesToPixels(0.12);
+        let fontSize = inchesToPixels(0.135);
         let marginBottom = 0;
         let marginTop = 0;
 
@@ -126,7 +126,7 @@ export const toEntries = async (
             break;
           case ResumeComponentType.SPACE:
             fontSize = 0;
-            marginBottom = inchesToPixels(0.4);
+            marginBottom = inchesToPixels(0.3);
             break;
           case ResumeComponentType.DIVIDER:
             fontSize = 0;

@@ -43,12 +43,12 @@
   },
   {
     "type": "BULLET",
-    "text": "Case Management & Twilio Expert: Acted as the go-to SME for Twilio call flows and telephony debugging; led complex projects (e.g., vehicle multi-conferencing, call recording, TTY/RTT for deaf riders).",
+    "text": "Case Management & Twilio Expert: Go-to SME for Twilio call flows and debugging; led complex projects (e.g., vehicle multi-conferencing, call and cabin recording).",
     "bold": "Case Management & Twilio Expert:"
   },
   {
     "type": "BULLET",
-    "text": "On-Call & Incident Response: Frequently served as incident lead, conducted root-cause analyses for telephony issues, and provided clear postmortems to stakeholders and executives.",
+    "text": "On-Call & Incident Response: Frequently served as incident lead, conducted root-cause analyses for telephony issues, and provided postmortems to executives.",
     "bold": "On-Call & Incident Response:"
   },
   {
@@ -63,12 +63,7 @@
   },
   {
     "type": "SUB_BULLET",
-    "text": "Interior Camera Playback: Extended video playback solutions to new vehicle types, unblocking key regulatory requirements.",
-    "bold": "Interior Camera Playback:"
-  },
-  {
-    "type": "SUB_BULLET",
-    "text": "Metrics & Analytics: Partnered with the Data Science teams to build pipelines for ingesting metrics into BigQuery/Looker, enabling real-time insights and scaling the fleet.",
+    "text": "Metrics & Analytics: Partnered with the Data Science teams to build pipelines for ingesting metrics into BigQuery/Looker, enabling real-time insights for the fleet.",
     "bold": "Metrics & Analytics:"
   },
   {
@@ -108,18 +103,13 @@
   },
   {
     "type": "BULLET",
-    "text": "Languages & Frameworks: TypeScript, Golang, Java, React, Jest, Redux, Redux-Saga, RxJava, Node.js, Angular, Vert.x",
+    "text": "Languages & Frameworks: TypeScript, Golang, Java, React, NestJS, Jest, Redux, Redux-Saga, RxJava, Node.js, Angular, Vert.x",
     "bold": "Languages & Frameworks:"
   },
   {
     "type": "BULLET",
-    "text": "Cloud & Data: Google Cloud, Kubernetes, PostgreSQL, Cloud Spanner, Redis, AWS, Docker, MySQL, BigQuery, Looker, Pub/Sub, JOOQ, PagerDuty",
+    "text": "Cloud & Data: Google Cloud, Kubernetes, PostgreSQL, Cloud Spanner, Redis, AWS, Docker, MySQL, BigQuery, Looker, Pub/Sub, JOOQ, PagerDuty, Twilio, SIP, WebRTC",
     "bold": "Cloud & Data:"
-  },
-  {
-    "type": "BULLET",
-    "text": "Telephony & Communications: Twilio, SIP, WebRTC, Conferencing APIs",
-    "bold": "Telephony & Communications:"
   },
   {
     "type": "BULLET",
