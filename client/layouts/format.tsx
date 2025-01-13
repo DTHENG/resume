@@ -188,7 +188,9 @@ export const formatResume = (resume: ResumeComponent[]): JSX.Element => {
                 <span className="font-semibold">{position ?? ""}</span> |{" "}
                 <span className="font-semibold">{company ?? ""}</span>
                 {" | "}
-                <span>{dates ?? ""}</span>, <span>{location ?? ""}</span>
+                <i>
+                  <span>{dates ?? ""}</span>, <span>{location ?? ""}</span>
+                </i>
               </p>
             );
           case ResumeComponentType.DATES:
