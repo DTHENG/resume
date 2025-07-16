@@ -24,7 +24,21 @@
   },
   {
     "type": "PARAGRAPH",
-    "text": "I am a software engineer with over 14 years of professional experience, currently a Senior Software Engineer at Cruise where I focus on building secure, high-availability systems for autonomous vehicles. With deep expertise in telephony integrations, distributed systems, and compliance-driven development, I excel in designing and implementing robust services at scale. I enjoy collaborating across teams, mentoring fellow engineers, and continuously improving organizational processes."
+    "text": "I am a software engineer with over 14 years of professional experience, currently at Folio, where I’m helping transform the $400B hotel procurement industry with AI-powered automation and modern infrastructure. I specialize in building secure, high-availability systems and have a strong track record in distributed systems, telephony, and compliance-driven development. I thrive in collaborative environments, mentor fellow engineers, and continuously work to improve both technical systems and team processes."
+  },
+  {
+    "type": "DIVIDER"
+  },
+  {
+    "type": "HEADING_2",
+    "position": "Software Engineer",
+    "company": "Folio",
+    "dates": "2025 - Present",
+    "location": "San Francisco"
+  },
+  {
+    "type": "PARAGRAPH",
+    "text": "Building AI-assisted procurement workflows, modern payment infrastructure, and scalable backend services to streamline hotel supplier interactions. Leading development of core platform features in a fast-paced startup environment, focusing on system reliability, extensibility, and user impact."
   },
   {
     "type": "DIVIDER"
@@ -33,38 +47,12 @@
     "type": "HEADING_2",
     "position": "Senior Software Engineer",
     "company": "GM Cruise LLC",
-    "dates": "2019 - Present",
+    "dates": "2019 - 2025",
     "location": "San Francisco"
   },
   {
-    "type": "BULLET",
-    "text": "Telephony Platform & Services: Designed and built a Telephony Platform to separate call logic from the core backend, improving reliability and maintainability.",
-    "bold": "Telephony Platform & Services:"
-  },
-  {
-    "type": "BULLET",
-    "text": "Case Management & Twilio Expert: Go-to SME for Twilio call flows and debugging; led complex projects (e.g., vehicle multi-conferencing, call and cabin recording).",
-    "bold": "Case Management & Twilio Expert:"
-  },
-  {
-    "type": "BULLET",
-    "text": "On-Call & Incident Response: Frequently served as incident lead, conducted root-cause analyses for telephony issues, and provided postmortems to executives.",
-    "bold": "On-Call & Incident Response:"
-  },
-  {
-    "type": "BULLET",
-    "text": "Notable Initiatives",
-    "bold": "Notable Initiatives"
-  },
-  {
-    "type": "SUB_BULLET",
-    "text": "Telephony Heartbeat: Implemented a real-time service to monitor call health and alert vehicle riders + on-call engineers during outages.",
-    "bold": "Telephony Heartbeat:"
-  },
-  {
-    "type": "SUB_BULLET",
-    "text": "Metrics & Analytics: Partnered with the Data Science teams to build pipelines for ingesting metrics into BigQuery/Looker, enabling real-time insights for the fleet.",
-    "bold": "Metrics & Analytics:"
+    "type": "PARAGRAPH",
+    "text": "Built and maintained high-availability telephony and backend services for autonomous vehicle operations, becoming the go-to expert for Twilio call flows and incident response. Led critical infrastructure initiatives like real-time call health monitoring and analytics pipelines, enabling operational insight across the autonomous fleet."
   },
   {
     "type": "DIVIDER"
