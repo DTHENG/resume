@@ -142,7 +142,6 @@ export const getIndexMarkdown = () => {
     componentsToMarkdown(coverBlurbComponents),
     "## Links",
     links,
-    `Generated from the resume source data on ${generatedDate}.`,
   ].join("\n\n");
 };
 
