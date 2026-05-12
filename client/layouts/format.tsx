@@ -1,3 +1,5 @@
+import { coverBlurbComponents, resumeComponents } from "@/lib/resume-data";
+
 export enum ResumeComponentType {
   TITLE = "TITLE",
   PARAGRAPH = "PARAGRAPH",
@@ -34,17 +36,11 @@ export interface ResumeComponent {
 }
 
 export const getResume = (): ResumeComponent[] => {
-  if (process.env.NEXT_PUBLIC_RESUME_JSON) {
-    return JSON.parse(process.env.NEXT_PUBLIC_RESUME_JSON);
-  }
-  throw new Error("NEXT_PUBLIC_RESUME_JSON not set!");
+  return resumeComponents;
 };
 
 export const getCoverBlurb = (): ResumeComponent[] => {
-  if (process.env.NEXT_PUBLIC_COVER_BLURB_JSON) {
-    return JSON.parse(process.env.NEXT_PUBLIC_COVER_BLURB_JSON);
-  }
-  throw new Error("NEXT_PUBLIC_COVER_BLURB_JSON not set!");
+  return coverBlurbComponents;
 };
 
 export const WithBoldText = (props: {

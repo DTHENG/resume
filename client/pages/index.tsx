@@ -1,3 +1,5 @@
+import type { GetServerSideProps } from "next";
+
 import ArrowIcon from "../icons/arrow";
 import FormerTwitterIcon from "../icons/former-twitter";
 import GitHubIcon from "../icons/github";
@@ -6,6 +8,21 @@ import LinkedInIcon from "../icons/linkedin";
 import { formatResume, getCoverBlurb } from "../layouts/format";
 
 import DefaultLayout from "@/layouts/default";
+import { acceptsMarkdown, getIndexMarkdown } from "@/lib/resume-content";
+
+export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
+  if (acceptsMarkdown(req.headers.accept)) {
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=3600, s-maxage=86400");
+    res.write(getIndexMarkdown());
+    res.end();
+  }
+
+  return {
+    props: {},
+  };
+};
 
 export default function IndexPage() {
   return (
